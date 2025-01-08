@@ -1,21 +1,22 @@
-import { useEffect } from "react";
 import {
-  GraduationCap,
-  Globe,
-  FileCheck,
   ArrowRight,
   CheckCircle,
+  FileCheck,
+  Globe,
+  GraduationCap,
 } from "lucide-react";
+import { useEffect } from "react";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const detailedServices = [
   {
     icon: <GraduationCap size={32} />,
-    title: "Academic Counseling",
+    title: "Job Counseling",
     description:
       "Expert guidance on course selection and university admissions worldwide.",
     features: [
-      "Personalized university selection",
+      // "Personalized university selection",
+      "Oil & GAS",
       "Course alignment with career goals",
       "Application strategy planning",
       "Academic profile evaluation",
@@ -75,8 +76,11 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-xl text-white/90 max-w-3xl animate-fade-in">
-            Comprehensive educational consulting services to help you achieve
-            your academic goals and build a successful future.
+            {/* Comprehensive educational consulting services to help you achieve
+            your academic goals and build a successful future. */}
+            We are providing manpower services all over the world. Our
+            recruiting team provides human resource solutions for all major job
+            sectors and industries
           </p>
         </div>
       </div>
