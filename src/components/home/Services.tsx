@@ -6,6 +6,7 @@ import {
   Phone,
   Users,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -73,9 +74,13 @@ export default function Services() {
                 {service.title}
               </h3>
               <p className="text-gray-600">{service.description}</p>
-              <button className="mt-4 text-blue-600 font-medium hover:text-blue-700 transition-colors">
+
+              <Link
+                to={"/details/1"}
+                className="mt-4 text-blue-600 font-medium hover:text-blue-700 transition-colors"
+              >
                 Learn More →
-              </button>
+              </Link>
             </div>
           ))}
         </div>

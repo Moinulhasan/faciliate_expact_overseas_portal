@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Hero from "../../components/home/Hero";
 import Services from "../../components/home/Services";
 import Testimonials from "../../components/home/Testimonials";
+import CountryList from "../../components/home/CountryList";
 import ContactForm from "../../components/home/ContactForm";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
     <main>
       <Hero />
       <Services />
+      <CountryList />
       <Testimonials />
       <ContactForm />
     </main>

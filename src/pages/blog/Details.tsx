@@ -84,11 +84,11 @@ export default function BlogDetails() {
         <div className="relative h-full flex items-center">
           <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Link
-              to="/blog"
+              to="/"
               className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
             >
               <ChevronLeft className="mr-2" size={20} />
-              Back to Blog
+              Back
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
