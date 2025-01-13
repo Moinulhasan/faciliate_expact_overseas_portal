@@ -7,55 +7,57 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
 
 const detailedServices = [
   {
+    id: 1,
     icon: <GraduationCap size={32} />,
-    title: "Job Counseling",
+    title: "Academic Counseling",
     description:
-      "Expert guidance on course selection and university admissions worldwide.",
+      "We provide expert guidance for students aiming to study in top universities worldwide. Our team helps with:",
     features: [
-      // "Personalized university selection",
-      "Oil & GAS",
-      "Course alignment with career goals",
-      "Application strategy planning",
-      "Academic profile evaluation",
-      "Admission requirement guidance",
+      "Personalized university selection based on your goals and preferences.",
+      "Crafting effective application strategies.",
+      "Aligning course selection with career aspirations.",
+      "Academic profile evaluation and enhancement.",
+      "Guidance on meeting university admission requirements.",
     ],
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80",
   },
   {
+    id: 2,
     icon: <Globe size={32} />,
     title: "Visa Assistance",
     description:
-      "Complete support for student visa applications and documentation.",
+      "Navigating the complexities of visa applications can be daunting. We're here to simplify the process with:",
     features: [
-      "Visa application processing",
-      "Document verification",
-      "Interview preparation",
-      "Travel guidance",
-      "Post-visa support",
+      "Comprehensive visa application processing.",
+      "Document verification and legal compliance checks.",
+      "Preparation for visa interviews.",
+      "Travel guidance and itinerary planning.",
+      "Support for post-visa formalities.",
     ],
     image:
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80",
   },
   {
+    id: 3,
     icon: <FileCheck size={32} />,
     title: "Document Processing",
     description:
-      "Efficient handling of all necessary academic and legal documents.",
+      "Efficiently handling your documents is key to a stress-free journey abroad. Our services include:",
     features: [
-      "Document authentication",
-      "Translation services",
-      "Notarization assistance",
-      "Digital document management",
-      "Application tracking",
+      "Authentication and legalization of academic and professional documents.",
+      "Translation services to meet global standards.",
+      "Assistance with notarization.",
+      "Digital document management for easy access.",
+      "Application tracking for timely updates.",
     ],
     image:
       "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80",
   },
-  // ... other services
 ];
 
 export default function ServicesPage() {
@@ -73,14 +75,13 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-blue-800/90" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold mb-6 animate-fade-in">
-            Our Services
+            Welcome to Facilitat Expat Services
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl animate-fade-in">
-            {/* Comprehensive educational consulting services to help you achieve
-            your academic goals and build a successful future. */}
-            We are providing manpower services all over the world. Our
-            recruiting team provides human resource solutions for all major job
-            sectors and industries
+          <p className="text-xl text-white/90 animate-fade-in">
+            At Facilitat Expat, we specialize in providing comprehensive support
+            for students and job seekers looking to achieve their dreams abroad.
+            From academic counseling to visa assistance and document processing,
+            we ensure your journey is smooth and successful.
           </p>
         </div>
       </div>
@@ -111,10 +112,13 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <button className="mt-8 inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                <Link
+                  to={`/services/details/${service.id}`}
+                  className="mt-8 inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                >
                   Learn More
                   <ArrowRight className="ml-2" size={20} />
-                </button>
+                </Link>
               </div>
               <div className="lg:w-1/2">
                 <img
@@ -132,16 +136,20 @@ export default function ServicesPage() {
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Start Your Educational Journey?
+            Why Choose Us?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Contact us today to schedule a consultation and learn how we can
-            help you achieve your academic goals.
+            Facilitat Expat is dedicated to making your overseas journey a
+            success. With personalized support, industry expertise, and a
+            client-focused approach, we strive to exceed your expectations.
           </p>
-          <button className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+          <Link
+            to={"/contact"}
+            className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
             Contact Us
             <ArrowRight className="ml-2" size={20} />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
