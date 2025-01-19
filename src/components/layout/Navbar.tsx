@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`sticky top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white shadow-md"
           : "bg-gradient-to-r from-[#0f172a]/95 via-[#1e293b]/90 to-[#1f51d0c2]/95 backdrop-blur-[2px]"

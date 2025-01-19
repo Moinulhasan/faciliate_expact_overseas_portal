@@ -35,7 +35,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-16">
+    <div className="">
       {/* Hero Section */}
       <div className="relative h-[40vh] overflow-hidden">
         <div

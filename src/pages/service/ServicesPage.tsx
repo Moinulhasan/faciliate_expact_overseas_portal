@@ -3,7 +3,7 @@ import {
   CheckCircle,
   FileCheck,
   Globe,
-  GraduationCap,
+  UserRoundSearch,
 } from "lucide-react";
 import { useEffect } from "react";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
@@ -12,16 +12,16 @@ import { Link } from "react-router-dom";
 const detailedServices = [
   {
     id: 1,
-    icon: <GraduationCap size={32} />,
-    title: "Academic Counseling",
+    icon: <UserRoundSearch size={32} />,
+    title: "Job Placement Assistance",
     description:
-      "We provide expert guidance for students aiming to study in top universities worldwide. Our team helps with:",
+      "We provide expert guidance for individuals aiming to secure jobs overseas. Our team helps with:",
     features: [
-      "Personalized university selection based on your goals and preferences.",
-      "Crafting effective application strategies.",
-      "Aligning course selection with career aspirations.",
-      "Academic profile evaluation and enhancement.",
-      "Guidance on meeting university admission requirements.",
+      "Personalized job search based on your skills and preferences.",
+      "Crafting effective resumes and cover letters.",
+      "Career counseling to align with international job markets.",
+      "Interview preparation to boost your confidence.",
+      "Connecting you with reputable employers worldwide.",
     ],
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80",
@@ -69,7 +69,7 @@ export default function ServicesPage() {
     });
   }, []);
   return (
-    <div className="pt-16">
+    <div className="">
       {/* Hero Section */}
       <div className="relative bg-blue-600 text-white py-24">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-blue-800/90" />
@@ -79,9 +79,9 @@ export default function ServicesPage() {
           </h1>
           <p className="text-xl text-white/90 animate-fade-in">
             At Facilitat Expat, we specialize in providing comprehensive support
-            for students and job seekers looking to achieve their dreams abroad.
-            From academic counseling to visa assistance and document processing,
-            we ensure your journey is smooth and successful.
+            for job seekers looking to achieve their dreams abroad. From job
+            placement assistance to visa services and document processing, we
+            ensure your journey is smooth and successful.
           </p>
         </div>
       </div>

@@ -5,15 +5,17 @@ import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 const TestData = [
   {
     id: 1,
-    title: "Academic Counseling - Details",
+    title: "Job Placement Assistance – Details",
     sub_title:
-      "Our Academic Counseling service ensures you make informed decisions about your education abroad. Our process involves:",
+      "Our Job Placement Assistance service ensures you make informed decisions about your career abroad. Our process involves:",
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80",
     list: [
-      "*Assessment of Goals and Interests:* We start by understanding your aspirations and preferences.",
-      "*University and Course Selection:* Based on your profile, we suggest institutions and programs that best suit your needs.",
-      "*Profile Enhancement:* We help you showcase your strengths to stand out in the competitive admissions process.",
-      "*Application Support:* Our experts guide you through crafting compelling applications, essays, and recommendation letters.",
-      "*Ongoing Support:* From interview preparation to final admission decisions, we're with you every step of the way.",
+      "<strong>Assessment of Skills and Interests:</strong> We start by understanding your career aspirations and preferences.",
+      "<strong>Resume and Cover Letter Crafting:</strong> Tailoring your application materials to stand out in the competitive job market.",
+      "<strong>Career Counseling:</strong> Providing insights into global job trends and opportunities.",
+      "<strong>Interview Preparation:</strong> Mock sessions and tips to help you excel in interviews.",
+      "<strong>Employer Connections:</strong> Leveraging our network to connect you with trusted employers.",
     ],
   },
   {
@@ -21,11 +23,13 @@ const TestData = [
     title: "Visa Assistance - Details",
     sub_title:
       "We provide end-to-end support for visa processes to ensure your travel plans proceed without a hitch. Key aspects include:",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80",
     list: [
-      "*Customized Guidance:* Our team understands visa regulations and tailors the process for each country.",
-      "*Document Checklist:* We provide a detailed checklist to ensure all required documents are ready.",
-      "*Mock Interviews:* Practice sessions to boost your confidence for visa interviews.",
-      "*Post-Visa Services:* Assistance with housing, local transportation, and other settling-in support upon arrival.",
+      "<strong>Customized Guidance:</strong> Our team understands visa regulations and tailors the process for each country.",
+      "<strong>Document Checklist:</strong> We provide a detailed checklist to ensure all required documents are ready.",
+      "<strong>Mock Interviews:</strong> Practice sessions to boost your confidence for visa interviews.",
+      "<strong>Post-Visa Services:</strong> Assistance with housing, local transportation, and other settling-in support upon arrival.",
     ],
   },
   {
@@ -33,11 +37,13 @@ const TestData = [
     title: "Document Processing - Details",
     sub_title:
       "Our document processing services are designed to save you time and effort. Highlights include:",
+    image:
+      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80",
     list: [
-      "*Legal Authentication:* Ensuring all your documents are legally acceptable in your destination country.",
-      "*Translations:* Accurate translations by certified professionals to meet international standards.",
-      "*Digital Accessibility:* Secure storage and easy access to your documents through our digital platform.",
-      "*Real-Time Tracking:* Stay updated on the status of your applications and submissions.",
+      "<strong>Legal Authentication:</strong> Ensuring all your documents are legally acceptable in your destination country.",
+      "<strong>Translations:</strong> Accurate translations by certified professionals to meet international standards.",
+      "<strong>Digital Accessibility:</strong> Secure storage and easy access to your documents through our digital platform.",
+      "<strong>Real-Time Tracking:</strong> Stay updated on the status of your applications and submissions.",
     ],
   },
 ];
@@ -47,6 +53,7 @@ const Details = () => {
   const [post, setPost] = useState<{
     id: number;
     title: string;
+    image: string;
     sub_title: string;
     list: string[];
   } | null>(null);
@@ -70,7 +77,7 @@ const Details = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen pt-16 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
     );
@@ -78,7 +85,7 @@ const Details = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen pt-16 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <p className="text-xl text-gray-600">Post not found</p>
       </div>
     );
@@ -87,11 +94,11 @@ const Details = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative h-[60vh] overflow-hidden">
+      <div className="relative h-[40vh] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80')`,
+            backgroundImage: `url('${post.image}')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-black/80" />
@@ -100,11 +107,6 @@ const Details = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
             </h1>
-            <div className="flex items-center space-x-4 text-white/90">
-              <div>
-                <p className="font-medium">{post.sub_title}</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -112,11 +114,20 @@ const Details = () => {
       {/* Content Section */}
       <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <article className="prose prose-slate lg:prose-lg max-w-none">
-          {post.list.map((paragraph: string, index: number) => (
-            <p key={index} className="text-gray-700 leading-relaxed my-6">
-              {paragraph.trim()}
-            </p>
-          ))}
+          <div className="flex items-center space-x-4 text-gray-700">
+            <div>
+              <p className="font-medium">{post.sub_title}</p>
+            </div>
+          </div>
+          <ul className="list-decimal marker:text-black-700">
+            {post.list.map((paragraph: string, index: number) => (
+              <li
+                key={index}
+                dangerouslySetInnerHTML={{ __html: paragraph.trim() }}
+                className="text-gray-700 leading-relaxed my-6"
+              ></li>
+            ))}
+          </ul>
         </article>
       </div>
     </div>

@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import ServicesPage from "./pages/service/ServicesPage";
 import ServicesDetailsPage from "./pages/service/Details";
 import IndustriesPage from "./pages/industry/IndustriesPage";
+import IndustriesDetailsPage from "./pages/industry/Details";
 import AboutUs from "./pages/aboutus/AboutUs";
 // import Blog from "./pages/blog/Blog";
 import BlogDetails from "./pages/blog/Details";
@@ -19,6 +20,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
+          <Route
+            path="/industries/details/:id"
+            element={<IndustriesDetailsPage />}
+          />
           <Route path="/about-us" element={<AboutUs />} />
           {/* <Route path="/blog" element={<Blog />} />*/}
           <Route path="/details/:id" element={<BlogDetails />} />

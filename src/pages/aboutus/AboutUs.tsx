@@ -13,7 +13,7 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <div className="pt-16">
+    <div className="">
       {/* Hero Section */}
       <div className="relative h-[60vh] overflow-hidden">
         <div
