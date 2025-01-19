@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,8 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const path = location.pathname.split("/")[1] ?? "";
 
   return (
     <nav
@@ -38,32 +41,32 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className={`${
-                isScrolled ? "text-gray-700" : "text-white"
+              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
+                path === "" ? "text-blue-400 transition-colors" : ""
               } hover:text-blue-400 transition-colors`}
             >
               Home
             </Link>
             <Link
               to="/services"
-              className={`${
-                isScrolled ? "text-gray-700" : "text-white"
+              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
+                path === "services" ? "text-blue-400 transition-colors" : ""
               } hover:text-blue-400 transition-colors`}
             >
               Services
             </Link>
             <Link
               to="/industries"
-              className={`${
-                isScrolled ? "text-gray-700" : "text-white"
+              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
+                path === "industries" ? "text-blue-400 transition-colors" : ""
               } hover:text-blue-400 transition-colors`}
             >
               Industries
             </Link>
             <Link
               to="/about-us"
-              className={`${
-                isScrolled ? "text-gray-700" : "text-white"
+              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
+                path === "about-us" ? "text-blue-400 transition-colors" : ""
               } hover:text-blue-400 transition-colors`}
             >
               About Us
@@ -78,8 +81,8 @@ export default function Navbar() {
             </Link> */}
             <Link
               to="/contact"
-              className={`${
-                isScrolled ? "text-gray-700" : "text-white"
+              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
+                path === "contact" ? "text-blue-400 transition-colors" : ""
               } hover:text-blue-400 transition-colors`}
             >
               Contact
