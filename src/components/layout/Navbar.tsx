@@ -41,56 +41,65 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
-                path === "" ? "text-blue-400 transition-colors" : ""
+              className={`${
+                path === ""
+                  ? "text-blue-400"
+                  : isScrolled
+                  ? "text-gray-700"
+                  : "text-white"
               } hover:text-blue-400 transition-colors`}
             >
               Home
             </Link>
             <Link
               to="/services"
-              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
-                path === "services" ? "text-blue-400 transition-colors" : ""
+              className={`${
+                path === "services"
+                  ? "text-blue-400"
+                  : isScrolled
+                  ? "text-gray-700"
+                  : "text-white"
               } hover:text-blue-400 transition-colors`}
             >
               Services
             </Link>
             <Link
               to="/industries"
-              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
-                path === "industries" ? "text-blue-400 transition-colors" : ""
+              className={`${
+                path === "industries"
+                  ? "text-blue-400"
+                  : isScrolled
+                  ? "text-gray-700"
+                  : "text-white"
               } hover:text-blue-400 transition-colors`}
             >
               Industries
             </Link>
             <Link
               to="/about-us"
-              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
-                path === "about-us" ? "text-blue-400 transition-colors" : ""
+              className={`${
+                path === "about-us"
+                  ? "text-blue-400"
+                  : isScrolled
+                  ? "text-gray-700"
+                  : "text-white"
               } hover:text-blue-400 transition-colors`}
             >
               About Us
             </Link>
-            {/* <Link
-              to="/blog"
-              className={`${
-                isScrolled ? "text-gray-700" : "text-white"
-              } hover:text-blue-400 transition-colors`}
-            >
-              Blog
-            </Link> */}
+
             <Link
               to="/contact"
-              className={`${isScrolled ? "text-gray-700" : "text-white"} ${
-                path === "contact" ? "text-blue-400 transition-colors" : ""
+              className={`${
+                path === "contact"
+                  ? "text-blue-400"
+                  : isScrolled
+                  ? "text-gray-700"
+                  : "text-white"
               } hover:text-blue-400 transition-colors`}
             >
               Contact
             </Link>
-
-            {/* <button className="text-gray-700 hover:text-blue-600">
-              <Search size={20} />
-            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -136,12 +145,6 @@ export default function Navbar() {
             >
               About Us
             </Link>
-            {/* <Link
-              to="/blog"
-              className="block px-3 py-2 text-gray-700 hover:text-blue-600"
-            >
-              Blog
-            </Link> */}
             <Link
               to="/contact"
               className="block px-3 py-2 text-gray-700 hover:text-blue-600"
