@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { CountryListData } from "../../lib/data/DemoData";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -75,6 +77,62 @@ export default function Navbar() {
             >
               Industries
             </Link>
+
+            <div className="relative">
+              {/* Dropdown Button */}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                className={`${
+                  path === "country"
+                    ? "text-blue-400"
+                    : isScrolled
+                    ? "text-gray-700"
+                    : "text-white"
+                } hover:text-blue-400 transition-colors flex items-center`}
+              >
+                Serves
+                <svg
+                  className="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+
+              {/* Dropdown Menu */}
+              <div
+                className={`absolute right-0 z-10 mt-2 w-44 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600 ${
+                  isOpen ? "block" : "hidden"
+                }`}
+              >
+                <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
+                  {CountryListData.map((country, index) => {
+                    return (
+                      <li key={index}>
+                        <Link
+                          to={`/country/${country.slug}`}
+                          onClick={() => setIsOpen(!isOpen)}
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          {country.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+
             <Link
               to="/about-us"
               className={`${

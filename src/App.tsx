@@ -10,6 +10,7 @@ import AboutUs from "./pages/aboutus/AboutUs";
 // import Blog from "./pages/blog/Blog";
 import BlogDetails from "./pages/blog/Details";
 import Contact from "./pages/contact/Contact";
+import ContryDetails from "./pages/country/DetailsPage";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             path="/services/details/:id"
             element={<ServicesDetailsPage />}
           />
+          <Route path="/country/:slug" element={<ContryDetails />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
