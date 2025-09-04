@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import Hero from "../../components/home/Hero";
 import Services from "../../components/home/Services";
-import Testimonials from "../../components/home/Testimonials";
 import CountryList from "../../components/home/CountryList";
+import Testimonials from "../../components/home/Testimonials";
 import ContactForm from "../../components/home/ContactForm";
+import GetInTouch from "../../components/global/GetInTouch";
 
 export default function Home() {
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Home() {
       <CountryList />
       <Testimonials />
       <ContactForm />
+      <GetInTouch />
     </main>
   );
 }
