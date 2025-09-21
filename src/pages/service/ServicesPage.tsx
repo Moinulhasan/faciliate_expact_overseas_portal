@@ -119,10 +119,11 @@ export default function ServicesPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed animate-fade-in delay-100">
-              At Facilitate Expat, we specialize in providing comprehensive
-              support for individuals seeking opportunities abroad. From job
-              placement to visa services and document processing, we ensure your
-              international journey is smooth and successful.
+              At Facilitate Expat Overseas Limited, we specialize in providing
+              comprehensive support for individuals seeking opportunities
+              abroad. From job placement to visa services and document
+              processing, we ensure your international journey is smooth and
+              successful.
             </p>
           </div>
         </div>

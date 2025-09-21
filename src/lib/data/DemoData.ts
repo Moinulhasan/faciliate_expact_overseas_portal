@@ -1,37 +1,38 @@
 // export json data to be used in the DetailsPage component
 const DemoData = [
-  {
-    id: 1,
-    title: "Country We Serve Bangladesh",
+    {
+        id: 1,
+        title: "Country We Serve Bangladesh",
     sub_title:
       "Our Job Placement Assistance service ensures you make informed decisions about your career abroad. Our process involves:",
-    image: "/images/bd.png",
-    list: [
-      "<strong>Assessment of Skills and Interests:</strong> We start by understanding your career aspirations and preferences.",
-      "<strong>Resume and Cover Letter Crafting:</strong> Tailoring your application materials to stand out in the competitive job market.",
-      "<strong>Career Counseling:</strong> Providing insights into global job trends and opportunities.",
-      "<strong>Interview Preparation:</strong> Mock sessions and tips to help you excel in interviews.",
-      "<strong>Employer Connections:</strong> Leveraging our network to connect you with trusted employers.",
-    ],
-  },
+        image: "/images/bd.png",
+        list: [
+            "<strong>Assessment of Skills and Interests:</strong> We start by understanding your career aspirations and preferences.",
+            "<strong>Resume and Cover Letter Crafting:</strong> Tailoring your application materials to stand out in the competitive job market.",
+            "<strong>Career Counseling:</strong> Providing insights into global job trends and opportunities.",
+            "<strong>Interview Preparation:</strong> Mock sessions and tips to help you excel in interviews.",
+            "<strong>Employer Connections:</strong> Leveraging our network to connect you with trusted employers.",
+        ],
+    },
 ];
 
 const CountryListData = [
+  // 1. Saudi Arabia
   {
     id: 1,
     name: "Saudi Arabia",
     slug: "saudi-arabia",
     image: "/images/saudi_arabia.png",
     details: [
-      "Saudi Arabia is a major hub for skilled workers, and Facilitate Expat plays a vital role in providing top-tier talent for its industries. Our oil & gas recruitment services connect leading companies with certified professionals experienced in offshore drilling, pipeline construction, and petrochemical engineering.",
-      "In the construction sector, we provide highly skilled laborers, including civil engineers, project managers, and heavy machinery operators, ensuring smooth operations on large-scale projects. Our healthcare staffing services help hospitals and medical institutions find experienced doctors, nurses, and technicians.",
+            "Saudi Arabia is a major hub for skilled workers, and Facilitate Expat Overseas Limited plays a vital role in providing top-tier talent for its industries. Our oil & gas recruitment services connect leading companies with certified professionals experienced in offshore drilling, pipeline construction, and petrochemical engineering.",
+            "In the construction sector, we provide highly skilled laborers, including civil engineers, project managers, and heavy machinery operators, ensuring smooth operations on large-scale projects. Our healthcare staffing services help hospitals and medical institutions find experienced doctors, nurses, and technicians.",
       "For security services, we recruit personnel with specialized training in corporate and industrial security. Education and training professionals, including teachers and vocational trainers, are also sourced to support Saudi Arabia's growing educational sector.",
-    ],
+        ],
     list: [
-      "Oil & Gas Recruitment",
-      "Construction Workers",
-      "Healthcare Staffing",
-      "Security Jobs",
+            "Oil & Gas Recruitment",
+            "Construction Workers",
+            "Healthcare Staffing",
+            "Security Jobs",
       "Education & Training",
     ],
     services: {
@@ -156,21 +157,22 @@ const CountryListData = [
       },
     },
   },
+  // 2. United Arab Emirates
   {
     id: 2,
     name: "United Arab Emirates",
     slug: "uae",
     image: "/images/uae.png",
     details: [
-      "The UAE is known for its thriving hospitality and tourism industry, and we provide highly trained professionals, including chefs, hotel managers, and customer service representatives, to maintain the high standards of service required in the country.",
-      "Our IT & software development staffing solutions help businesses hire expert software engineers, cybersecurity specialists, and IT project managers. The booming construction industry in the UAE requires skilled laborers, including carpenters, welders, and civil engineers, who we recruit from Bangladesh to meet the demand.",
+            "The UAE is known for its thriving hospitality and tourism industry, and we provide highly trained professionals, including chefs, hotel managers, and customer service representatives, to maintain the high standards of service required in the country.",
+            "Our IT & software development staffing solutions help businesses hire expert software engineers, cybersecurity specialists, and IT project managers. The booming construction industry in the UAE requires skilled laborers, including carpenters, welders, and civil engineers, who we recruit from Bangladesh to meet the demand.",
       "The banking and finance sector benefits from our talent pool of accountants, auditors, and financial analysts. Additionally, we offer engineering recruitment services, providing mechanical, electrical, and civil engineers to various industries.",
-    ],
+        ],
     list: [
-      "Hospitality Recruitment",
-      "IT & Software Development Staffing",
-      "Construction Labor Supply",
-      "Banking & Finance Professionals",
+            "Hospitality Recruitment",
+            "IT & Software Development Staffing",
+            "Construction Labor Supply",
+            "Banking & Finance Professionals",
       "Engineering Recruitment",
     ],
     services: {
@@ -296,20 +298,21 @@ const CountryListData = [
       },
     },
   },
+  // 3. Qatar
   {
     id: 3,
     name: "Qatar",
     slug: "qatar",
     image: "/images/qatar.png",
     details: [
-      "Qatar's economy is driven by the petrochemical and gas industry, requiring specialized professionals such as process engineers, refinery technicians, and pipeline operators. We facilitate recruitment for these critical roles.",
-      "We provide both skilled and unskilled labor recruitment services, supplying professionals ranging from electricians to general laborers. Our finance and administrative staffing services cater to the growing business ecosystem, connecting companies with expert accountants, HR professionals, and office managers.",
+            "Qatar's economy is driven by the petrochemical and gas industry, requiring specialized professionals such as process engineers, refinery technicians, and pipeline operators. We facilitate recruitment for these critical roles.",
+            "We provide both skilled and unskilled labor recruitment services, supplying professionals ranging from electricians to general laborers. Our finance and administrative staffing services cater to the growing business ecosystem, connecting companies with expert accountants, HR professionals, and office managers.",
       "With an increasing number of infrastructure projects, we support Qatar's construction industry by hiring masons, site supervisors, and heavy vehicle drivers.",
-    ],
+        ],
     list: [
-      "Petrochemical & Gas Industry Workers",
-      "Skilled & Unskilled Labor Recruitment",
-      "Finance & Administrative Staffing",
+            "Petrochemical & Gas Industry Workers",
+            "Skilled & Unskilled Labor Recruitment",
+            "Finance & Administrative Staffing",
       "Construction Project Workers",
     ],
     services: {
@@ -411,113 +414,9 @@ const CountryListData = [
       },
     },
   },
+  // 4. Kuwait
   {
     id: 4,
-    name: "Malaysia",
-    slug: "malaysia",
-    image: "/images/malaysia.png",
-    details: [
-      "Malaysia's agricultural sector relies on experienced farm workers, plantation managers, and harvest specialists, whom we recruit from Bangladesh.",
-      "Our manufacturing industry staffing solutions help businesses hire skilled machine operators, factory workers, and supply chain managers.",
-      "Domestic helpers, including caregivers and housekeepers, are placed with families and organizations needing home support.",
-      "Additionally, our recruitment of IT and engineering professionals helps Malaysian firms maintain cutting-edge operations in technology and industrial design.",
-    ],
-    list: [
-      "Agricultural Workers",
-      "Manufacturing Industry Staffing",
-      "Domestic Helpers",
-      "Professional IT & Engineering Jobs",
-    ],
-  },
-  {
-    id: 5,
-    name: "Romania",
-    slug: "romania",
-    image: "/images/romania.png",
-    details: [
-      "Romania's growing economy demands general laborers, including factory workers, warehouse staff, and logistics personnel. We provide healthcare professionals, including nurses and medical technicians, to hospitals and clinics.",
-      "The construction industry in Romania is supported by our recruitment of skilled masons, steel fixers, and crane operators.",
-      "Our IT & technical worker recruitment services help businesses hire software developers, IT specialists, and system administrators.",
-    ],
-    list: [
-      "General Labor Recruitment",
-      "Healthcare Professionals",
-      "Construction Industry Staffing",
-      "IT & Technical Workers",
-    ],
-  },
-  {
-    id: 6,
-    name: "Bulgaria",
-    slug: "bulgaria",
-    image: "/images/bulgaria.png",
-    details: [
-      "Bulgaria's industrial and manufacturing sectors require a steady supply of skilled labor, including machinists, production line workers, and industrial supervisors.",
-      "We recruit experienced agricultural workers for farming and food production industries.",
-      "The construction and engineering sector benefits from our staffing of project managers, civil engineers, and skilled laborers.",
-      "Security services are essential for businesses, and we provide trained security officers, bouncers, and personal protection specialists.",
-    ],
-    list: [
-      "Manufacturing & Industrial Workers",
-      "Agricultural Labor",
-      "Construction & Engineering Experts",
-      "Security & Protection Services",
-    ],
-  },
-  {
-    id: 7,
-    name: "Poland",
-    slug: "poland",
-    image: "/images/poland.png",
-    details: [
-      "Poland's warehousing and logistics industry is expanding, requiring forklift operators, inventory managers, and logistics coordinators. Our recruitment services provide top talent for these roles.",
-      "We also specialize in hiring IT and software development professionals, including frontend and backend developers, data analysts, and network administrators.",
-      "The hospitality sector benefits from our recruitment of hotel staff, restaurant workers, and event coordinators.",
-      "For construction projects, we supply bricklayers, plumbers, and construction supervisors to meet industry demands.",
-    ],
-    list: [
-      "Warehouse & Logistics Staffing",
-      "IT & Software Development Recruitment",
-      "Hospitality & Hotel Staffing",
-      "Construction Labor Supply",
-    ],
-  },
-  {
-    id: 9,
-    name: "Moldova",
-    slug: "moldova",
-    image: "/images/moldova.png",
-    details: [
-      "Moldova's agriculture sector depends on laborers, greenhouse workers, and agricultural technicians. We recruit skilled industrial workers, including machine operators and production supervisors.",
-      "Our IT & engineering staffing solutions provide experts in software development, network security, and electrical engineering.",
-      "Financial institutions benefit from our recruitment of accountants, payroll specialists, and administrative professionals.",
-    ],
-    list: [
-      "Agriculture & Farming Labor",
-      "Skilled Industrial Workers",
-      "IT & Engineering Jobs",
-      "Financial & Administrative Staffing",
-    ],
-  },
-  {
-    id: 10,
-    name: "Hungary",
-    slug: "hungary",
-    image: "/images/hungary.png",
-    details: [
-      "Hungary's industrial workforce relies on welders, factory workers, and machine operators. We recruit IT specialists, including programmers and cybersecurity experts, to support Hungary's digital economy.",
-      "In the construction sector, we place civil engineers, project managers, and skilled laborers.",
-      "Our medical recruitment services provide hospitals and clinics with experienced nurses, doctors, and healthcare administrators.",
-    ],
-    list: [
-      "Industrial Workforce Staffing",
-      "IT & Tech Industry Recruitment",
-      "Construction & Civil Engineering",
-      "Medical & Healthcare Professionals",
-    ],
-  },
-  {
-    id: 11,
     name: "Kuwait",
     slug: "kuwait",
     image: "/images/kuwait.svg",
@@ -599,8 +498,9 @@ const CountryListData = [
       },
     },
   },
+  // 5. Japan
   {
-    id: 12,
+    id: 5,
     name: "Japan",
     slug: "japan",
     image: "/images/japan.png",
@@ -615,75 +515,10 @@ const CountryListData = [
       "Healthcare & Caregiving",
       "Engineering & Technical",
     ],
-    services: {
-      "IT & Technology Professionals": {
-        overview:
-          "We provide highly skilled IT professionals for Japan's technology sector, including software developers, system engineers, and AI specialists.",
-        keyFeatures: [
-          "Advanced technical skills and certifications",
-          "Japanese language proficiency support",
-          "Cultural integration assistance",
-          "Long-term career development",
-        ],
-        whyChooseUs: [
-          "Extensive network of tech professionals",
-          "Experience in Japanese tech industry",
-          "Cultural and language support",
-          "Quality and innovation focus",
-        ],
-      },
-      "Manufacturing & Automotive": {
-        overview:
-          "We supply skilled workers for Japan's precision manufacturing and automotive industries.",
-        keyFeatures: [
-          "Precision manufacturing specialists",
-          "Quality control experts",
-          "Automotive industry experience",
-          "Safety and compliance training",
-        ],
-        whyChooseUs: [
-          "Proven track record in Japanese manufacturing",
-          "High-quality workforce",
-          "Industry-specific expertise",
-          "Reliable and efficient delivery",
-        ],
-      },
-      "Healthcare & Caregiving": {
-        overview:
-          "We provide healthcare professionals and caregivers for Japan's aging population and healthcare sector.",
-        keyFeatures: [
-          "Licensed medical professionals",
-          "Caregiving specialists",
-          "Cultural sensitivity training",
-          "Language support services",
-        ],
-        whyChooseUs: [
-          "Extensive healthcare professional network",
-          "Experience in Japanese healthcare system",
-          "Cultural competency focus",
-          "Quality patient care commitment",
-        ],
-      },
-      "Engineering & Technical": {
-        overview:
-          "We supply engineering and technical professionals for various industries in Japan.",
-        keyFeatures: [
-          "Certified engineers and technicians",
-          "Multi-industry expertise",
-          "Technical consulting services",
-          "Project management support",
-        ],
-        whyChooseUs: [
-          "Qualified technical professionals",
-          "Multi-sector experience",
-          "Technical excellence",
-          "Innovation and quality focus",
-        ],
-      },
-    },
   },
+  // 6. Singapore
   {
-    id: 13,
+    id: 6,
     name: "Singapore",
     slug: "singapore",
     image: "/images/singapore.png",
@@ -698,9 +533,107 @@ const CountryListData = [
       "Hospitality & Services",
       "Healthcare Professionals",
     ],
+    services: {
+      "Banking & Finance": {
+        overview:
+          "We provide highly qualified banking and finance professionals aligned with MAS guidelines, ensuring compliance and performance for banks, corporates, and investment firms in Singapore.",
+        categories: [
+          "Banking Operations & Services: Customer service officers, relationship managers, branch staff",
+          "Financial Analysis & Advisory: Financial analysts, investment advisors, portfolio managers",
+          "Accounting & Compliance: Accountants, auditors, regulatory compliance officers",
+          "Risk & Treasury Management: Risk analysts, credit officers, treasury specialists",
+          "Specialized Roles: FinTech professionals, wealth managers, AML officers",
+        ],
+        keyFeatures: [
+          "Tailored recruitment matching technical skills and industry expertise",
+          "Pre-screened candidates for qualifications and regulatory compliance",
+          "Flexible staffing — temporary, project-based, or permanent",
+          "Compliance with Singapore labor and financial regulations",
+        ],
+        whyChooseUs: [
+          "Extensive database of finance professionals",
+          "Experience with banks, investment firms, and corporate finance teams",
+          "Cost-effective, scalable manpower solutions",
+          "Commitment to professionalism, confidentiality, and results",
+        ],
+      },
+      "IT & Technology": {
+        overview:
+          "Skilled IT professionals for innovation, digital transformation, and operational resilience across Singapore, compliant with local standards.",
+        categories: [
+          "Software Engineering: Frontend, backend, full-stack developers",
+          "Data & Cloud: Data scientists, cloud engineers, DevOps specialists",
+          "IT Infrastructure & Support: Sysadmins, support engineers, network specialists",
+          "Cybersecurity: Security analysts, pentesters, compliance officers",
+          "Project & Product: Project managers, business analysts, scrum masters",
+          "Specialized: AI/ML engineers, blockchain developers, automation experts",
+        ],
+        keyFeatures: [
+          "Rigorous technical screening and certification verification",
+          "Flexible models — contract, project-based, permanent",
+          "Dedicated account managers for smooth delivery",
+          "Compliance with Singapore labor and industry standards",
+        ],
+        whyChooseUs: [
+          "Wide network across multiple tech domains",
+          "Proven support for startups, SMEs, and MNCs",
+          "Scalable, cost-effective delivery",
+          "Focus on innovation and reliability",
+        ],
+      },
+      "Hospitality & Services": {
+        overview:
+          "Customer-focused hospitality professionals for hotels, restaurants, events, and service businesses across Singapore.",
+        categories: [
+          "Front Office & Guest Services: Receptionists, concierge, guest relations",
+          "Food & Beverage: Waiters, bartenders, baristas, banquet staff",
+          "Culinary & Kitchen: Chefs, sous chefs, kitchen assistants, dishwashers",
+          "Housekeeping & Facilities: Room attendants, janitors, maintenance",
+          "Events & Entertainment: Event coordinators, banquet servers, setup crews",
+          "Specialized: Spa therapists, fitness trainers, VIP service staff",
+        ],
+        keyFeatures: [
+          "Training in service excellence, hygiene, and safety",
+          "Seasonal, temporary, and permanent staffing",
+          "On-site coordination for shift and quality management",
+          "Compliance with Singapore hospitality regulations",
+        ],
+        whyChooseUs: [
+          "Deep talent pool of trained hospitality staff",
+          "Experience with hotels, restaurants, and venues",
+          "Scalable, cost-effective solutions",
+          "Strong commitment to guest experience",
+        ],
+      },
+      "Healthcare Professionals": {
+        overview:
+          "Licensed healthcare professionals for hospitals, clinics, and long-term care facilities in Singapore, aligned with MOH standards.",
+        categories: [
+          "Doctors & Specialists: GPs, surgeons, anesthetists, consultants",
+          "Nursing & Patient Care: Registered and enrolled nurses, nursing aides",
+          "Allied Health: Physiotherapists, occupational therapists, radiographers",
+          "Clinical & Lab Support: Medical technologists, lab assistants, phlebotomists",
+          "Healthcare Support: Caregivers, healthcare assistants, patient service associates",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing compliance",
+          "Flexible models — temporary, locum, contract, permanent",
+          "Training in patient care, safety, and infection control",
+          "Dedicated managers for smooth deployment",
+        ],
+        whyChooseUs: [
+          "Extensive pool of licensed healthcare staff",
+          "Experience across hospitals and private facilities",
+          "Quality and compliance driven",
+          "Patient safety and care focus",
+        ],
+      },
+    },
   },
+  // 7. South Korea
   {
-    id: 14,
+    id: 7,
     name: "South Korea",
     slug: "south-korea",
     image: "/images/south_korea.svg",
@@ -715,9 +648,220 @@ const CountryListData = [
       "Healthcare Services",
       "Automotive & Electronics",
     ],
+    services: {
+      "Technology & IT": {
+        overview:
+          "Skilled technology professionals supporting innovation and digital transformation across South Korea.",
+        categories: [
+          "Software Engineering: Frontend, backend, full-stack",
+          "Data & Cloud: Data analysts, cloud engineers, DevOps",
+          "Infrastructure & Support: Sysadmins, IT support, network engineers",
+          "Cybersecurity: Analysts, pentesters, compliance",
+          "Project & Product: PMs, product owners, scrum masters",
+          "Specialized: AI/ML, blockchain, AR/VR, automation",
+        ],
+        keyFeatures: [
+          "Tailored recruitment and technical screening",
+          "Flexible models — project, contract, permanent",
+          "Bilingual support (English/Korean) where required",
+          "Compliance with Korean labor regulations",
+        ],
+        whyChooseUs: [
+          "Extensive tech talent network",
+          "Experience with startups to MNCs",
+          "Scalable, cost-effective delivery",
+          "Focus on innovation and reliability",
+        ],
+      },
+      "Manufacturing & Engineering": {
+        overview:
+          "Skilled, semi-skilled, and professional workers for Korea's manufacturing and engineering sectors.",
+        categories: [
+          "Production & Assembly: Operators, assemblers",
+          "Skilled Trades: Welders, electricians, CNC operators",
+          "Engineering & Design: Mechanical, electrical, civil",
+          "Quality & Inspection: QA/QC inspectors, testers",
+          "Maintenance & Support: Mechanics, plant techs",
+          "Specialized: Automation, robotics, R&D support",
+        ],
+        keyFeatures: [
+          "End-to-end recruitment and deployment",
+          "Safety and lean manufacturing practices",
+          "Temporary to permanent staffing models",
+          "On-site coordination for productivity",
+        ],
+        whyChooseUs: [
+          "Proven manufacturing staffing expertise",
+          "Compliance and safety focus",
+          "Rapid, scalable mobilization",
+          "Reliable, high-quality workforce",
+        ],
+      },
+      "Healthcare Services": {
+        overview:
+          "Licensed healthcare professionals supporting Korean hospitals and care facilities.",
+        categories: [
+          "Doctors & Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Healthcare Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing support",
+          "Flexible models — locum, contract, permanent",
+          "Training in patient care and infection control",
+          "Dedicated deployment support",
+        ],
+        whyChooseUs: [
+          "Large pool of licensed professionals",
+          "Experience across care settings",
+          "Quality and compliance driven",
+          "Patient safety and care focus",
+        ],
+      },
+      "Automotive & Electronics": {
+        overview:
+          "Skilled teams for automotive and electronics production, QA, and maintenance.",
+        categories: [
+          "Production & Assembly",
+          "Skilled Trades & Technical",
+          "Quality Control & Inspection",
+          "Maintenance & Support",
+          "Engineering & Design",
+          "Specialized: Automation, PCB, R&D support",
+        ],
+        keyFeatures: [
+          "Full-cycle recruitment and deployment",
+          "Training in safety and lean practices",
+          "Flexible staffing models",
+          "On-site coordination and monitoring",
+        ],
+        whyChooseUs: [
+          "Proven industry track record",
+          "Scalable manpower solutions",
+          "Quality and safety emphasis",
+          "Reliable workforce delivery",
+        ],
+      },
+    },
   },
+  // 8. Malaysia
   {
-    id: 15,
+    id: 8,
+    name: "Malaysia",
+    slug: "malaysia",
+    image: "/images/malaysia.png",
+    details: [
+            "Malaysia's agricultural sector relies on experienced farm workers, plantation managers, and harvest specialists, whom we recruit from Bangladesh.",
+            "Our manufacturing industry staffing solutions help businesses hire skilled machine operators, factory workers, and supply chain managers.",
+            "Domestic helpers, including caregivers and housekeepers, are placed with families and organizations needing home support.",
+      "Additionally, our recruitment of IT and engineering professionals helps Malaysian firms maintain cutting-edge operations in technology and industrial design.",
+        ],
+    list: [
+            "Agricultural Workers",
+            "Manufacturing Industry Staffing",
+            "Domestic Helpers",
+      "Professional IT & Engineering Jobs",
+    ],
+    services: {
+      "Agricultural Workers": {
+        overview:
+          "Skilled, semi-skilled, and unskilled agricultural workforce for plantations, farms, aquaculture, and agribusinesses across Malaysia.",
+        categories: [
+          "Plantation & Farm: Harvesters, pruners, seeders, irrigation assistants",
+          "Specialized: Greenhouse workers, pest control assistants, crop technicians",
+          "Livestock & Poultry: Animal handlers, feeders, dairy assistants",
+          "Aquaculture & Fisheries: Fish farm workers, hatchery assistants, processing staff",
+          "Support & Maintenance: Equipment operators, drivers, general labor",
+        ],
+        keyFeatures: [
+          "Recruitment, mobilization, documentation",
+          "Training in techniques, safety, productivity",
+          "Seasonal, contract, or permanent",
+          "Rapid mobilization and coordination",
+        ],
+        whyChooseUs: [
+          "Experienced agricultural staffing",
+          "Support for plantations and farms",
+          "Compliance and reliability",
+          "Scalable, cost-effective solutions",
+        ],
+      },
+      "Manufacturing Industry Staffing": {
+        overview:
+          "Skilled, semi-skilled, and unskilled manufacturing workforce for electronics, automotive, textiles, food processing, and heavy industries.",
+        categories: [
+          "Production & Assembly: Operators, assemblers, QC, packers",
+          "Skilled Technicians: Maintenance, electricians, welders, fitters",
+          "Supervisory & Technical: Team leaders, shift supervisors, planners, process engineers",
+          "Support: Forklift, warehouse, logistics, helpers",
+          "Quality & Safety: QA/QC inspectors, safety officers",
+        ],
+        keyFeatures: [
+          "Recruitment, mobilization, documentation",
+          "Training in safety, quality, compliance",
+          "Flexible staffing — short/long-term, project-based",
+          "On-site coordination and workforce management",
+        ],
+        whyChooseUs: [
+          "Proven manufacturing staffing in Malaysia",
+          "Quality, reliability, cost-effectiveness",
+          "Rapid mobilization for urgent needs",
+          "Compliance with Malaysian labor and H&S",
+        ],
+      },
+      "Domestic Helpers": {
+        overview:
+          "Trained domestic helpers for households and private employers across Malaysia.",
+        categories: [
+          "Housekeeping & Cleaning",
+          "Childcare Assistants",
+          "Elderly & Special Care",
+          "Cooking & Kitchen Staff",
+          "Combined Domestic Services",
+        ],
+        keyFeatures: [
+          "Recruitment, documentation, and placement",
+          "Training in home management, safety, etiquette",
+          "Live-in, live-out, short-term, long-term",
+          "Verified and pre-screened personnel",
+        ],
+        whyChooseUs: [
+          "Trusted domestic staffing",
+          "Quality and reliability",
+          "Tailored to household needs",
+          "Ongoing support and coordination",
+        ],
+      },
+      "Professional IT & Engineering Jobs": {
+        overview:
+          "Skilled IT and engineering professionals for corporate, technology, manufacturing, and infrastructure sectors in Malaysia.",
+        categories: [
+          "IT: Developers, network, cybersecurity, cloud, data, support",
+          "Engineering: Civil, mechanical, electrical, structural",
+          "Project Roles: PMs, site supervisors, design engineers",
+          "Industrial: Process, quality, safety, maintenance",
+        ],
+        keyFeatures: [
+          "Recruitment, mobilization, documentation",
+          "Certified, experienced professionals",
+          "Project, contract, permanent",
+          "Training in standards and compliance",
+        ],
+        whyChooseUs: [
+          "Large IT and engineering network",
+          "Support across corporate and industrial sectors",
+          "Quality, reliability, and value",
+          "Right talent for the right role",
+        ],
+      },
+    },
+  },
+  // 9. Italy
+  {
+    id: 9,
     name: "Italy",
     slug: "italy",
     image: "/images/italy.png",
@@ -730,11 +874,223 @@ const CountryListData = [
       "Manufacturing & Fashion",
       "Construction Workers",
       "Hospitality & Tourism",
-      "Healthcare Professionals",
+            "Healthcare Professionals",
     ],
+    services: {
+      "Manufacturing & Fashion": {
+        overview:
+          "Skilled and professional workforce for Italy's manufacturing and fashion sectors, supporting production, design, quality, and logistics.",
+        categories: [
+          "Production & Assembly: Garment workers, pattern makers, machine operators",
+          "Skilled Trades: Tailors, seamstresses, textile technicians, cutters",
+          "Quality & Inspection: Inspectors, finishing, packaging",
+          "Design & Development: Fashion designers, CAD designers, product developers",
+          "Maintenance & Support: Machinery operators, maintenance, logistics",
+          "Specialized: Textile engineers, embroidery specialists, sample makers",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and deployment",
+          "Training in production techniques and safety",
+          "Temporary, seasonal, project, or permanent",
+          "Compliance with Italian labor and industry standards",
+        ],
+        whyChooseUs: [
+          "Deep pool of manufacturing/fashion professionals",
+          "Experience across textile and luxury segments",
+          "Scalable, cost-effective solutions",
+          "Quality, reliability, and workforce excellence",
+        ],
+      },
+      "Construction Workers": {
+        overview:
+          "Skilled, semi-skilled, and general construction labor for projects across Italy.",
+        categories: [
+          "Skilled: Masons, carpenters, electricians, plumbers, steel fixers",
+          "Equipment: Crane, excavator, forklift, heavy machinery",
+          "General Labor: Helpers, loaders, site maintenance",
+          "Supervisory & Technical: Supervisors, safety, QA",
+          "Specialized: Welders, painters, HVAC, scaffolding",
+        ],
+        keyFeatures: [
+          "Safety compliance and site protocol training",
+          "Short-term, long-term, project-based",
+          "On-site coordination for productivity",
+          "Compliance with Italian construction standards",
+        ],
+        whyChooseUs: [
+          "Vetted, experienced construction workforce",
+          "Support for residential, commercial, infrastructure",
+          "Cost-effective, scalable delivery",
+          "Reliability and safety focus",
+        ],
+      },
+      "Hospitality & Tourism": {
+        overview:
+          "Customer-focused hospitality personnel for hotels, resorts, restaurants, and travel/tourism operations across Italy.",
+        categories: [
+          "Front Office & Guest Services",
+          "Food & Beverage Services",
+          "Housekeeping & Facility Management",
+          "Tourism & Travel Support",
+          "Events & Conference Support",
+          "Specialized: Spa, fitness, VIP service",
+        ],
+        keyFeatures: [
+          "Training in service, hygiene, safety, and etiquette",
+          "Seasonal, temporary, or permanent placements",
+          "On-site coordination and quality management",
+          "Compliance with Italian hospitality regulations",
+        ],
+        whyChooseUs: [
+          "Experienced hospitality professionals",
+          "Strong presence across venues and regions",
+          "Scalable and cost-efficient staffing",
+          "Professionalism and guest experience focus",
+        ],
+      },
+      "Healthcare Professionals": {
+        overview:
+          "Licensed and experienced healthcare staff for hospitals, clinics, and care facilities across Italy.",
+        categories: [
+          "Doctors & Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing",
+          "Flexible models — locum, contract, permanent",
+          "Training in patient care and infection control",
+          "Dedicated deployment management",
+        ],
+        whyChooseUs: [
+          "Large pool of licensed professionals",
+          "Experience across public and private care",
+          "Quality and compliance orientation",
+          "Focus on patient safety and excellence",
+        ],
+      },
+    },
   },
+  // 10. Poland
   {
-    id: 16,
+    id: 10,
+    name: "Poland",
+    slug: "poland",
+    image: "/images/poland.png",
+    details: [
+      "Poland's warehousing and logistics industry is expanding, requiring forklift operators, inventory managers, and logistics coordinators. Our recruitment services provide top talent for these roles.",
+      "We also specialize in hiring IT and software development professionals, including frontend and backend developers, data analysts, and network administrators.",
+      "The hospitality sector benefits from our recruitment of hotel staff, restaurant workers, and event coordinators.",
+      "For construction projects, we supply bricklayers, plumbers, and construction supervisors to meet industry demands.",
+    ],
+    list: [
+      "Warehouse & Logistics Staffing",
+      "IT & Software Development Recruitment",
+      "Hospitality & Hotel Staffing",
+      "Construction Labor Supply",
+    ],
+    services: {
+      "Warehouse & Logistics Staffing": {
+        overview:
+          "Skilled warehouse and logistics personnel supporting warehousing, distribution, and supply chain operations in Poland.",
+        categories: [
+          "Warehouse Operations: Pickers, packers, inventory clerks",
+          "Material Handling: Forklift, reach truck, pallet jack operators",
+          "Logistics & Distribution: Loaders, unloaders, dispatch coordinators",
+          "Supervisory & Admin: Team leaders, shift supervisors, admins",
+          "Specialized: Quality controllers, stock auditors, customs assistants",
+        ],
+        keyFeatures: [
+          "Safety training and equipment handling",
+          "Seasonal, short-term, and long-term contracts",
+          "On-site coordination for productivity",
+          "Compliance with Polish labor and H&S standards",
+        ],
+        whyChooseUs: [
+          "Vetted, experienced logistics talent",
+          "Experience across e-commerce, retail, manufacturing",
+          "Scalable, cost-effective solutions",
+          "Reliability and operational excellence",
+        ],
+      },
+      "IT & Software Development Recruitment": {
+        overview:
+          "Highly skilled IT professionals for startups to enterprises in Poland.",
+        categories: [
+          "Software Engineering: Frontend, backend, full-stack",
+          "Data & Cloud: Data analysts, cloud engineers, DevOps",
+          "Infrastructure & Support: Sysadmins, support, network",
+          "Project & Product: PMs, product owners, scrum masters",
+          "Specialized: AI/ML, cybersecurity, QA testers",
+        ],
+        keyFeatures: [
+          "Tailored recruitment and technical screening",
+          "Flexible contracts — project or permanent",
+          "Dedicated managers for coordination",
+          "Compliance with Polish and EU standards",
+        ],
+        whyChooseUs: [
+          "Large pool of qualified tech talent",
+          "Expertise in niche and in-demand roles",
+          "Fast, scalable delivery",
+          "Quality, speed, and cost-efficiency",
+        ],
+      },
+      "Hospitality & Hotel Staffing": {
+        overview:
+          "Professional hospitality teams for hotels, resorts, restaurants, and events in Poland.",
+        categories: [
+          "Front Office & Guest Services",
+          "Food & Beverage Operations",
+          "Culinary & Kitchen Support",
+          "Housekeeping & Maintenance",
+          "Event & Conference Support",
+          "Specialized: Spa, fitness, VIP service",
+        ],
+        keyFeatures: [
+          "Customer service, hygiene, and safety training",
+          "Seasonal to permanent staffing models",
+          "On-site coordination and shift management",
+          "Compliance with local hospitality regulations",
+        ],
+        whyChooseUs: [
+          "Experienced hospitality professionals",
+          "Proven service across venues",
+          "Scalable, cost-effective staffing",
+          "Reliability and professionalism",
+        ],
+      },
+      "Construction Labor Supply": {
+        overview:
+          "Skilled and general labor for construction projects across Poland.",
+        categories: [
+          "Skilled Workers: Masons, carpenters, steel fixers, electricians",
+          "Equipment Operators: Crane, excavator, forklift",
+          "General Labor: Helpers, loaders, site support",
+          "Supervisory & Technical: Supervisors, safety, QA",
+          "Specialized: Welders, plumbers, painters, drywall",
+        ],
+        keyFeatures: [
+          "Safety protocols and site compliance",
+          "Short-term, long-term, project-based",
+          "On-site workforce coordination",
+          "Compliance with Polish construction standards",
+        ],
+        whyChooseUs: [
+          "Large, vetted construction talent pool",
+          "Support for infrastructure to residential",
+          "Cost-effective and scalable",
+          "Emphasis on reliability and safety",
+        ],
+      },
+    },
+  },
+  // 11. Czech Republic
+  {
+    id: 11,
     name: "Czech Republic",
     slug: "czech-republic",
     image: "/images/czech_republic.png",
@@ -749,9 +1105,223 @@ const CountryListData = [
       "Healthcare Services",
       "Engineering & Technical",
     ],
+    services: {
+      "Automotive & Manufacturing": {
+        overview:
+          "Skilled and semi-skilled workforce for Czech automotive and manufacturing sectors, supporting production, QC, and maintenance.",
+        categories: [
+          "Production & Assembly: Operators, machine operators, general production",
+          "Skilled Trades: Welders, electricians, mechanics, CNC operators",
+          "Quality & Inspection: Inspectors, testers, calibration",
+          "Maintenance & Support: Mechanics, plant technicians, robotics",
+          "Engineering & Design: Mechanical, electrical, industrial",
+          "Specialized: Automation, R&D support, process optimization",
+        ],
+        keyFeatures: [
+          "Full-cycle recruitment and deployment",
+          "Safety and lean manufacturing training",
+          "Flexible models — temporary, project, permanent",
+          "Compliance with Czech labor and H&S standards",
+        ],
+        whyChooseUs: [
+          "Proven sector expertise",
+          "Scalable manpower solutions",
+          "Quality and safety driven",
+          "Reliable workforce delivery",
+        ],
+      },
+      "IT & Technology": {
+        overview:
+          "Qualified IT professionals for software engineering, infrastructure, cybersecurity, data, and emerging tech in the Czech Republic.",
+        categories: [
+          "Software Engineering",
+          "Data & Cloud",
+          "Infrastructure & Support",
+          "Cybersecurity",
+          "Project & Product",
+          "Specialized: AI/ML, blockchain, automation",
+        ],
+        keyFeatures: [
+          "Tailored recruitment and technical vetting",
+          "Flexible contracts and placements",
+          "Dedicated coordination and support",
+          "Compliance with labor and IT standards",
+        ],
+        whyChooseUs: [
+          "Extensive IT talent network",
+          "Support for startups, SMEs, MNCs",
+          "Scalable, cost-effective delivery",
+          "Focus on innovation and reliability",
+        ],
+      },
+      "Healthcare Services": {
+        overview:
+          "Licensed, experienced healthcare professionals supporting hospitals and care facilities across the Czech Republic.",
+        categories: [
+          "Doctors & Medical Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Healthcare Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing",
+          "Temporary, locum, contract, permanent",
+          "Training in patient care and infection control",
+          "Deployment and workforce management",
+        ],
+        whyChooseUs: [
+          "Large pool of licensed professionals",
+          "Experience in public and private healthcare",
+          "Quality and compliance orientation",
+          "Patient safety and care excellence",
+        ],
+      },
+      "Engineering & Technical": {
+        overview:
+          "Skilled engineering and technical staff supporting manufacturing, construction, infrastructure, and industrial projects in the Czech Republic.",
+        categories: [
+          "Mechanical & Electrical Engineering",
+          "Civil & Structural Engineering",
+          "Industrial & Manufacturing Engineering",
+          "Technical Support & Drafting: CAD, drafters, documentation",
+          "Quality & Safety Engineering",
+          "Specialized: Automation, robotics, R&D",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and placement",
+          "Safety and technical standards training",
+          "Flexible models — project, contract, permanent",
+          "On-site coordination and performance monitoring",
+        ],
+        whyChooseUs: [
+          "Certified, experienced professionals",
+          "Proven support across sectors",
+          "Cost-effective, scalable solutions",
+          "Reliability and technical excellence",
+        ],
+      },
+    },
   },
+  // 12. Hungary
   {
-    id: 17,
+    id: 12,
+    name: "Hungary",
+    slug: "hungary",
+    image: "/images/hungary.png",
+    details: [
+      "Hungary's industrial workforce relies on welders, factory workers, and machine operators. We recruit IT specialists, including programmers and cybersecurity experts, to support Hungary's digital economy.",
+      "In the construction sector, we place civil engineers, project managers, and skilled laborers.",
+      "Our medical recruitment services provide hospitals and clinics with experienced nurses, doctors, and healthcare administrators.",
+    ],
+    list: [
+      "Industrial Workforce Staffing",
+      "IT & Tech Industry Recruitment",
+      "Construction & Civil Engineering",
+      "Medical & Healthcare Professionals",
+    ],
+    services: {
+      "Industrial Workforce Staffing": {
+        overview:
+          "Skilled, semi-skilled, and professional industrial workers supporting manufacturing, production, and industrial operations in Hungary.",
+        categories: [
+          "Production & Assembly: Operators, line workers",
+          "Skilled Trades: Welders, electricians, fitters, CNC operators",
+          "Maintenance & Equipment: Industrial mechanics, machinery operators, plant maintenance",
+          "Quality & Inspection: QA inspectors, testing technicians, process auditors",
+          "Engineering & Technical Support: Industrial and process engineers, R&D support",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and workforce deployment",
+          "Safety and industrial best practices training",
+          "Flexible models — temp, contract, permanent",
+          "On-site coordination and productivity monitoring",
+        ],
+        whyChooseUs: [
+          "Extensive industrial talent pool",
+          "Support across Hungary's industrial sectors",
+          "Scalable, cost-effective staffing",
+          "Quality, safety, and reliability",
+        ],
+      },
+      "IT & Tech Industry Recruitment": {
+        overview:
+          "Qualified IT and technology professionals for software, infrastructure, cybersecurity, data, and emerging tech across Hungary.",
+        categories: [
+          "Software Engineering",
+          "Data & Cloud",
+          "Infrastructure & Support",
+          "Cybersecurity",
+          "Project & Product",
+          "Specialized: AI/ML, blockchain, automation",
+        ],
+        keyFeatures: [
+          "Tailored recruitment and technical vetting",
+          "Flexible hiring models",
+          "Dedicated account coordination",
+          "Compliance with Hungarian labor and IT standards",
+        ],
+        whyChooseUs: [
+          "Large network of IT professionals",
+          "Proven delivery for startups to MNCs",
+          "Scalable and cost-effective",
+          "Innovation and reliability focus",
+        ],
+      },
+      "Construction & Civil Engineering": {
+        overview:
+          "Skilled construction and civil engineering workforce supporting residential, commercial, and infrastructure projects in Hungary.",
+        categories: [
+          "Skilled Construction Workers",
+          "Equipment & Machinery Operators",
+          "General Labor & Site Support",
+          "Civil Engineering Specialists",
+          "Quality & Safety Staff",
+          "Specialized: Welders, HVAC, painters, scaffolding",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and deployment",
+          "Training in site operations and safety",
+          "Flexible staffing models",
+          "Compliance with Hungarian standards",
+        ],
+        whyChooseUs: [
+          "Qualified construction and engineering talent",
+          "Support across diverse projects",
+          "Cost-effective and scalable",
+          "Reliability and safety-first",
+        ],
+      },
+      "Medical & Healthcare Professionals": {
+        overview:
+          "Licensed and experienced healthcare professionals supporting hospitals, clinics, and long-term care facilities across Hungary.",
+        categories: [
+          "Doctors & Medical Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Healthcare Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing",
+          "Flexible staffing — locum, contract, permanent",
+          "Training in patient care and infection control",
+          "Dedicated deployment and workforce management",
+        ],
+        whyChooseUs: [
+          "Extensive healthcare professional network",
+          "Experience across care settings",
+          "Quality and compliance orientation",
+          "Patient safety and care excellence",
+        ],
+      },
+    },
+  },
+  // 13. Slovakia
+  {
+    id: 13,
     name: "Slovakia",
     slug: "slovakia",
     image: "/images/slovakia.svg",
@@ -766,7 +1336,460 @@ const CountryListData = [
       "Healthcare Services",
       "Technical Specialists",
     ],
+    services: {
+      "Automotive Industry": {
+        overview:
+          "Skilled, semi-skilled, and professional personnel for Slovakia's automotive sector across production, QC, maintenance, and engineering.",
+        categories: [
+          "Production & Assembly: Assembly line workers, operators",
+          "Skilled Trades: Welders, electricians, mechanics, CNC operators",
+          "Quality & Inspection: QA inspectors, testing technicians, calibration",
+          "Maintenance & Support: Maintenance staff, industrial mechanics, robotics techs",
+          "Engineering & Design: Mechanical, electrical, automotive engineers",
+          "Specialized: Automation engineers, process optimization, R&D support",
+        ],
+        keyFeatures: [
+          "End-to-end recruitment and deployment",
+          "Safety and lean manufacturing training",
+          "Flexible staffing models",
+          "Compliance with Slovak labor and H&S standards",
+        ],
+        whyChooseUs: [
+          "Large pool of automotive professionals",
+          "Proven expertise in Slovakia's auto sector",
+          "Scalable, cost-effective solutions",
+          "Quality, safety, and reliability",
+        ],
+      },
+      "Manufacturing Workers": {
+        overview:
+          "Skilled, semi-skilled, and general manufacturing workforce for production and operations across Slovakia.",
+        categories: [
+          "Production & Assembly",
+          "Skilled Trades & Technical",
+          "Quality Control & Inspection",
+          "Maintenance & Support",
+          "Engineering & Technical Support",
+          "Specialized: Automation, robotics, safety",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, deployment",
+          "Training in safety and best practices",
+          "Temporary, project, or permanent",
+          "On-site coordination and monitoring",
+        ],
+        whyChooseUs: [
+          "Vetted, experienced manufacturing staff",
+          "Compliance and safety focus",
+          "Rapid mobilization",
+          "Operational reliability",
+        ],
+      },
+      "Healthcare Services": {
+        overview:
+          "Licensed and experienced healthcare personnel supporting hospitals and care facilities in Slovakia.",
+        categories: [
+          "Doctors & Medical Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Healthcare Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing",
+          "Flexible staffing models",
+          "Training in patient care and infection control",
+          "Dedicated deployment support",
+        ],
+        whyChooseUs: [
+          "Extensive healthcare talent pool",
+          "Experience across care settings",
+          "Quality and compliance",
+          "Patient safety focus",
+        ],
+      },
+      "Technical Specialists": {
+        overview:
+          "Highly skilled technical specialists supporting industrial, manufacturing, construction, and engineering projects in Slovakia.",
+        categories: [
+          "Engineering & Design: Mechanical, electrical, civil, industrial",
+          "Industrial & Manufacturing: CNC operators, maintenance technicians, process engineers",
+          "Quality & Safety: QA engineers, safety officers, inspection",
+          "IT & Technical Support: System engineers, automation, support",
+          "Project & Supervisory: Project engineers, supervisors, coordinators",
+          "Specialized: Robotics, R&D, industrial automation",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, placement",
+          "Training and standards compliance",
+          "Project, contract, or permanent",
+          "Performance monitoring and coordination",
+        ],
+        whyChooseUs: [
+          "Certified technical specialists",
+          "Cross-industry support",
+          "Cost-effective and scalable",
+          "Reliability and technical excellence",
+        ],
+      },
+    },
   },
+  // 14. Croatia (added)
+  {
+    id: 14,
+    name: "Croatia",
+    slug: "croatia",
+    image: "/images/croatia.png",
+    details: [
+      "Croatia's tourism and hospitality sector requires skilled staff including hotel workers, restaurant personnel, and tour service professionals.",
+      "The construction industry benefits from skilled laborers such as masons, electricians, and equipment operators.",
+      "Manufacturing and logistics sectors require machine operators, warehouse staff, and quality control personnel.",
+    ],
+    list: [
+      "Hospitality & Tourism",
+      "Construction Workers",
+      "Manufacturing & Logistics",
+      "Healthcare Professionals",
+    ],
+  },
+  // 15. Bulgaria
+  {
+    id: 15,
+    name: "Bulgaria",
+    slug: "bulgaria",
+    image: "/images/bulgaria.png",
+    details: [
+            "Bulgaria's industrial and manufacturing sectors require a steady supply of skilled labor, including machinists, production line workers, and industrial supervisors.",
+            "We recruit experienced agricultural workers for farming and food production industries.",
+            "The construction and engineering sector benefits from our staffing of project managers, civil engineers, and skilled laborers.",
+      "Security services are essential for businesses, and we provide trained security officers, bouncers, and personal protection specialists.",
+        ],
+    list: [
+            "Manufacturing & Industrial Workers",
+            "Agricultural Labor",
+            "Construction & Engineering Experts",
+      "Security & Protection Services",
+    ],
+    services: {
+      "Manufacturing & Industrial Workers": {
+        overview:
+          "We provide skilled, semi-skilled, and unskilled workers to meet manufacturing and industrial workforce demands across Bulgaria.",
+        categories: [
+          "Skilled: Machine operators, electricians, welders, technicians, assemblers",
+          "Semi-Skilled & Helpers: Production assistants, general laborers, material handlers",
+          "Heavy Equipment: Forklift, crane, machinery operators",
+          "Supervisory & Technical: Team leaders, quality inspectors, process engineers",
+          "Support Staff: Warehouse staff, logistics assistants, maintenance workers, cleaners",
+        ],
+        keyFeatures: [
+          "Work permits and documentation support",
+          "Safety, quality, and compliance training",
+          "Flexible staffing models",
+          "Rapid deployment for urgent needs",
+        ],
+        whyChooseUs: [
+          "Qualified manufacturing workforce",
+          "Experience supporting factories and production lines",
+          "Cost-effective, reliable staffing",
+          "Compliance with Bulgarian laws and H&S",
+        ],
+      },
+      "Agricultural Labor": {
+        overview:
+          "Agricultural workers for farms, plantations, orchards, vineyards, and agro-industrial operations in Bulgaria.",
+        categories: [
+          "Field & Farm: Planters, harvesters, seeders, irrigation assistants",
+          "Specialized: Greenhouse workers, horticulturists, crop technicians, pest control",
+          "Livestock & Poultry: Handlers, feeders, dairy assistants",
+          "Support & Maintenance: Equipment operators, drivers, warehouse assistants",
+          "Aquaculture & Fisheries: Hatchery and processing staff (as required)",
+        ],
+        keyFeatures: [
+          "End-to-end recruitment and mobilization",
+          "Training in agricultural techniques and safety",
+          "Seasonal, contract, or permanent placements",
+          "Rapid mobilization for large-scale needs",
+        ],
+        whyChooseUs: [
+          "Experienced agricultural labor pool",
+          "Support for farms and agro-industrial operations",
+          "Regulatory compliance and reliability",
+          "Tailored solutions by project needs",
+        ],
+      },
+      "Construction & Engineering Experts": {
+        overview:
+          "Skilled construction and engineering professionals for infrastructure, residential, commercial, and industrial projects in Bulgaria.",
+        categories: [
+          "Civil & Structural Engineers: Site, design, structural, PMs",
+          "Mechanical & Electrical Engineers: MEP, maintenance, HVAC, electrical",
+          "Construction Specialists: Foremen, QS, coordinators, supervisors",
+          "Technical & Skilled Workers: Welders, masons, carpenters, electricians, plumbers, operators",
+          "Support & Safety: Quality inspectors, safety officers, logistics",
+        ],
+        keyFeatures: [
+          "Recruitment, documentation, and work permit assistance",
+          "Access to certified and experienced professionals",
+          "Flexible staffing options",
+          "Training in standards, safety, and compliance",
+        ],
+        whyChooseUs: [
+          "Database of qualified construction and engineering experts",
+          "Experience with mega projects and leading contractors",
+          "Quality, reliability, and cost-effective delivery",
+          "Project-aligned talent matching",
+        ],
+      },
+      "Security & Protection Services": {
+        overview:
+          "Trained and professional security personnel for corporate, industrial, residential, event, and government security in Bulgaria.",
+        categories: [
+          "Corporate & Commercial: Security officers, reception guards, access control",
+          "Industrial & Facility: Supervisors, safety officers, asset protection",
+          "Residential & Private: Community guards, bodyguards, personal protection",
+          "Event & Crowd Management: Event officers, crowd control, VIP protection",
+          "Specialized: CCTV operators, alarm response, emergency teams",
+        ],
+        keyFeatures: [
+          "Background checks and documentation support",
+          "Training in safety, emergency response, client protocols",
+          "Short-term, long-term, or project-based",
+          "Compliance with security regulations and labor laws",
+        ],
+        whyChooseUs: [
+          "Vetted and trained personnel",
+          "Experience across corporate, industrial, and events",
+          "Professional and reliable services",
+          "Cost-effective, tailored solutions",
+        ],
+      },
+    },
+  },
+  // 16. Romania
+  {
+    id: 16,
+    name: "Romania",
+    slug: "romania",
+    image: "/images/romania.png",
+    details: [
+      "Romania's growing economy demands general laborers, including factory workers, warehouse staff, and logistics personnel. We provide healthcare professionals, including nurses and medical technicians, to hospitals and clinics.",
+      "The construction industry in Romania is supported by our recruitment of skilled masons, steel fixers, and crane operators.",
+      "Our IT & technical worker recruitment services help businesses hire software developers, IT specialists, and system administrators.",
+    ],
+    list: [
+      "General Labor Recruitment",
+      "Healthcare Professionals",
+      "Construction Industry Staffing",
+      "IT & Technical Workers",
+    ],
+    services: {
+      "General Labor Recruitment": {
+        overview:
+          "Reliable skilled, semi-skilled, and unskilled labor for construction, manufacturing, logistics, agriculture, and industrial sectors in Romania.",
+        categories: [
+          "Skilled: Electricians, plumbers, carpenters, welders, masons, machine operators",
+          "Semi-Skilled: Site assistants, helpers, general production",
+          "Unskilled: Cleaners, warehouse assistants, general labor",
+          "Support: Drivers, logistics, facility maintenance",
+          "Supervisory: Team leaders, foremen, quality inspectors, safety officers",
+        ],
+        keyFeatures: [
+          "End-to-end recruitment and mobilization",
+          "Pre-screened and experienced workforce",
+          "Flexible staffing — short/long-term or project-based",
+          "Training in safety and operational compliance",
+        ],
+        whyChooseUs: [
+          "Extensive database across multiple industries",
+          "Experience with large-scale projects",
+          "Quality and cost-effective solutions",
+          "Rapid mobilization for urgent needs",
+        ],
+      },
+      "Healthcare Professionals": {
+        overview:
+          "Qualified, certified healthcare professionals for hospitals, clinics, and care facilities in Romania.",
+        categories: [
+          "Doctors & Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Support Staff",
+          "Administrative & Management",
+        ],
+        keyFeatures: [
+          "Onboarding including documentation and work permits",
+          "Licensed and certified personnel",
+          "Flexible placements — full-time, contract, locum",
+          "Training in Romanian healthcare standards",
+        ],
+        whyChooseUs: [
+          "Strong healthcare professional network",
+          "Experience with public and private institutions",
+          "Quality and compliance focus",
+          "Tailored, cost-effective solutions",
+        ],
+      },
+      "Construction Industry Staffing": {
+        overview:
+          "Skilled, semi-skilled, and unskilled workers for infrastructure, commercial, and residential projects in Romania.",
+        categories: [
+          "Skilled: Carpenters, masons, electricians, plumbers, welders, steel fixers, painters",
+          "Semi-Skilled: General laborers, site assistants, material handlers",
+          "Heavy Equipment: Crane, excavator, forklift, truck drivers",
+          "Technical & Supervisory: Supervisors, engineers, quality inspectors",
+          "Support & Maintenance: Cleaners, camp maintenance, logistics",
+        ],
+        keyFeatures: [
+          "End-to-end recruitment and work permits",
+          "Safety, quality, and compliance training",
+          "Flexible staffing options",
+          "Rapid deployment for urgent needs",
+        ],
+        whyChooseUs: [
+          "Qualified and experienced construction workforce",
+          "Support for mega-projects and contractors",
+          "Cost-effective and reliable",
+          "Compliance with Romanian laws and H&S",
+        ],
+      },
+      "IT & Technical Workers": {
+        overview:
+          "Qualified IT and technical professionals supporting corporate, industrial, and infrastructure clients in Romania.",
+        categories: [
+          "IT: Developers, mobile, network, cybersecurity, cloud, data",
+          "Technical & Engineering: Civil, mechanical, electrical, industrial",
+          "Supervisory: Project supervisors, site engineers, QA",
+          "Technicians: Electronics, machinery, process operations",
+        ],
+        keyFeatures: [
+          "Work permit and documentation support",
+          "Certified and experienced professionals",
+          "Contract, project-based, or permanent models",
+          "Training in standards, safety, and compliance",
+        ],
+        whyChooseUs: [
+          "Large pool of skilled IT/technical workers",
+          "Experience serving corporate and industrial clients",
+          "Quality, reliability, and cost-effectiveness",
+          "Effective skill-matching to project needs",
+        ],
+      },
+    },
+  },
+  // 17. Moldova
+  {
+    id: 17,
+    name: "Moldova",
+    slug: "moldova",
+    image: "/images/moldova.png",
+    details: [
+            "Moldova's agriculture sector depends on laborers, greenhouse workers, and agricultural technicians. We recruit skilled industrial workers, including machine operators and production supervisors.",
+            "Our IT & engineering staffing solutions provide experts in software development, network security, and electrical engineering.",
+      "Financial institutions benefit from our recruitment of accountants, payroll specialists, and administrative professionals.",
+        ],
+    list: [
+            "Agriculture & Farming Labor",
+            "Skilled Industrial Workers",
+            "IT & Engineering Jobs",
+      "Financial & Administrative Staffing",
+    ],
+    services: {
+      "Agriculture & Farming Labor": {
+        overview:
+          "Skilled, semi-skilled, and general agricultural labor supporting farms, agribusinesses, and greenhouse operations across Moldova.",
+        categories: [
+          "Crop Cultivation & Harvesting: Planters, pickers, seasonal workers",
+          "Greenhouse & Horticulture: Greenhouse assistants, floriculture, nursery",
+          "Livestock & Dairy: Animal caretakers, milkers, feed handlers",
+          "Equipment & Machinery: Tractor drivers, irrigation operators, maintenance",
+          "Specialized: Agronomists, farm supervisors, quality inspectors",
+        ],
+        keyFeatures: [
+          "Recruitment, vetting, placement",
+          "Training in safety, crop handling, modern techniques",
+          "Seasonal, short-term, long-term",
+          "On-site coordination and productivity",
+        ],
+        whyChooseUs: [
+          "Experienced agricultural staffing",
+          "Support for farms and cooperatives",
+          "Scalable, cost-effective solutions",
+          "Regulatory compliance focus",
+        ],
+      },
+      "Skilled Industrial Workers": {
+        overview:
+          "Qualified industrial workers supporting manufacturing, production, and maintenance operations across Moldova.",
+        categories: [
+          "Production & Assembly: Machine operators, line workers, assemblers",
+          "Maintenance & Technical: Mechanics, electricians, maintenance techs",
+          "Quality & Inspection: QA inspectors, testers, packaging controllers",
+          "Warehouse & Logistics: Forklift, loaders, material handlers",
+          "Specialized: CNC operators, welders, industrial painters",
+        ],
+        keyFeatures: [
+          "Recruitment, assessment, and placement",
+          "Safety procedures and equipment handling training",
+          "Temporary, project, or permanent",
+          "On-site coordination and performance monitoring",
+        ],
+        whyChooseUs: [
+          "Vetted industrial workforce",
+          "Support for small to large-scale operations",
+          "Cost-effective and scalable",
+          "Quality and productivity driven",
+        ],
+      },
+      "IT & Engineering Jobs": {
+        overview:
+          "Skilled IT and engineering professionals for businesses and industry projects in Moldova.",
+        categories: [
+          "IT: Software developers, sysadmins, support",
+          "Data & Cloud: Data analysts, cloud engineers, DevOps",
+          "Engineering & Design: Mechanical, electrical, civil",
+          "Project & Operations: PMs, process engineers, supervisors",
+          "Specialized: AI/ML, cybersecurity, CAD, QA",
+        ],
+        keyFeatures: [
+          "Tailored recruitment and skill-matching",
+          "Technical assessments and background checks",
+          "Contract, project-based, permanent",
+          "Dedicated coordinators and compliance",
+        ],
+        whyChooseUs: [
+          "Network of qualified IT/engineering talent",
+          "Support for businesses and industrial projects",
+          "Scalable, cost-effective staffing",
+          "Focus on quality, innovation, and reliability",
+        ],
+      },
+      "Financial & Administrative Staffing": {
+        overview:
+          "Skilled financial and administrative professionals supporting corporate, government, and institutional operations in Moldova.",
+        categories: [
+          "Finance & Accounting: Accountants, bookkeepers, payroll, auditors",
+          "Banking & Financial Services: Analysts, loan officers, customer service",
+          "Administrative & Office: Office assistants, receptionists, executive secretaries",
+          "Management & Coordination: Office managers, coordinators, operations support",
+          "Specialized: Tax consultants, compliance, procurement",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and placement",
+          "Verified qualifications and language skills",
+          "Temporary, contract, permanent",
+          "Scaling support for seasonal/project workloads",
+        ],
+        whyChooseUs: [
+          "Qualified finance and admin professionals",
+          "Corporate, governmental, and non-profit support",
+          "Cost-effective and scalable",
+          "Professionalism, accuracy, operational excellence",
+        ],
+      },
+    },
+  },
+  // 18. Serbia
   {
     id: 18,
     name: "Serbia",
@@ -783,7 +1806,105 @@ const CountryListData = [
       "IT & Technology",
       "Healthcare Services",
     ],
+    services: {
+      "Manufacturing Workers": {
+        overview:
+          "Skilled, semi-skilled, and general manufacturing workforce to support production and operations in Serbia.",
+        categories: [
+          "Production & Assembly: Operators, line workers",
+          "Skilled Trades: Welders, electricians, fitters, CNC",
+          "Quality & Inspection: QA inspectors, testers, packaging",
+          "Maintenance & Support: Mechanics, plant technicians",
+          "Engineering & Technical: Process and industrial engineers",
+          "Specialized: Automation, robotics, safety",
+        ],
+        keyFeatures: [
+          "End-to-end recruitment and deployment",
+          "Training in safety and best practices",
+          "Flexible models — temp, project, permanent",
+          "On-site coordination and monitoring",
+        ],
+        whyChooseUs: [
+          "Experienced manufacturing staffing",
+          "Compliance with Serbian regulations",
+          "Scalable and cost-effective",
+          "Reliable workforce supply",
+        ],
+      },
+      "Construction Labor": {
+        overview:
+          "Skilled, semi-skilled, and general construction labor for residential, commercial, and infrastructure projects in Serbia.",
+        categories: [
+          "Skilled Workers: Masons, carpenters, electricians, plumbers, steel fixers",
+          "Equipment Operators: Crane, excavator, forklift, heavy machinery",
+          "General Labor: Helpers, loaders, site maintenance",
+          "Supervisory & Technical: Supervisors, safety, QA",
+          "Specialized: Welders, painters, HVAC, scaffolding",
+        ],
+        keyFeatures: [
+          "Safety and site protocol training",
+          "Short-term, long-term, project-based",
+          "On-site workforce coordination",
+          "Compliance with Serbian construction standards",
+        ],
+        whyChooseUs: [
+          "Large pool of vetted construction workers",
+          "Support for diverse construction projects",
+          "Cost-effective and scalable",
+          "Reliability and safety focus",
+        ],
+      },
+      "IT & Technology": {
+        overview:
+          "Qualified IT professionals for software, infrastructure, cybersecurity, data, and emerging tech roles across Serbia.",
+        categories: [
+          "Software Engineering",
+          "Data & Cloud",
+          "Infrastructure & Support",
+          "Cybersecurity",
+          "Project & Product",
+          "Specialized: AI/ML, blockchain, automation",
+        ],
+        keyFeatures: [
+          "Tailored recruitment and technical vetting",
+          "Flexible contracts and placements",
+          "Dedicated coordination and support",
+          "Compliance with Serbian labor and IT standards",
+        ],
+        whyChooseUs: [
+          "Extensive IT talent network",
+          "Proven support for startups to MNCs",
+          "Scalable, cost-effective delivery",
+          "Focus on innovation and reliability",
+        ],
+      },
+      "Healthcare Services": {
+        overview:
+          "Licensed and experienced healthcare professionals supporting hospitals and care facilities across Serbia.",
+        categories: [
+          "Doctors & Medical Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Healthcare Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing",
+          "Flexible staffing models",
+          "Training in patient care and infection control",
+          "Dedicated deployment support",
+        ],
+        whyChooseUs: [
+          "Large pool of licensed professionals",
+          "Experience across care settings",
+          "Quality and compliance orientation",
+          "Patient safety and care excellence",
+        ],
+      },
+    },
   },
+  // 19. North Macedonia
   {
     id: 19,
     name: "North Macedonia",
@@ -800,7 +1921,105 @@ const CountryListData = [
       "Healthcare Services",
       "Technical Specialists",
     ],
+    services: {
+      "Manufacturing & Textile": {
+        overview:
+          "Skilled, semi-skilled, and professional workforce for manufacturing and textile operations across North Macedonia.",
+        categories: [
+          "Production & Assembly: Operators, line workers",
+          "Textile & Garment: Seamstresses, tailors, cutters, pattern makers",
+          "Quality & Finishing: Inspectors, finishing, packaging",
+          "Maintenance & Technical: Equipment maintenance, technicians",
+          "Engineering & Design Support: Textile engineers, CAD designers",
+          "Specialized: Embroidery, sample makers, supervisors",
+        ],
+        keyFeatures: [
+          "End-to-end recruitment and placement",
+          "Training in production, quality, and safety",
+          "Seasonal, project-based, or permanent",
+          "Compliance with local labor standards",
+        ],
+        whyChooseUs: [
+          "Experienced textile and manufacturing staffing",
+          "Support across factories and workshops",
+          "Scalable and cost-effective",
+          "Quality, safety, and reliability",
+        ],
+      },
+      "Construction Workers": {
+        overview:
+          "Skilled, semi-skilled, and general construction workers for residential, commercial, and infrastructure projects in North Macedonia.",
+        categories: [
+          "Skilled Workers: Masons, carpenters, electricians, plumbers, steel fixers",
+          "Equipment Operators: Crane, excavator, forklift, heavy machinery",
+          "General Labor: Helpers, loaders, site maintenance",
+          "Supervisory & Technical: Supervisors, safety, QA",
+          "Specialized: Welders, painters, HVAC, scaffolding",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and deployment",
+          "Safety protocols and site compliance",
+          "Short-term, long-term, or project-based",
+          "On-site coordination and productivity management",
+        ],
+        whyChooseUs: [
+          "Large pool of vetted construction workers",
+          "Support across diverse project types",
+          "Cost-effective and scalable",
+          "Reliability and safety focus",
+        ],
+      },
+      "Healthcare Services": {
+        overview:
+          "Licensed and experienced healthcare professionals supporting hospitals and care facilities across North Macedonia.",
+        categories: [
+          "Doctors & Medical Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Healthcare Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing",
+          "Flexible staffing models",
+          "Training in patient care and infection control",
+          "Deployment and workforce management",
+        ],
+        whyChooseUs: [
+          "Extensive pool of licensed professionals",
+          "Experience across care settings",
+          "Quality and compliance orientation",
+          "Patient safety and care excellence",
+        ],
+      },
+      "Technical Specialists": {
+        overview:
+          "Highly skilled technical specialists supporting industrial, manufacturing, construction, and engineering projects in North Macedonia.",
+        categories: [
+          "Engineering & Design: Mechanical, electrical, civil, industrial",
+          "Industrial & Manufacturing: CNC operators, maintenance technicians, process engineers",
+          "Quality & Safety: QA engineers, safety officers, inspection",
+          "IT & Technical Support: System engineers, automation, technical support",
+          "Project & Supervisory: Project engineers, supervisors, site coordinators",
+          "Specialized: Robotics, R&D, industrial automation",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and placement",
+          "Training and standards compliance",
+          "Project, contract, or permanent",
+          "Performance monitoring and coordination",
+        ],
+        whyChooseUs: [
+          "Certified technical specialists",
+          "Cross-industry project support",
+          "Scalable and cost-effective",
+          "Reliability and technical excellence",
+        ],
+      },
+    },
   },
+  // 20. Belarus
   {
     id: 20,
     name: "Belarus",
@@ -817,7 +2036,105 @@ const CountryListData = [
       "Healthcare Services",
       "Industrial Specialists",
     ],
+    services: {
+      "Manufacturing Workers": {
+        overview:
+          "Skilled, semi-skilled, and general manufacturing workforce supporting production and operations across Belarus.",
+        categories: [
+          "Production & Assembly: Operators, line workers",
+          "Skilled Trades: Welders, electricians, mechanics, CNC",
+          "Quality & Inspection: QA inspectors, testers, packaging",
+          "Maintenance & Support: Industrial mechanics, plant techs",
+          "Engineering & Technical: Process and industrial engineers",
+        ],
+        keyFeatures: [
+          "Full-cycle recruitment and deployment",
+          "Safety and production best practices",
+          "Flexible staffing models",
+          "Compliance with Belarusian regulations",
+        ],
+        whyChooseUs: [
+          "Experienced manufacturing staffing",
+          "Support for diverse industries",
+          "Scalable and cost-effective",
+          "Reliable workforce supply",
+        ],
+      },
+      "IT & Technology": {
+        overview:
+          "Qualified IT professionals for software, infrastructure, cybersecurity, data, and emerging tech in Belarus.",
+        categories: [
+          "Software Engineering",
+          "Data & Cloud",
+          "Infrastructure & Support",
+          "Cybersecurity",
+          "Project & Product",
+          "Specialized: AI/ML, blockchain, automation",
+        ],
+        keyFeatures: [
+          "Tailored recruitment and technical vetting",
+          "Flexible contracts and placements",
+          "Dedicated coordination and support",
+          "Compliance with labor and IT standards",
+        ],
+        whyChooseUs: [
+          "Extensive IT talent network",
+          "Support for startups, SMEs, MNCs",
+          "Scalable, cost-effective delivery",
+          "Innovation and reliability focus",
+        ],
+      },
+      "Healthcare Services": {
+        overview:
+          "Licensed and experienced healthcare professionals for hospitals and care facilities across Belarus.",
+        categories: [
+          "Doctors & Medical Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Healthcare Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing",
+          "Flexible staffing models",
+          "Training in patient care and infection control",
+          "Dedicated deployment support",
+        ],
+        whyChooseUs: [
+          "Licensed healthcare talent pool",
+          "Experience across care settings",
+          "Quality and compliance orientation",
+          "Patient safety and care focus",
+        ],
+      },
+      "Industrial Specialists": {
+        overview:
+          "Highly skilled industrial specialists for manufacturing, production, and industrial operations in Belarus.",
+        categories: [
+          "Engineering & Technical: Mechanical, electrical, civil, industrial",
+          "Production & Process: CNC operators, machine technicians, process engineers",
+          "Maintenance & Equipment: Industrial mechanics, machinery operators, plant maintenance",
+          "Quality & Safety: QA engineers, safety officers, inspection",
+          "Project & Supervisory: Project engineers, supervisors, site coordinators",
+          "Specialized: Automation engineers, robotics techs, R&D support",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and placement",
+          "Training in safety and best practices",
+          "Flexible models — project, contract, permanent",
+          "On-site workforce coordination",
+        ],
+        whyChooseUs: [
+          "Certified industrial specialists",
+          "Cross-sector support",
+          "Cost-effective and scalable",
+          "Reliability and technical excellence",
+        ],
+      },
+    },
   },
+  // 21. Albania
   {
     id: 21,
     name: "Albania",
@@ -834,6 +2151,103 @@ const CountryListData = [
       "Hospitality Services",
       "Healthcare Professionals",
     ],
+    services: {
+      "Construction Workers": {
+        overview:
+          "Skilled, semi-skilled, and general construction workers for residential, commercial, and infrastructure projects across Albania.",
+        categories: [
+          "Skilled: Masons, carpenters, electricians, plumbers, steel fixers",
+          "Equipment & Machinery: Crane, excavator, forklift, heavy machinery",
+          "General Labor: Helpers, loaders, site maintenance",
+          "Supervisory & Technical: Supervisors, safety, QA",
+          "Specialized: Welders, painters, HVAC, scaffolding",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, deployment",
+          "Safety and site protocol training",
+          "Short-term, long-term, or project-based",
+          "Compliance with Albanian construction standards",
+        ],
+        whyChooseUs: [
+          "Experienced construction workforce",
+          "Support for diverse project types",
+          "Scalable and cost-effective",
+          "Reliability and safety focus",
+        ],
+      },
+      "Manufacturing Labor": {
+        overview:
+          "Skilled, semi-skilled, and general manufacturing workforce supporting production and operations across Albania.",
+        categories: [
+          "Production & Assembly",
+          "Skilled Trades & Technical",
+          "Quality Control & Inspection",
+          "Maintenance & Support",
+          "Engineering & Technical Support",
+          "Specialized: Automation, robotics, safety",
+        ],
+        keyFeatures: [
+          "Recruitment, screening, and deployment",
+          "Training in safety and best practices",
+          "Flexible staffing models",
+          "On-site coordination and monitoring",
+        ],
+        whyChooseUs: [
+          "Qualified and experienced manufacturing staff",
+          "Compliance with labor regulations",
+          "Rapid mobilization",
+          "Operational reliability",
+        ],
+      },
+      "Hospitality Services": {
+        overview:
+          "Professional hospitality teams supporting hotels, resorts, restaurants, and tourism facilities across Albania.",
+        categories: [
+          "Hotel & Accommodation: Front desk, housekeeping, concierge, reception",
+          "Food & Beverage: Chefs, cooks, waiters, bartenders, kitchen assistants",
+          "Events & Banquets: Coordinators, banquet staff, catering",
+          "Management & Supervisory: Hotel and restaurant managers, floor supervisors",
+          "Tourism & Guest Services: Tour guides, guest relations, travel coordinators",
+          "Specialized: Spa therapists, wellness instructors, entertainment",
+        ],
+        keyFeatures: [
+          "Recruitment, training, and placement",
+          "Seasonal, project-based, or permanent",
+          "On-site coordination for quality service",
+          "Compliance with hospitality standards",
+        ],
+        whyChooseUs: [
+          "Experienced hospitality staffing",
+          "Support for venues and tourism businesses",
+          "Scalable and cost-effective",
+          "Commitment to guest experience",
+        ],
+      },
+      "Healthcare Professionals": {
+        overview:
+          "Licensed, trained healthcare professionals for hospitals, clinics, and care facilities across Albania.",
+        categories: [
+          "Doctors & Medical Specialists",
+          "Nursing & Patient Care",
+          "Allied Health",
+          "Clinical & Laboratory Support",
+          "Healthcare Support Staff",
+          "Specialized: Pharmacists, dental assistants, EMTs",
+        ],
+        keyFeatures: [
+          "Credential verification and licensing",
+          "Flexible models — locum, contract, permanent",
+          "Training in patient care and infection control",
+          "Deployment and workforce management",
+        ],
+        whyChooseUs: [
+          "Licensed healthcare talent pool",
+          "Experience across care facilities",
+          "Quality and compliance orientation",
+          "Patient safety and care excellence",
+        ],
+      },
+    },
   },
 ];
 export { CountryListData, DemoData };

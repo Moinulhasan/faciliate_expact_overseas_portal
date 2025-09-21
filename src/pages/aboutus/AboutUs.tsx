@@ -47,7 +47,7 @@ export default function AboutUs() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 animate-fade-in leading-tight">
               About
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
-                Facilitate Expat
+                Facilitate Expat Overseas Limited
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed animate-fade-in delay-100">
@@ -66,14 +66,14 @@ export default function AboutUs() {
             Your Trusted Partner for Global Success
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            At Facilitate Expat, we are more than just a consultancy firm. We
-            are your dedicated partners in achieving international success,
-            providing comprehensive visa and travel services that open doors to
-            global opportunities.
+            At Facilitate Expat Overseas Limited, we are more than just a
+            consultancy firm. We are your dedicated partners in achieving
+            international success, providing comprehensive visa and travel
+            services that open doors to global opportunities.
           </p>
-        </div>
+      </div>
 
-        {/* Mission & Vision Section */}
+      {/* Mission & Vision Section */}
         <div className="grid lg:grid-cols-2 gap-16 mb-24">
           <div className="scroll-fade-in">
             <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 h-full">
@@ -81,7 +81,7 @@ export default function AboutUs() {
                 <Target size={40} className="text-blue-600" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Our Mission
+              Our Mission
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
                 To empower individuals worldwide by providing expert visa
@@ -98,7 +98,7 @@ export default function AboutUs() {
                 <Eye size={40} className="text-purple-600" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Our Vision
+              Our Vision
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
                 To be the global leader in visa consultancy and international
@@ -231,28 +231,28 @@ export default function AboutUs() {
               <div key={index} className="scroll-fade-in">
                 <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
                   <div className="text-white">{stat.icon}</div>
-                </div>
+            </div>
                 <div className="text-4xl font-bold text-white mb-2">
                   {stat.number}
-                </div>
+            </div>
                 <div className="text-blue-100">{stat.label}</div>
-              </div>
+            </div>
             ))}
+            </div>
           </div>
         </div>
-      </div>
 
       {/* Why Choose Us */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center mb-16">
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Why Choose Facilitate Expat?
+            Why Choose Facilitate Expat Overseas Limited?
           </h3>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We stand out from the competition with our unique approach and
             proven track record
           </p>
-        </div>
+      </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
@@ -329,9 +329,9 @@ export default function AboutUs() {
             <button className="inline-flex items-center px-10 py-5 border-2 border-white text-white rounded-xl hover:bg-white/10 transition-all font-semibold">
               <Users size={22} className="mr-3" />
               Contact Our Team
-            </button>
-          </div>
+          </button>
         </div>
+      </div>
       </div>
 
       {/* Get In Touch Section */}

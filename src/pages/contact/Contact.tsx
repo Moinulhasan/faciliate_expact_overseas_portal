@@ -41,9 +41,7 @@ export default function Contact() {
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 animate-fade-in leading-tight">
               Let's Start Your
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
-                Journey Together
-              </span>
+              <span className="block text-blue-200">Journey Together</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed animate-fade-in delay-100">
               Ready to take the next step? Our expert team is here to guide you

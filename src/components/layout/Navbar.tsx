@@ -36,7 +36,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center">
               <img
                 src="/images/logo.svg"
-                alt="Facilitate Expat Logo"
+                alt="Facilitate Expat Overseas Limited Logo"
                 className="h-16 w-auto"
               />
             </Link>
