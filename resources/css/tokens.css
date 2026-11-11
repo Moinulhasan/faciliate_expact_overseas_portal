@@ -1,0 +1,44 @@
+/* Measured from facilitatexpat.com :root on 2026-11-11 — keep the sites siblings. */
+@theme {
+  --font-sans: "Geist Variable", "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Light surfaces */
+  --color-bg: #f6f8f5;
+  --color-surface: #ffffff;
+  --color-surface-2: #edf3ec;
+  --color-line: #dce6da;
+
+  /* Text */
+  --color-ink: #0b1a12;
+  --color-muted: #475950;
+  --color-faint: #57695f;
+
+  /* Brand */
+  --color-brand: #1c7949;
+  --color-brand-hi: #1f8550;
+  --color-brand-lo: #155c37;
+  --color-cta: #73bf44;
+  --color-cta-hi: #a6db80;
+  --color-wa: #25d366;
+
+  /* Night (dark sections) */
+  --color-night: #06120d;
+  --color-night-2: #0d1f17;
+  --color-night-line: #264032;
+  --color-night-ink: #eef5f0;
+  --color-night-muted: #a9bdb1;
+
+  --color-danger: #b42318;
+  --color-warning: #b45309;
+
+  --radius-card: 24px;
+  --radius-panel: 28px;
+  --radius-item: 18px;
+  --radius-tile: 14px;
+
+  --shadow-card: 0 1px 2px rgba(10, 15, 36, 0.05), 0 16px 40px rgba(10, 15, 36, 0.08);
+  --shadow-cta: 0 8px 24px -10px rgba(28, 121, 73, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  --shadow-cta-hover: 0 14px 32px -10px rgba(28, 121, 73, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

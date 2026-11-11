@@ -1,0 +1,40 @@
+import {
+  Briefcase,
+  Building2,
+  Car,
+  Cpu,
+  Factory,
+  Flame,
+  GraduationCap,
+  HeartPulse,
+  Scissors,
+  Shield,
+  ShoppingBag,
+  Sparkles,
+  Sprout,
+  Truck,
+  UtensilsCrossed,
+  Wrench,
+  type LucideIcon,
+} from "lucide-react";
+
+export const industryIcons: Record<string, LucideIcon> = {
+  construction: Building2,
+  "oil-gas": Flame,
+  mep: Wrench,
+  "engineering-technical": Cpu,
+  manufacturing: Factory,
+  agriculture: Sprout,
+  hospitality: UtensilsCrossed,
+  healthcare: HeartPulse,
+  "beauty-wellness": Scissors,
+  education: GraduationCap,
+  security: Shield,
+  "facility-management": Sparkles,
+  "transport-logistics": Truck,
+  drivers: Car,
+  retail: ShoppingBag,
+  "office-admin": Briefcase,
+};
+
+export const iconFor = (slug: string): LucideIcon => industryIcons[slug] ?? Building2;

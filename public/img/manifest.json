@@ -1,0 +1,26 @@
+{
+  "industries/construction": {
+    "width": 800,
+    "height": 586,
+    "src": "/img/industries/construction-800.webp",
+    "avif": "/img/industries/construction-480.avif 480w, /img/industries/construction-800.avif 800w",
+    "webp": "/img/industries/construction-480.webp 480w, /img/industries/construction-800.webp 800w",
+    "blur": "data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAACwBACdASoYABIAPu1uq1EppiOiqAqpMB2JQBOgAby2wfJ/iluqRS1TSbD4TdsAAP7adXxFsEsza4UWAkExBoUEAy4vv4mvvnGO2dvdKWXqV96iyVdsXTzVmbrO5Xyv26m4R7dTL/RqKobLbrLjca9OH/CNhkuJothMANXa4uXtsbytGWZPapczBHw4Nv4A1t2W6TT4NUAdDtuIBs30LZu80AgfQbs9sgQNb0JUTeRJ5x73lTtzNMAA"
+  },
+  "industries/oil-gas": {
+    "width": 800,
+    "height": 800,
+    "src": "/img/industries/oil-gas-800.webp",
+    "avif": "/img/industries/oil-gas-480.avif 480w, /img/industries/oil-gas-800.avif 800w",
+    "webp": "/img/industries/oil-gas-480.webp 480w, /img/industries/oil-gas-800.webp 800w",
+    "blur": "data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAABwBQCdASoYABgAPu1urlIppiQiqAgBMB2JQBUihswZYVo/uN1+pi02HFJOSAn9FgPoakcwAP6D1zVOrphxIwUrtIrAUlwTBT6GDfkaaBHGIQ4m0n24ubYqX+c1EisRsmsSZaUti7M38hCJHc4lXdZ/flrbg0LrFHXZYDxtkDc2283rD1zZOioLx02qOx3VMtuXZms/6XJjSQeaYRcc3KlHcXHIUQl1Mssi4I8jOi3WN8T6b7hfck+Cgeuho+BfDsuqhq2U7Jp2V1TLbGhGPH0Gmy/UsmPZCYMz+lijfjVv80FfTgEd0ZOQitBfsy6toWvK0MAfvqnDCZ2+nDFcoAAA"
+  },
+  "industries/security": {
+    "width": 1200,
+    "height": 686,
+    "src": "/img/industries/security-800.webp",
+    "avif": "/img/industries/security-480.avif 480w, /img/industries/security-800.avif 800w, /img/industries/security-1200.avif 1200w",
+    "webp": "/img/industries/security-480.webp 480w, /img/industries/security-800.webp 800w, /img/industries/security-1200.webp 1200w",
+    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoYAA4APu1iqU2ppaOiMAgBMB2JYwCdABwjui7x3UsUcAjcoAD+6dHcurPbcbTdTyIWj8MCnIVPmeF/4lkUUgFSjqQ+10KYp8s5BTxg0lHm1wMJuw7cn6XgMoOgWBmHXYEv8ia/liVBYB/9rE4HxsX0DbH6Yllt9rBtpBKoqJK9K1ecpAAAAA=="
+  }
+}

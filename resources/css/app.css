@@ -1,0 +1,161 @@
+@import "tailwindcss";
+@import "./tokens.css";
+/* Fonts are imported from app.tsx: Tailwind's @import breaks their url()s on Windows drive paths. */
+
+@source "../views/**/*.blade.php";
+@source "../js/**/*.tsx";
+@source not "../js/Components/legacy";
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+  .night :focus-visible {
+    outline-color: var(--color-cta);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Type scale — measured from facilitatexpat.com (h1 62/600/-2.17px, h2 40/600/-1px, h3 17/600) */
+@utility text-display {
+  font-size: clamp(2.5rem, 5.2vw, 3.875rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+@utility text-h2 {
+  font-size: clamp(1.875rem, 3.4vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+@utility text-h3 {
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+@utility text-lead {
+  font-size: 18px;
+  line-height: 28px;
+  text-wrap: pretty;
+}
+
+/* Highlight word in headlines (main-site signature) */
+@utility text-accent {
+  background: linear-gradient(90deg, var(--color-cta), var(--color-cta-hi));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Dark section background with brand glow */
+@utility night-glow {
+  background:
+    radial-gradient(60% 60% at 75% 40%, rgba(28, 121, 73, 0.35), transparent 70%),
+    var(--color-night);
+}
+
+/* Subtle dotted texture for dark sections (stand-in until the phase-6 globe) */
+@utility night-dots {
+  background-image: radial-gradient(rgba(115, 191, 68, 0.16) 1px, transparent 1.2px);
+  background-size: 18px 18px;
+  mask-image: radial-gradient(70% 60% at 70% 45%, #000 20%, transparent 75%);
+}
+
+/* Main-site .card: white, 1px line, pointer-following brand glow, brand border + shadow on hover */
+@utility card {
+  position: relative;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-line);
+  background:
+    radial-gradient(360px circle at var(--gx, 50%) var(--gy, 0%), rgba(28, 121, 73, 0.08), transparent 50%),
+    var(--color-surface);
+  transition:
+    border-color 0.35s var(--ease-out),
+    box-shadow 0.35s var(--ease-out),
+    transform 0.35s var(--ease-out);
+  &:hover {
+    border-color: var(--color-brand);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@utility card-night {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-night-line);
+  background: rgba(13, 31, 23, 0.72);
+  backdrop-filter: blur(18px) saturate(1.4);
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+
+/* Marquee (Components/motion/Marquee.tsx) */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@layer components {
+  .marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--mq-dur, 40s) linear infinite;
+  }
+  .marquee-reverse {
+    animation-direction: reverse;
+  }
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee {
+      overflow-x: auto;
+      mask-image: none;
+    }
+    .marquee-track {
+      animation: none;
+    }
+    .marquee-track > [aria-hidden] {
+      display: none;
+    }
+  }
+}
+
+@utility icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-tile);
+  background: rgba(28, 121, 73, 0.1);
+  color: var(--color-brand);
+  flex-shrink: 0;
+}

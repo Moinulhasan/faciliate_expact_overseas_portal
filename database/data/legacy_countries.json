@@ -1,0 +1,587 @@
+{
+  "saudi-arabia": {
+    "intro": [
+      "Saudi Arabia is a major hub for skilled workers, and Facilitate Expat Overseas Limited plays a vital role in providing top-tier talent for its industries. Our oil & gas recruitment services connect leading companies with certified professionals experienced in offshore drilling, pipeline construction, and petrochemical engineering.",
+      "In the construction sector, we provide highly skilled laborers, including civil engineers, project managers, and heavy machinery operators, ensuring smooth operations on large-scale projects. Our healthcare staffing services help hospitals and medical institutions find experienced doctors, nurses, and technicians.",
+      "For security services, we recruit personnel with specialized training in corporate and industrial security. Education and training professionals, including teachers and vocational trainers, are also sourced to support Saudi Arabia's growing educational sector."
+    ],
+    "sectors": [
+      {
+        "name": "Oil & Gas Recruitment",
+        "overview": "We specialize in providing skilled, semi-skilled, and unskilled manpower for the oil and gas sector in Saudi Arabia. Our recruitment solutions are designed to meet the high standards of the industry while ensuring compliance with Saudi labor laws and safety regulations.",
+        "roles": [
+          "Upstream Operations: Drilling crew, rig operators, geologists, and technical support staff.",
+          "Midstream Operations: Pipeline construction teams, logistics support, and maintenance workers.",
+          "Downstream Operations: Refinery technicians, engineers, welders, and safety officers.",
+          "Support Roles: Administrative staff, drivers, and general laborers for site support."
+        ]
+      },
+      {
+        "name": "Construction Workers",
+        "overview": "We specialize in supplying skilled, semi-skilled, and unskilled construction workers for infrastructure, industrial, and commercial projects in Saudi Arabia. Our workforce solutions ensure quality, reliability, and compliance with Saudi labor laws and safety standards.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Staffing",
+        "overview": "We provide qualified and certified healthcare professionals to meet demand in Saudi Arabia's hospitals, clinics, laboratories, and other medical facilities. Our solutions ensure highly skilled, certified, and reliable personnel to support academic excellence and workforce development initiatives, in compliance with Saudi education and labor regulations.",
+        "roles": []
+      },
+      {
+        "name": "Security Jobs",
+        "overview": "We specialize in providing trained and reliable security personnel to meet the growing demand for commercial, industrial, and residential security services in Saudi Arabia. Our workforce is carefully vetted, trained, and compliant with Saudi regulations and safety standards, ensuring professional protection for every client.",
+        "roles": []
+      },
+      {
+        "name": "Education & Training",
+        "overview": "We provide qualified and experienced education and training professionals to meet demand in Saudi Arabia's schools, universities, vocational institutes, and corporate training centers. Our solutions ensure highly skilled, certified, and reliable personnel to support academic excellence and workforce development initiatives, in compliance with Saudi education and labor regulations.",
+        "roles": []
+      }
+    ]
+  },
+  "uae": {
+    "intro": [
+      "The UAE is known for its thriving hospitality and tourism industry, and we provide highly trained professionals, including chefs, hotel managers, and customer service representatives, to maintain the high standards of service required in the country.",
+      "Our IT & software development staffing solutions help businesses hire expert software engineers, cybersecurity specialists, and IT project managers. The booming construction industry in the UAE requires skilled laborers, including carpenters, welders, and civil engineers, who we recruit from Bangladesh to meet the demand.",
+      "The banking and finance sector benefits from our talent pool of accountants, auditors, and financial analysts. Additionally, we offer engineering recruitment services, providing mechanical, electrical, and civil engineers to various industries."
+    ],
+    "sectors": [
+      {
+        "name": "Hospitality Recruitment",
+        "overview": "We specialize in providing skilled, semi-skilled, and entry-level professionals for the hospitality and tourism industry across the UAE. Our workforce solutions are designed to support hotels, resorts, restaurants, airlines, event management companies, and catering services, ensuring reliable staffing that meets both international standards and UAE labor laws.",
+        "roles": []
+      },
+      {
+        "name": "IT & Software Development Staffing",
+        "overview": "We provide skilled IT and software development professionals to support businesses, startups, and enterprises across the UAE. Our staffing solutions are tailored to meet the growing demand for digital transformation, enterprise automation, and innovative tech solutions, ensuring highly qualified and reliable talent for both short-term projects and long-term placements.",
+        "roles": []
+      },
+      {
+        "name": "Construction Labor Supply",
+        "overview": "We specialize in providing skilled, semi-skilled, and unskilled construction labor to meet the workforce demands of infrastructure, industrial, residential, and commercial projects across the UAE. Our manpower solutions ensure high-quality, reliable, and compliant staffing to support the country's rapid development while adhering to UAE labor laws and safety standards.",
+        "roles": []
+      },
+      {
+        "name": "Banking & Finance Professionals",
+        "overview": "We provide qualified and experienced banking and finance professionals to support the growing demands of banks, financial institutions, investment firms, and fintech companies across the UAE. Our staffing solutions ensure highly skilled, reliable, and compliant professionals to meet dynamic industry requirements while adhering to UAE Central Bank regulations and financial standards.",
+        "roles": []
+      },
+      {
+        "name": "Engineering Recruitment",
+        "overview": "We provide highly skilled and certified engineering professionals to meet the growing demands of construction, infrastructure, oil & gas, manufacturing, and technology projects across the UAE. Our staffing solutions ensure qualified, reliable, and compliant talent, supporting both short-term projects and long-term assignments while adhering to UAE labor laws and industry standards.",
+        "roles": []
+      }
+    ]
+  },
+  "qatar": {
+    "intro": [
+      "Qatar's economy is driven by the petrochemical and gas industry, requiring specialized professionals such as process engineers, refinery technicians, and pipeline operators. We facilitate recruitment for these critical roles.",
+      "We provide both skilled and unskilled labor recruitment services, supplying professionals ranging from electricians to general laborers. Our finance and administrative staffing services cater to the growing business ecosystem, connecting companies with expert accountants, HR professionals, and office managers.",
+      "With an increasing number of infrastructure projects, we support Qatar's construction industry by hiring masons, site supervisors, and heavy vehicle drivers."
+    ],
+    "sectors": [
+      {
+        "name": "Petrochemical & Gas Industry Workers",
+        "overview": "We specialize in providing skilled, semi-skilled, and unskilled manpower for the petrochemical and gas industry in Qatar. Our staffing solutions support upstream, midstream, and downstream operations, ensuring clients receive highly trained and certified professionals while maintaining compliance with Qatar labor laws, HSE standards, and industry regulations.",
+        "roles": []
+      },
+      {
+        "name": "Skilled & Unskilled Labor Recruitment",
+        "overview": "We provide reliable, skilled, and unskilled labor to meet the growing workforce demands of construction, oil & gas, manufacturing, logistics, hospitality, and maintenance sectors in Qatar. Our recruitment process ensures qualified, safety-trained, and compliant workers, ready for both short-term projects and long-term assignments, following Qatar's labor laws and industry regulations.",
+        "roles": []
+      },
+      {
+        "name": "Finance & Administrative Staffing",
+        "overview": "We specialize in providing qualified finance and administrative professionals to meet the workforce needs of corporate offices, government entities, financial institutions, and project-based operations in Qatar. Our staffing solutions ensure skilled, reliable, and compliant personnel to support both day-to-day operations and specialized financial tasks, adhering to Qatar labor regulations and industry standards.",
+        "roles": []
+      },
+      {
+        "name": "Construction Project Workers",
+        "overview": "We provide skilled, semi-skilled, and unskilled workers to meet the workforce needs of infrastructure, industrial, commercial, and residential construction projects across Qatar. Our staffing solutions ensure trained, reliable, and safety-compliant personnel, supporting on-time and quality project delivery while adhering to Qatar labor regulations and HSE standards.",
+        "roles": []
+      }
+    ]
+  },
+  "kuwait": {
+    "intro": [
+      "Kuwait's oil and gas sector requires specialized professionals including drilling engineers, refinery technicians, and safety officers. We provide comprehensive recruitment solutions for the energy industry.",
+      "The construction industry in Kuwait benefits from our skilled labor supply including masons, electricians, and heavy equipment operators.",
+      "Our healthcare staffing services connect hospitals and medical facilities with qualified doctors, nurses, and medical technicians."
+    ],
+    "sectors": [
+      {
+        "name": "Oil & Gas Professionals",
+        "overview": "We specialize in providing skilled professionals for Kuwait's oil and gas sector, ensuring compliance with local regulations and industry standards.",
+        "roles": []
+      },
+      {
+        "name": "Construction Workers",
+        "overview": "We provide skilled construction workers for Kuwait's growing infrastructure and development projects.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Staffing",
+        "overview": "We supply qualified healthcare professionals to Kuwait's hospitals and medical facilities.",
+        "roles": []
+      },
+      {
+        "name": "Engineering Services",
+        "overview": "We provide engineering professionals for various sectors in Kuwait including oil & gas, construction, and manufacturing.",
+        "roles": []
+      }
+    ]
+  },
+  "japan": {
+    "intro": [
+      "Japan's technology sector demands highly skilled IT professionals including software developers, system engineers, and AI specialists. We provide top-tier talent for Japan's innovative industries.",
+      "Manufacturing and automotive industries require precision workers, quality control specialists, and production engineers.",
+      "Our healthcare recruitment services supply hospitals with experienced medical professionals and caregivers."
+    ],
+    "sectors": []
+  },
+  "singapore": {
+    "intro": [
+      "Singapore's financial sector requires banking professionals, financial analysts, and compliance officers. We provide qualified talent for the city-state's thriving financial industry.",
+      "The technology sector benefits from our IT professionals including software developers, cybersecurity experts, and data scientists.",
+      "Our hospitality and service industry recruitment supplies hotels, restaurants, and retail with skilled professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Banking & Finance",
+        "overview": "We provide highly qualified banking and finance professionals aligned with MAS guidelines, ensuring compliance and performance for banks, corporates, and investment firms in Singapore.",
+        "roles": []
+      },
+      {
+        "name": "IT & Technology",
+        "overview": "Skilled IT professionals for innovation, digital transformation, and operational resilience across Singapore, compliant with local standards.",
+        "roles": []
+      },
+      {
+        "name": "Hospitality & Services",
+        "overview": "Customer-focused hospitality professionals for hotels, restaurants, events, and service businesses across Singapore.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Professionals",
+        "overview": "Licensed healthcare professionals for hospitals, clinics, and long-term care facilities in Singapore, aligned with MOH standards.",
+        "roles": []
+      }
+    ]
+  },
+  "south-korea": {
+    "intro": [
+      "South Korea's technology and manufacturing sectors require skilled engineers, IT professionals, and production specialists. We provide comprehensive staffing solutions.",
+      "The automotive and electronics industries benefit from our technical workforce including engineers, technicians, and quality control specialists.",
+      "Our healthcare recruitment services supply hospitals and medical facilities with qualified medical professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Technology & IT",
+        "overview": "Skilled technology professionals supporting innovation and digital transformation across South Korea.",
+        "roles": []
+      },
+      {
+        "name": "Manufacturing & Engineering",
+        "overview": "Skilled, semi-skilled, and professional workers for Korea's manufacturing and engineering sectors.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Services",
+        "overview": "Licensed healthcare professionals supporting Korean hospitals and care facilities.",
+        "roles": []
+      },
+      {
+        "name": "Automotive & Electronics",
+        "overview": "Skilled teams for automotive and electronics production, QA, and maintenance.",
+        "roles": []
+      }
+    ]
+  },
+  "malaysia": {
+    "intro": [
+      "Malaysia's agricultural sector relies on experienced farm workers, plantation managers, and harvest specialists, whom we recruit from Bangladesh.",
+      "Our manufacturing industry staffing solutions help businesses hire skilled machine operators, factory workers, and supply chain managers.",
+      "Domestic helpers, including caregivers and housekeepers, are placed with families and organizations needing home support.",
+      "Additionally, our recruitment of IT and engineering professionals helps Malaysian firms maintain cutting-edge operations in technology and industrial design."
+    ],
+    "sectors": [
+      {
+        "name": "Agricultural Workers",
+        "overview": "Skilled, semi-skilled, and unskilled agricultural workforce for plantations, farms, aquaculture, and agribusinesses across Malaysia.",
+        "roles": []
+      },
+      {
+        "name": "Manufacturing Industry Staffing",
+        "overview": "Skilled, semi-skilled, and unskilled manufacturing workforce for electronics, automotive, textiles, food processing, and heavy industries.",
+        "roles": []
+      },
+      {
+        "name": "Domestic Helpers",
+        "overview": "Trained domestic helpers for households and private employers across Malaysia.",
+        "roles": []
+      },
+      {
+        "name": "Professional IT & Engineering Jobs",
+        "overview": "Skilled IT and engineering professionals for corporate, technology, manufacturing, and infrastructure sectors in Malaysia.",
+        "roles": []
+      }
+    ]
+  },
+  "italy": {
+    "intro": [
+      "Italy's manufacturing and fashion industries require skilled workers including textile workers, fashion designers, and production specialists.",
+      "The construction sector benefits from our skilled laborers including masons, carpenters, and civil engineers.",
+      "Our hospitality recruitment services supply hotels, restaurants, and tourism with qualified professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Manufacturing & Fashion",
+        "overview": "Skilled and professional workforce for Italy's manufacturing and fashion sectors, supporting production, design, quality, and logistics.",
+        "roles": []
+      },
+      {
+        "name": "Construction Workers",
+        "overview": "Skilled, semi-skilled, and general construction labor for projects across Italy.",
+        "roles": []
+      },
+      {
+        "name": "Hospitality & Tourism",
+        "overview": "Customer-focused hospitality personnel for hotels, resorts, restaurants, and travel/tourism operations across Italy.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Professionals",
+        "overview": "Licensed and experienced healthcare staff for hospitals, clinics, and care facilities across Italy.",
+        "roles": []
+      }
+    ]
+  },
+  "poland": {
+    "intro": [
+      "Poland's warehousing and logistics industry is expanding, requiring forklift operators, inventory managers, and logistics coordinators. Our recruitment services provide top talent for these roles.",
+      "We also specialize in hiring IT and software development professionals, including frontend and backend developers, data analysts, and network administrators.",
+      "The hospitality sector benefits from our recruitment of hotel staff, restaurant workers, and event coordinators.",
+      "For construction projects, we supply bricklayers, plumbers, and construction supervisors to meet industry demands."
+    ],
+    "sectors": [
+      {
+        "name": "Warehouse & Logistics Staffing",
+        "overview": "Skilled warehouse and logistics personnel supporting warehousing, distribution, and supply chain operations in Poland.",
+        "roles": []
+      },
+      {
+        "name": "IT & Software Development Recruitment",
+        "overview": "Highly skilled IT professionals for startups to enterprises in Poland.",
+        "roles": []
+      },
+      {
+        "name": "Hospitality & Hotel Staffing",
+        "overview": "Professional hospitality teams for hotels, resorts, restaurants, and events in Poland.",
+        "roles": []
+      },
+      {
+        "name": "Construction Labor Supply",
+        "overview": "Skilled and general labor for construction projects across Poland.",
+        "roles": []
+      }
+    ]
+  },
+  "czech-republic": {
+    "intro": [
+      "Czech Republic's automotive and manufacturing sectors require skilled workers including machine operators, engineers, and quality control specialists.",
+      "The IT sector benefits from our software developers, system administrators, and cybersecurity professionals.",
+      "Our healthcare recruitment services supply hospitals and medical facilities with qualified medical professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Automotive & Manufacturing",
+        "overview": "Skilled and semi-skilled workforce for Czech automotive and manufacturing sectors, supporting production, QC, and maintenance.",
+        "roles": []
+      },
+      {
+        "name": "IT & Technology",
+        "overview": "Qualified IT professionals for software engineering, infrastructure, cybersecurity, data, and emerging tech in the Czech Republic.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Services",
+        "overview": "Licensed, experienced healthcare professionals supporting hospitals and care facilities across the Czech Republic.",
+        "roles": []
+      },
+      {
+        "name": "Engineering & Technical",
+        "overview": "Skilled engineering and technical staff supporting manufacturing, construction, infrastructure, and industrial projects in the Czech Republic.",
+        "roles": []
+      }
+    ]
+  },
+  "hungary": {
+    "intro": [
+      "Hungary's industrial workforce relies on welders, factory workers, and machine operators. We recruit IT specialists, including programmers and cybersecurity experts, to support Hungary's digital economy.",
+      "In the construction sector, we place civil engineers, project managers, and skilled laborers.",
+      "Our medical recruitment services provide hospitals and clinics with experienced nurses, doctors, and healthcare administrators."
+    ],
+    "sectors": [
+      {
+        "name": "Industrial Workforce Staffing",
+        "overview": "Skilled, semi-skilled, and professional industrial workers supporting manufacturing, production, and industrial operations in Hungary.",
+        "roles": []
+      },
+      {
+        "name": "IT & Tech Industry Recruitment",
+        "overview": "Qualified IT and technology professionals for software, infrastructure, cybersecurity, data, and emerging tech across Hungary.",
+        "roles": []
+      },
+      {
+        "name": "Construction & Civil Engineering",
+        "overview": "Skilled construction and civil engineering workforce supporting residential, commercial, and infrastructure projects in Hungary.",
+        "roles": []
+      },
+      {
+        "name": "Medical & Healthcare Professionals",
+        "overview": "Licensed and experienced healthcare professionals supporting hospitals, clinics, and long-term care facilities across Hungary.",
+        "roles": []
+      }
+    ]
+  },
+  "slovakia": {
+    "intro": [
+      "Slovakia's automotive industry requires skilled workers including assembly line workers, quality control specialists, and maintenance technicians.",
+      "The manufacturing sector benefits from our production workers, machine operators, and technical specialists.",
+      "Our healthcare recruitment services supply hospitals and medical facilities with qualified medical professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Automotive Industry",
+        "overview": "Skilled, semi-skilled, and professional personnel for Slovakia's automotive sector across production, QC, maintenance, and engineering.",
+        "roles": []
+      },
+      {
+        "name": "Manufacturing Workers",
+        "overview": "Skilled, semi-skilled, and general manufacturing workforce for production and operations across Slovakia.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Services",
+        "overview": "Licensed and experienced healthcare personnel supporting hospitals and care facilities in Slovakia.",
+        "roles": []
+      },
+      {
+        "name": "Technical Specialists",
+        "overview": "Highly skilled technical specialists supporting industrial, manufacturing, construction, and engineering projects in Slovakia.",
+        "roles": []
+      }
+    ]
+  },
+  "croatia": {
+    "intro": [
+      "Croatia's tourism and hospitality sector requires skilled staff including hotel workers, restaurant personnel, and tour service professionals.",
+      "The construction industry benefits from skilled laborers such as masons, electricians, and equipment operators.",
+      "Manufacturing and logistics sectors require machine operators, warehouse staff, and quality control personnel."
+    ],
+    "sectors": []
+  },
+  "bulgaria": {
+    "intro": [
+      "Bulgaria's industrial and manufacturing sectors require a steady supply of skilled labor, including machinists, production line workers, and industrial supervisors.",
+      "We recruit experienced agricultural workers for farming and food production industries.",
+      "The construction and engineering sector benefits from our staffing of project managers, civil engineers, and skilled laborers.",
+      "Security services are essential for businesses, and we provide trained security officers, bouncers, and personal protection specialists."
+    ],
+    "sectors": [
+      {
+        "name": "Manufacturing & Industrial Workers",
+        "overview": "We provide skilled, semi-skilled, and unskilled workers to meet manufacturing and industrial workforce demands across Bulgaria.",
+        "roles": []
+      },
+      {
+        "name": "Agricultural Labor",
+        "overview": "Agricultural workers for farms, plantations, orchards, vineyards, and agro-industrial operations in Bulgaria.",
+        "roles": []
+      },
+      {
+        "name": "Construction & Engineering Experts",
+        "overview": "Skilled construction and engineering professionals for infrastructure, residential, commercial, and industrial projects in Bulgaria.",
+        "roles": []
+      },
+      {
+        "name": "Security & Protection Services",
+        "overview": "Trained and professional security personnel for corporate, industrial, residential, event, and government security in Bulgaria.",
+        "roles": []
+      }
+    ]
+  },
+  "romania": {
+    "intro": [
+      "Romania's growing economy demands general laborers, including factory workers, warehouse staff, and logistics personnel. We provide healthcare professionals, including nurses and medical technicians, to hospitals and clinics.",
+      "The construction industry in Romania is supported by our recruitment of skilled masons, steel fixers, and crane operators.",
+      "Our IT & technical worker recruitment services help businesses hire software developers, IT specialists, and system administrators."
+    ],
+    "sectors": [
+      {
+        "name": "General Labor Recruitment",
+        "overview": "Reliable skilled, semi-skilled, and unskilled labor for construction, manufacturing, logistics, agriculture, and industrial sectors in Romania.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Professionals",
+        "overview": "Qualified, certified healthcare professionals for hospitals, clinics, and care facilities in Romania.",
+        "roles": []
+      },
+      {
+        "name": "Construction Industry Staffing",
+        "overview": "Skilled, semi-skilled, and unskilled workers for infrastructure, commercial, and residential projects in Romania.",
+        "roles": []
+      },
+      {
+        "name": "IT & Technical Workers",
+        "overview": "Qualified IT and technical professionals supporting corporate, industrial, and infrastructure clients in Romania.",
+        "roles": []
+      }
+    ]
+  },
+  "moldova": {
+    "intro": [
+      "Moldova's agriculture sector depends on laborers, greenhouse workers, and agricultural technicians. We recruit skilled industrial workers, including machine operators and production supervisors.",
+      "Our IT & engineering staffing solutions provide experts in software development, network security, and electrical engineering.",
+      "Financial institutions benefit from our recruitment of accountants, payroll specialists, and administrative professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Agriculture & Farming Labor",
+        "overview": "Skilled, semi-skilled, and general agricultural labor supporting farms, agribusinesses, and greenhouse operations across Moldova.",
+        "roles": []
+      },
+      {
+        "name": "Skilled Industrial Workers",
+        "overview": "Qualified industrial workers supporting manufacturing, production, and maintenance operations across Moldova.",
+        "roles": []
+      },
+      {
+        "name": "IT & Engineering Jobs",
+        "overview": "Skilled IT and engineering professionals for businesses and industry projects in Moldova.",
+        "roles": []
+      },
+      {
+        "name": "Financial & Administrative Staffing",
+        "overview": "Skilled financial and administrative professionals supporting corporate, government, and institutional operations in Moldova.",
+        "roles": []
+      }
+    ]
+  },
+  "serbia": {
+    "intro": [
+      "Serbia's manufacturing and construction sectors require skilled workers including factory workers, construction laborers, and technical specialists.",
+      "The IT sector benefits from our software developers, system administrators, and IT support professionals.",
+      "Our healthcare recruitment services supply hospitals and medical facilities with qualified medical professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Manufacturing Workers",
+        "overview": "Skilled, semi-skilled, and general manufacturing workforce to support production and operations in Serbia.",
+        "roles": []
+      },
+      {
+        "name": "Construction Labor",
+        "overview": "Skilled, semi-skilled, and general construction labor for residential, commercial, and infrastructure projects in Serbia.",
+        "roles": []
+      },
+      {
+        "name": "IT & Technology",
+        "overview": "Qualified IT professionals for software, infrastructure, cybersecurity, data, and emerging tech roles across Serbia.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Services",
+        "overview": "Licensed and experienced healthcare professionals supporting hospitals and care facilities across Serbia.",
+        "roles": []
+      }
+    ]
+  },
+  "north-macedonia": {
+    "intro": [
+      "North Macedonia's manufacturing and textile industries require skilled workers including textile workers, machine operators, and quality control specialists.",
+      "The construction sector benefits from our skilled laborers including masons, carpenters, and construction workers.",
+      "Our healthcare recruitment services supply hospitals and medical facilities with qualified medical professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Manufacturing & Textile",
+        "overview": "Skilled, semi-skilled, and professional workforce for manufacturing and textile operations across North Macedonia.",
+        "roles": []
+      },
+      {
+        "name": "Construction Workers",
+        "overview": "Skilled, semi-skilled, and general construction workers for residential, commercial, and infrastructure projects in North Macedonia.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Services",
+        "overview": "Licensed and experienced healthcare professionals supporting hospitals and care facilities across North Macedonia.",
+        "roles": []
+      },
+      {
+        "name": "Technical Specialists",
+        "overview": "Highly skilled technical specialists supporting industrial, manufacturing, construction, and engineering projects in North Macedonia.",
+        "roles": []
+      }
+    ]
+  },
+  "belarus": {
+    "intro": [
+      "Belarus's manufacturing and industrial sectors require skilled workers including factory workers, machine operators, and technical specialists.",
+      "The IT sector benefits from our software developers, system administrators, and IT professionals.",
+      "Our healthcare recruitment services supply hospitals and medical facilities with qualified medical professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Manufacturing Workers",
+        "overview": "Skilled, semi-skilled, and general manufacturing workforce supporting production and operations across Belarus.",
+        "roles": []
+      },
+      {
+        "name": "IT & Technology",
+        "overview": "Qualified IT professionals for software, infrastructure, cybersecurity, data, and emerging tech in Belarus.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Services",
+        "overview": "Licensed and experienced healthcare professionals for hospitals and care facilities across Belarus.",
+        "roles": []
+      },
+      {
+        "name": "Industrial Specialists",
+        "overview": "Highly skilled industrial specialists for manufacturing, production, and industrial operations in Belarus.",
+        "roles": []
+      }
+    ]
+  },
+  "albania": {
+    "intro": [
+      "Albania's construction and manufacturing sectors require skilled workers including construction laborers, factory workers, and technical specialists.",
+      "The hospitality sector benefits from our hotel staff, restaurant workers, and service professionals.",
+      "Our healthcare recruitment services supply hospitals and medical facilities with qualified medical professionals."
+    ],
+    "sectors": [
+      {
+        "name": "Construction Workers",
+        "overview": "Skilled, semi-skilled, and general construction workers for residential, commercial, and infrastructure projects across Albania.",
+        "roles": []
+      },
+      {
+        "name": "Manufacturing Labor",
+        "overview": "Skilled, semi-skilled, and general manufacturing workforce supporting production and operations across Albania.",
+        "roles": []
+      },
+      {
+        "name": "Hospitality Services",
+        "overview": "Professional hospitality teams supporting hotels, resorts, restaurants, and tourism facilities across Albania.",
+        "roles": []
+      },
+      {
+        "name": "Healthcare Professionals",
+        "overview": "Licensed, trained healthcare professionals for hospitals, clinics, and care facilities across Albania.",
+        "roles": []
+      }
+    ]
+  }
+}
