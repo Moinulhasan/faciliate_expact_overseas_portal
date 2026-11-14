@@ -27,11 +27,15 @@ class IndustryController extends Controller
 
     public function show(Industry $industry): Response
     {
+        // Current pay per country for this trade, from real open jobs only.
+        $pay = JobOpening::payRanges(JobOpening::query()->where('industry_id', $industry->id), 'country_id');
+
         return Inertia::render('Industries/Show', [
             'industry' => $industry->toDetail(),
             'countries' => $industry->hiringCountries()->map(fn (Country $c) => [
                 ...$c->toCard(),
-                'note' => collect($c->sectors)->firstWhere('industry', $industry->slug)['note'] ?? null,
+                'note' => $c->sectorNote($industry->slug),
+                'pay' => $pay[$c->id] ?? null,
             ]),
             'jobs' => JobOpening::with(['country', 'industry'])->open()->where('industry_id', $industry->id)->latest()->limit(6)->get()->map->toDetail(),
             'related' => Industry::where('group', $industry->group)->whereKeyNot($industry->id)->orderBy('sort')->limit(3)->get()->map->toCard(),

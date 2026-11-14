@@ -97,6 +97,8 @@ Old URLs must 301: `/services → /work-abroad`, `/industries` stays, `/country/
 ## 4. Design system
 
 > **Override (11 Nov 2026, owner direction):** fonts and everything visual must match `facilitatexpat.com` exactly. The live tokens measured from its `:root` are in `resources/css/tokens.css` and win over §4.1–4.3 below: **Geist only** (400/500/600 — no Instrument Serif, no Geist Mono); h1 62px/600/-0.035em, h2 40px/600/-0.025em, h3 17px/600; headline highlight = green gradient text (`#73BF44 → #A6DB80`), not serif italic; brand `#1C7949`, night `#06120D`, line `#DCE6DA`, alt section `#EDF3EC`; `.card` = white, 1px line, 24px radius, pointer-following glow, brand border + shadow on hover; CTA = 135° `#1F8550 → #155C37` gradient pill with green shadow.
+>
+> **Override (13 Nov 2026, UX audit):** the *main action* button (`variant="cta"`) is **amber** `#F5A524` with dark text — one per view; green (`variant="green"`) stays for brand/secondary filled buttons. Badges: red-orange = urgent only, teal = verified, dashed grey = sample. Nav shows logo **+ wordmark** and a বাংলা/EN switch; minimum text 14px (13px only for tiny meta). Home order: hero → trust → jobs → fees → journey → trades → reviews → FAQ → contact → CTA.
 
 ### 4.1 Colour tokens (extend the main site)
 

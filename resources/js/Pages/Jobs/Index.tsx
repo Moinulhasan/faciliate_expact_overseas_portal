@@ -44,7 +44,7 @@ function Select({ label, value, onChange, children }: { label: string; value: st
 }
 
 export default function JobsIndex({ jobs, total, filters, countries, industries, destinations }: Props) {
-  const { t } = useLocale();
+  const { t, path } = useLocale();
   const { appUrl, site } = usePage<SharedProps>().props;
   const [q, setQ] = useState(filters.q ?? "");
   const first = useRef(true);
@@ -52,7 +52,7 @@ export default function JobsIndex({ jobs, total, filters, countries, industries,
   // Server-side filtering via Inertia partial reloads; URL stays shareable (?country=qatar&q=welder).
   const visit = (next: Partial<Filters>) => {
     const params = Object.fromEntries(Object.entries({ ...filters, q, ...next }).filter(([k, v]) => v && !(k === "sort" && v === "newest")));
-    router.get("/jobs", params, { only: ["jobs", "filters"], preserveState: true, preserveScroll: true, replace: true });
+    router.get(path("/jobs"), params, { only: ["jobs", "filters"], preserveState: true, preserveScroll: true, replace: true });
   };
 
   useEffect(() => {
@@ -97,7 +97,7 @@ export default function JobsIndex({ jobs, total, filters, countries, industries,
                   <p className="mt-1 max-w-[60ch] text-[15px] text-muted">{t("hubs.jobs.empty_body")}</p>
                 </div>
                 <div className="flex shrink-0 gap-2">
-                  <ButtonLink href="/apply">
+                  <ButtonLink href="/contact?type=job">
                     {t("pages.apply")} <ArrowRight />
                   </ButtonLink>
                   <ButtonAnchor href={`https://wa.me/${site.contact.whatsapp}`} target="_blank" rel="noopener" variant="ghost">
@@ -155,14 +155,14 @@ export default function JobsIndex({ jobs, total, filters, countries, industries,
                 </div>
               </div>
 
-              <div className="mb-4 flex items-center justify-between gap-3 text-[13px] text-muted">
+              <div className="mb-4 flex items-center justify-between gap-3 text-sm text-muted">
                 <span aria-live="polite">{t("hubs.jobs.results", { n: jobs.length, total })}</span>
                 {active && (
                   <button
                     type="button"
                     onClick={() => {
                       setQ("");
-                      router.get("/jobs", {}, { only: ["jobs", "filters"], preserveScroll: true, replace: true });
+                      router.get(path("/jobs"), {}, { only: ["jobs", "filters"], preserveScroll: true, replace: true });
                     }}
                     className="inline-flex items-center gap-1.5 font-semibold text-brand hover:underline"
                   >
@@ -186,7 +186,7 @@ export default function JobsIndex({ jobs, total, filters, countries, industries,
                   clearLabel={t("hubs.jobs.reset")}
                   onClear={() => {
                     setQ("");
-                    router.get("/jobs", {}, { only: ["jobs", "filters"], preserveScroll: true, replace: true });
+                    router.get(path("/jobs"), {}, { only: ["jobs", "filters"], preserveScroll: true, replace: true });
                   }}
                 />
               )}

@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasI18n;
 use App\Support\Img;
 use Illuminate\Database\Eloquent\Model;
 
 class Industry extends Model
 {
+    use HasI18n;
+
     protected $guarded = [];
 
     protected $casts = [
@@ -21,20 +24,15 @@ class Industry extends Model
         return 'slug';
     }
 
-    private function t(string $field): ?string
-    {
-        return $this->{"{$field}_".app()->getLocale()} ?: $this->{"{$field}_en"};
-    }
-
     public function toCard(): array
     {
         return [
             'id' => $this->id,
             'slug' => $this->slug,
-            'name' => $this->t('name'),
+            'name' => $this->tr('name'),
             'group' => $this->group,
-            'summary' => $this->t('summary'),
-            'roles' => $this->roles ?? [],
+            'summary' => $this->tr('summary'),
+            'roles' => $this->tr('roles') ?? [],
             // From the image pipeline (resources/images/industries/<slug>.jpg → npm run images).
             'image' => Img::get("industries/{$this->slug}"),
             'deployable_headcount' => $this->deployable_headcount,
@@ -45,12 +43,12 @@ class Industry extends Model
     {
         return [
             ...$this->toCard(),
-            'intro' => $this->t('intro'),
+            'intro' => $this->tr('intro'),
             'image_detail' => Img::get("industries/{$this->slug}-detail"),
-            'certifications' => $this->certifications ?? [],
-            'highlights' => $this->highlights ?? [],
-            'faqs' => $this->faqs ?? [],
-            'meta_description' => $this->t('meta_description'),
+            'certifications' => $this->tr('certifications') ?? [],
+            'highlights' => $this->tr('highlights') ?? [],
+            'faqs' => $this->tr('faqs') ?? [],
+            'meta_description' => $this->tr('meta_description'),
             'updated_at' => $this->updated_at?->toIso8601String(),
         ];
     }

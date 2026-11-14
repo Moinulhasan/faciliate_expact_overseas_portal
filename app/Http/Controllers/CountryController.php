@@ -29,9 +29,13 @@ class CountryController extends Controller
     {
         abort_unless($country->is_active, 404);
         $industries = Industry::all()->keyBy('slug');
+        $detail = $country->toDetail($industries);
+        // Current pay per trade in this country, from real open jobs only (no jobs → no figure).
+        $pay = JobOpening::payRanges(JobOpening::query()->whereBelongsTo($country), 'industry_id');
+        $detail['sectors'] = $detail['sectors']->map(fn ($s) => [...$s, 'pay' => $pay[$s['id']] ?? null]);
 
         return Inertia::render('Countries/Show', [
-            'country' => $country->toDetail($industries),
+            'country' => $detail,
             'jobs' => JobOpening::with(['country', 'industry'])->open()->whereBelongsTo($country)->latest()->limit(6)->get()->map->toDetail(),
             'related' => Country::active()->where('region', $country->region)->whereKeyNot($country->id)
                 ->orderBy('sort')->limit(4)->get()->map->toCard(),

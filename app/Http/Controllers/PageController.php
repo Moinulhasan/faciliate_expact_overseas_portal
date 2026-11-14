@@ -27,6 +27,11 @@ class PageController extends Controller
         ]);
     }
 
+    public function privacy(): Response
+    {
+        return Inertia::render('Privacy');
+    }
+
     public function about(): Response
     {
         return Inertia::render('About', [

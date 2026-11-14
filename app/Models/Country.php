@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasI18n;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Country extends Model
 {
+    use HasI18n;
+
     protected $guarded = [];
 
     protected $casts = [
@@ -38,12 +41,14 @@ class Country extends Model
 
     public function getNameAttribute(): string
     {
-        return $this->{'name_'.app()->getLocale()} ?: $this->name_en;
+        return $this->tr('name');
     }
 
-    private function t(string $field): ?string
+    /** Country-specific note for one of its sectors, translated when available. */
+    public function sectorNote(string $industry): ?string
     {
-        return $this->{"{$field}_".app()->getLocale()} ?: $this->{"{$field}_en"};
+        return data_get($this->i18n, app()->getLocale().".sector_notes.{$industry}")
+            ?? collect($this->sectors ?? [])->firstWhere('industry', $industry)['note'] ?? null;
     }
 
     public function toCard(): array
@@ -54,12 +59,12 @@ class Country extends Model
             'name' => $this->name,
             'iso2' => $this->iso2,
             'region' => $this->region,
-            'visa_type' => $this->t('visa_type'),
+            'visa_type' => $this->tr('visa_type'),
             'currency' => $this->currency,
             'contract_months' => $this->contract_months_typical,
             'processing_days_min' => $this->processing_days_min,
             'processing_days_max' => $this->processing_days_max,
-            'top_trades' => $this->top_trades ?? [],
+            'top_trades' => $this->tr('top_trades') ?? [],
         ];
     }
 
@@ -68,17 +73,17 @@ class Country extends Model
     {
         return [
             ...$this->toCard(),
-            'intro' => $this->t('intro'),
-            'notice' => $this->t('notice'),
-            'languages' => $this->t('languages'),
-            'meta_description' => $this->t('meta_description'),
+            'intro' => $this->tr('intro'),
+            'notice' => $this->tr('notice'),
+            'languages' => $this->tr('languages'),
+            'meta_description' => $this->tr('meta_description'),
             'sectors' => collect($this->sectors ?? [])
                 ->filter(fn ($s) => isset($industries[$s['industry']]))
-                ->map(fn ($s) => [...$industries[$s['industry']]->toCard(), 'note' => $s['note']])
+                ->map(fn ($s) => [...$industries[$s['industry']]->toCard(), 'note' => $this->sectorNote($s['industry'])])
                 ->values(),
-            'steps' => $this->steps ?? [],
-            'requirements' => $this->requirements ?? [],
-            'faqs' => $this->faqs ?? [],
+            'steps' => $this->tr('steps') ?? [],
+            'requirements' => $this->tr('requirements') ?? [],
+            'faqs' => $this->tr('faqs') ?? [],
             'updated_at' => $this->updated_at?->toIso8601String(),
         ];
     }

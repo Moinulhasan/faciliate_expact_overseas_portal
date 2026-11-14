@@ -4,6 +4,7 @@ import { CountryCard } from "@/Components/cards/CountryCard";
 import { IndustryCard } from "@/Components/cards/IndustryCard";
 import { DocumentChecklist } from "@/Components/DocumentChecklist";
 import { breadcrumbLd, faqLd, Seo } from "@/Components/Seo";
+import { CostsBlock } from "@/Components/sections/CostsBlock";
 import { Faq } from "@/Components/sections/Faq";
 import { FinalCta } from "@/Components/sections/FinalCta";
 import { LiveOpenings } from "@/Components/sections/LiveOpenings";
@@ -71,7 +72,7 @@ export default function CountryShow({ country: c, jobs, related }: Props) {
       <PageHero
         crumbs={crumbs}
         eyebrow={
-          <p className="inline-flex items-center gap-2 rounded-full border border-night-line bg-night-2/70 py-1 pr-3 pl-1 text-[13px] text-night-muted backdrop-blur-sm">
+          <p className="inline-flex items-center gap-2 rounded-full border border-night-line bg-night-2/70 py-1 pr-3 pl-1 text-sm text-night-muted backdrop-blur-sm">
             <FlagIcon iso2={c.iso2} className="h-4 w-[22px] rounded-full" />
             {region}
           </p>
@@ -81,7 +82,7 @@ export default function CountryShow({ country: c, jobs, related }: Props) {
         lead={c.intro}
         actions={
           <>
-            <ButtonLink href="/apply" size="lg">
+            <ButtonLink href="/contact?type=job" size="lg">
               {t("pages.apply")} <ArrowRight />
             </ButtonLink>
             <ButtonAnchor
@@ -95,24 +96,13 @@ export default function CountryShow({ country: c, jobs, related }: Props) {
             </ButtonAnchor>
           </>
         }
+        // Flag only — the facts are shown once, in the strip below (UX audit: no repeated facts).
         aside={
-          <div className="card-night overflow-hidden p-0">
-            <div className="relative flex items-center justify-center border-b border-night-line bg-night-2 px-8 py-10">
-              <div aria-hidden className="night-dots absolute inset-0" />
-              <span className="relative inline-flex overflow-hidden rounded-lg shadow-[0_24px_48px_-16px_rgba(0,0,0,.7),0_0_0_1px_rgba(255,255,255,.08)]">
-                <FlagIcon iso2={c.iso2} eager className="h-[120px] w-[160px] rounded-none shadow-none" />
-              </span>
-            </div>
-            <dl className="grid grid-cols-2 gap-px bg-night-line">
-              {facts.slice(0, 4).map(({ Icon, label, value }) => (
-                <div key={label} className="bg-night/95 p-4">
-                  <dt className="flex items-center gap-1.5 text-[12px] text-night-muted">
-                    <Icon className="size-3.5 text-cta" strokeWidth={2} /> {label}
-                  </dt>
-                  <dd className="mt-1 text-[14px] leading-5 font-semibold text-night-ink">{value}</dd>
-                </div>
-              ))}
-            </dl>
+          <div className="card-night relative hidden items-center justify-center overflow-hidden px-8 py-14 lg:flex">
+            <div aria-hidden className="night-dots absolute inset-0" />
+            <span className="relative inline-flex overflow-hidden rounded-lg shadow-[0_24px_48px_-16px_rgba(0,0,0,.7),0_0_0_1px_rgba(255,255,255,.08)]">
+              <FlagIcon iso2={c.iso2} eager className="h-[150px] w-[200px] rounded-none shadow-none" />
+            </span>
           </div>
         }
       />
@@ -127,13 +117,13 @@ export default function CountryShow({ country: c, jobs, related }: Props) {
                   <Icon className="size-[18px]" strokeWidth={1.75} />
                 </span>
                 <div className="min-w-0">
-                  <dt className="text-[12px] text-faint">{label}</dt>
-                  <dd className="text-[14px] leading-5 font-semibold">{value}</dd>
+                  <dt className="text-sm text-muted">{label}</dt>
+                  <dd className="text-base leading-6 font-semibold">{value}</dd>
                 </div>
               </div>
             ))}
           </dl>
-          <p className="border-t border-line py-3 text-[12px] text-faint">{t("pages.typical")}</p>
+          <p className="border-t border-line py-3 text-sm text-muted">{t("pages.typical")}</p>
         </Container>
       </section>
 
@@ -156,7 +146,7 @@ export default function CountryShow({ country: c, jobs, related }: Props) {
           <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {c.sectors.map((s) => (
               <li key={s.slug} className="flex">
-                <IndustryCard industry={s} note={s.note} />
+                <IndustryCard industry={s} note={s.note} pay={s.pay} />
               </li>
             ))}
           </ul>
@@ -172,12 +162,19 @@ export default function CountryShow({ country: c, jobs, related }: Props) {
               {c.steps.map((s, i) => (
                 <li key={s.title} className="relative grid grid-cols-[40px_1fr] gap-4 pb-6 last:pb-0">
                   {i < c.steps.length - 1 && <span aria-hidden className="absolute top-10 bottom-0 left-[19px] w-px bg-line" />}
-                  <span className="relative z-10 inline-flex size-10 items-center justify-center rounded-full border border-line bg-surface text-[13px] font-semibold text-brand tabular-nums">
+                  <span className="relative z-10 inline-flex size-10 items-center justify-center rounded-full border border-line bg-surface text-sm font-semibold text-brand tabular-nums">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="pt-1.5">
                     <h3 className="text-h3">{s.title}</h3>
-                    <p className="mt-1 text-[15px] leading-[22px] text-muted">{s.body}</p>
+                    <p className="mt-1 text-base leading-6 text-muted">{s.body}</p>
+                    {s.time && (
+                      <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-brand/10 px-2.5 py-1 text-sm font-medium text-brand">
+                        <Clock className="size-3.5" strokeWidth={2} />
+                        <span className="sr-only">{t("pages.countries.time_label")}: </span>
+                        {s.time}
+                      </p>
+                    )}
                   </div>
                 </li>
               ))}
@@ -186,17 +183,21 @@ export default function CountryShow({ country: c, jobs, related }: Props) {
           <div className="lg:sticky lg:top-24 lg:self-start">
             <SectionHead title={t("pages.countries.docs_title")} lead={t("pages.countries.docs_lead")} />
             <DocumentChecklist items={c.requirements} />
-            <p className="mt-3 text-[13px] text-faint">{t("pages.countries.docs_note")}</p>
+            <p className="mt-3 text-sm text-faint">{t("pages.countries.docs_note")}</p>
           </div>
         </Container>
       </Section>
 
+      {/* Fees & fraud protection — the audit's best trust content, where workers actually decide. */}
+      <CostsBlock tone="bg" />
+
       <LiveOpenings jobs={jobs} />
 
-      <Faq title={t("pages.faq_title")} lead={t("pages.faq_lead")} items={c.faqs} />
+      {/* Tones keep alternating whether or not there are open jobs. */}
+      <Faq title={t("pages.faq_title")} lead={t("pages.faq_lead")} items={c.faqs} tone={jobs.length ? "bg" : "alt"} />
 
       {related.length > 0 && (
-        <Section tone="alt">
+        <Section tone={jobs.length ? "alt" : "bg"}>
           <Container>
             <SectionHead title={t("pages.countries.related", { region })} />
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -210,7 +211,7 @@ export default function CountryShow({ country: c, jobs, related }: Props) {
         </Section>
       )}
 
-      <FinalCta tone={related.length > 0 ? "alt" : "bg"} />
+      <FinalCta tone={(related.length > 0) === (jobs.length > 0) ? "alt" : "bg"} />
     </SiteLayout>
   );
 }

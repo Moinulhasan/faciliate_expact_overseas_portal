@@ -7,6 +7,12 @@ function lookup(dict: Dict, key: string): unknown {
   return key.split(".").reduce<unknown>((node, part) => (node as Dict | undefined)?.[part], dict);
 }
 
+/** "/jobs" → "/bn/jobs" in Bangla. External links, anchors and already-prefixed paths pass through. */
+export function localizePath(path: string, locale: string): string {
+  if (locale !== "bn" || !path.startsWith("/") || path.startsWith("//") || /^\/bn(\/|$|\?)/.test(path)) return path;
+  return path === "/" ? "/bn" : `/bn${path}`;
+}
+
 export function useLocale() {
   const { locale, translations } = usePage<SharedProps>().props;
 
@@ -21,5 +27,7 @@ export function useLocale() {
     return (lookup(translations, key) ?? []) as T;
   }
 
-  return { locale, t, tm };
+  const path = (p: string) => localizePath(p, locale);
+
+  return { locale, t, tm, path };
 }

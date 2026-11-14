@@ -1,136 +1,139 @@
 {
   "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
   "resources/js/Components/DocumentChecklist.tsx": [
-    "/build/assets/DocumentChecklist-v2-xdQLx.js"
+    "/build/assets/DocumentChecklist-DpyElRqF.js"
   ],
   "resources/js/Components/IndustryHeroVisual.tsx": [
-    "/build/assets/Show-DqC4MQWD.js"
+    "/build/assets/Show-BuZJctuQ.js"
   ],
   "resources/js/Components/InquiryForm.tsx": [
-    "/build/assets/ContactSection-BdyaB-BD.js"
+    "/build/assets/ContactSection-BaeNzoO6.js"
   ],
   "resources/js/Components/JobContactDialog.tsx": [
-    "/build/assets/JobCard-DmK72EL7.js"
+    "/build/assets/JobCard-DcxxoXq4.js"
   ],
   "resources/js/Components/Seo.tsx": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/Components/cards/CountryCard.tsx": [
-    "/build/assets/CountryCard-BiAgkKXp.js"
+    "/build/assets/CountryCard-BUbyYD7V.js"
   ],
   "resources/js/Components/cards/IndustryCard.tsx": [
-    "/build/assets/IndustryCard-D8yL-ANg.js"
+    "/build/assets/IndustryCard-BMLD7L2H.js"
   ],
   "resources/js/Components/cards/JobCard.tsx": [
-    "/build/assets/JobCard-DmK72EL7.js"
+    "/build/assets/JobCard-DcxxoXq4.js"
   ],
   "resources/js/Components/motion/Marquee.tsx": [
-    "/build/assets/Home-BCd2Wgt_.js"
-  ],
-  "resources/js/Components/sections/AudienceFork.tsx": [
-    "/build/assets/Home-BCd2Wgt_.js"
+    "/build/assets/Home-_myFRHDF.js"
   ],
   "resources/js/Components/sections/ContactSection.tsx": [
-    "/build/assets/ContactSection-BdyaB-BD.js"
+    "/build/assets/ContactSection-BaeNzoO6.js"
   ],
   "resources/js/Components/sections/CostsBlock.tsx": [
-    "/build/assets/Journey-CC8M2ibD.js"
-  ],
-  "resources/js/Components/sections/Destinations.tsx": [
-    "/build/assets/Home-BCd2Wgt_.js"
+    "/build/assets/CostsBlock-DOmj-iOo.js"
   ],
   "resources/js/Components/sections/Faq.tsx": [
-    "/build/assets/Faq-Dr90sckK.js"
+    "/build/assets/Faq-X2DWsC6W.js"
   ],
   "resources/js/Components/sections/FinalCta.tsx": [
-    "/build/assets/Card-9Ubla1vH.js"
+    "/build/assets/Card-C3OvSPRv.js"
   ],
   "resources/js/Components/sections/Footer.tsx": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/Components/sections/Hero.tsx": [
-    "/build/assets/Home-BCd2Wgt_.js"
+    "/build/assets/Home-_myFRHDF.js"
   ],
   "resources/js/Components/sections/IndustryBento.tsx": [
-    "/build/assets/Home-BCd2Wgt_.js"
+    "/build/assets/Home-_myFRHDF.js"
   ],
   "resources/js/Components/sections/Journey.tsx": [
-    "/build/assets/Journey-CC8M2ibD.js"
+    "/build/assets/Journey-hItFaDzF.js"
   ],
   "resources/js/Components/sections/LiveOpenings.tsx": [
-    "/build/assets/LiveOpenings-DPoPac1B.js"
+    "/build/assets/LiveOpenings-BK0LHdeM.js"
   ],
   "resources/js/Components/sections/Nav.tsx": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/Components/sections/PageHero.tsx": [
-    "/build/assets/PageHero-mEN2jfPE.js"
+    "/build/assets/PageHero-ZW5DPLSc.js"
   ],
   "resources/js/Components/sections/Reviews.tsx": [
-    "/build/assets/Home-BCd2Wgt_.js"
+    "/build/assets/Home-_myFRHDF.js"
   ],
   "resources/js/Components/sections/TrustBar.tsx": [
-    "/build/assets/Home-BCd2Wgt_.js"
+    "/build/assets/Home-_myFRHDF.js"
   ],
   "resources/js/Components/ui/Badge.tsx": [
-    "/build/assets/JobCard-DmK72EL7.js"
+    "/build/assets/JobCard-DcxxoXq4.js"
   ],
   "resources/js/Components/ui/Button.tsx": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/Components/ui/Card.tsx": [
-    "/build/assets/Card-9Ubla1vH.js"
+    "/build/assets/Card-C3OvSPRv.js"
   ],
   "resources/js/Components/ui/FlagIcon.tsx": [
-    "/build/assets/FlagIcon-CPJ7bVnz.js"
+    "/build/assets/FlagIcon-DLwSLeS3.js"
   ],
   "resources/js/Components/ui/IndustryVisual.tsx": [
-    "/build/assets/IndustryCard-D8yL-ANg.js"
+    "/build/assets/IndustryCard-BMLD7L2H.js"
+  ],
+  "resources/js/Components/ui/Link.tsx": [
+    "/build/assets/SiteLayout-CAKLTTxk.js"
+  ],
+  "resources/js/Components/ui/PayLine.tsx": [
+    "/build/assets/IndustryCard-BMLD7L2H.js"
   ],
   "resources/js/Components/ui/Picture.tsx": [
-    "/build/assets/IndustryCard-D8yL-ANg.js"
+    "/build/assets/IndustryCard-BMLD7L2H.js"
   ],
   "resources/js/Components/ui/SearchInput.tsx": [
-    "/build/assets/SearchInput-Cd8O2Zx5.js"
+    "/build/assets/SearchInput-DS_QX9bp.js"
   ],
   "resources/js/Components/ui/Section.tsx": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/Layouts/SiteLayout.tsx": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/Pages/About.tsx": [
-    "/build/assets/About-XR4BFt4H.js"
+    "/build/assets/About-DOcjMTLJ.js"
   ],
   "resources/js/Pages/Contact.tsx": [
-    "/build/assets/Contact-CXBSc2rT.js"
+    "/build/assets/Contact-BO6_IX1P.js"
   ],
   "resources/js/Pages/Countries/Index.tsx": [
-    "/build/assets/Index-DHOwQmOV.js"
+    "/build/assets/Index-DgUaCq_J.js"
   ],
   "resources/js/Pages/Countries/Show.tsx": [
-    "/build/assets/Show-Cb3_BrQV.js"
+    "/build/assets/Show-BEs3Zhtl.js"
   ],
   "resources/js/Pages/Employers.tsx": [
-    "/build/assets/Employers-C_e5G4iy.js"
+    "/build/assets/Employers-BK4SpK5v.js"
   ],
   "resources/js/Pages/Home.tsx": [
-    "/build/assets/Home-BCd2Wgt_.js"
+    "/build/assets/Home-_myFRHDF.js"
   ],
   "resources/js/Pages/Industries/Index.tsx": [
-    "/build/assets/Index-mvKcMwyb.js"
+    "/build/assets/Index-BqxoLRUF.js"
   ],
   "resources/js/Pages/Industries/Show.tsx": [
-    "/build/assets/Show-DqC4MQWD.js"
+    "/build/assets/Show-BuZJctuQ.js"
   ],
   "resources/js/Pages/Jobs/Index.tsx": [
-    "/build/assets/Index-Cw0MNzUY.js"
+    "/build/assets/Index-Bc0G5CyF.js"
+  ],
+  "resources/js/Pages/Privacy.tsx": [
+    "/build/assets/Privacy-CWOYUXyi.js"
   ],
   "resources/js/Pages/WorkAbroad.tsx": [
-    "/build/assets/WorkAbroad-ClSOjDjF.js"
+    "/build/assets/WorkAbroad-DROngVx9.js"
   ],
   "resources/js/hooks/useLocale.ts": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/hooks/useSearchQuery.ts": [
     "/build/assets/search-B7Us7PSw.js"
@@ -138,13 +141,13 @@
   "resources/js/hooks/useTier.ts": [],
   "resources/js/lib/capability.ts": [],
   "resources/js/lib/cn.ts": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/lib/industryIcons.ts": [
-    "/build/assets/IndustryCard-D8yL-ANg.js"
+    "/build/assets/IndustryCard-BMLD7L2H.js"
   ],
   "resources/js/lib/motion.ts": [
-    "/build/assets/SiteLayout-hZjGrTmB.js"
+    "/build/assets/SiteLayout-CAKLTTxk.js"
   ],
   "resources/js/lib/search.ts": [
     "/build/assets/search-B7Us7PSw.js"

@@ -1,4 +1,4 @@
-import { Link } from "@inertiajs/react";
+import { Link } from "@/Components/ui/Link";
 import { ChevronRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Container, Heading } from "@/Components/ui/Section";
@@ -46,7 +46,7 @@ export function PageHero({
       {background}
       <Container>
         <nav aria-label="Breadcrumb">
-          <ol className="flex flex-wrap items-center gap-1 text-[13px] text-night-muted">
+          <ol className="flex flex-wrap items-center gap-1 text-sm text-night-muted">
             {crumbs.map((c, i) => (
               <li key={c.href} className="flex items-center gap-1">
                 {i > 0 && <ChevronRight aria-hidden className="size-3.5 opacity-60" />}
@@ -82,7 +82,7 @@ export function PageHero({
 
 export function HeroPill({ children }: { children: ReactNode }) {
   return (
-    <p className="inline-flex items-center gap-2 rounded-full border border-night-line bg-night-2/70 px-3 py-1.5 text-[13px] text-night-muted backdrop-blur-sm">
+    <p className="inline-flex items-center gap-2 rounded-full border border-night-line bg-night-2/70 px-3 py-1.5 text-sm text-night-muted backdrop-blur-sm">
       <span className="size-1.5 rounded-full bg-cta shadow-[0_0_0_3px_rgba(115,191,68,.18)]" />
       {children}
     </p>

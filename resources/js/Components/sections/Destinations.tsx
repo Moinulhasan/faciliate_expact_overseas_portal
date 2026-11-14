@@ -1,4 +1,5 @@
-import { Link, usePage } from "@inertiajs/react";
+import { usePage } from "@inertiajs/react";
+import { Link } from "@/Components/ui/Link";
 import { Clock, MessageCircle } from "lucide-react";
 import { LayoutGroup, m } from "motion/react";
 import { useState } from "react";
@@ -62,13 +63,13 @@ export function Destinations({ countries }: { countries: Country[] }) {
                 <div className="mb-2 flex items-start justify-between gap-2">
                   <FlagIcon iso2={c.iso2} className="h-[18px] w-6" />
                   {regions.length > 1 && (
-                    <Pill className="border-0 bg-brand/10 px-2 py-0 text-xs text-brand">{t(`home.destinations.region_label.${c.region}`)}</Pill>
+                    <Pill className="border-0 bg-brand/10 px-2 py-0 text-[13px] text-brand">{t(`home.destinations.region_label.${c.region}`)}</Pill>
                   )}
                 </div>
                 <h3 className="text-h3">{c.name}</h3>
-                <p className="line-clamp-2 text-[13px] leading-[18px] text-muted">{c.top_trades.slice(0, 2).join(" · ")}</p>
+                <p className="line-clamp-2 text-sm leading-[18px] text-muted">{c.top_trades.slice(0, 2).join(" · ")}</p>
                 {c.processing_days_min && c.processing_days_max && (
-                  <p className="mt-1 inline-flex items-center gap-1.5 text-[13px] text-brand">
+                  <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-brand">
                     <Clock className="size-3.5" strokeWidth={2} />
                     {t("home.destinations.days", { min: c.processing_days_min, max: c.processing_days_max })}
                   </p>
@@ -91,7 +92,7 @@ export function Destinations({ countries }: { countries: Country[] }) {
             </li>
           ))}
         </ul>
-        <p className="mt-5 text-[13px] text-faint">{t("home.destinations.note")}</p>
+        <p className="mt-5 text-sm text-faint">{t("home.destinations.note")}</p>
       </Container>
     </Section>
   );

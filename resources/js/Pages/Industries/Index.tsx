@@ -2,7 +2,7 @@ import { usePage } from "@inertiajs/react";
 import { ArrowRight } from "lucide-react";
 import { AnimatePresence, LayoutGroup, m } from "motion/react";
 import { useState } from "react";
-import { IndustryCard } from "@/Components/cards/IndustryCard";
+import { allHavePhotos, IndustryCard } from "@/Components/cards/IndustryCard";
 import { breadcrumbLd, itemListLd, Seo } from "@/Components/Seo";
 import { FinalCta } from "@/Components/sections/FinalCta";
 import { HeroPill, PageHero } from "@/Components/sections/PageHero";
@@ -32,6 +32,7 @@ export default function IndustriesIndex({ industries }: { industries: Row[] }) {
   const countIn = (g: (typeof groups)[number] | "all") => (g === "all" ? searched.length : searched.filter((i) => i.group === g).length);
   const countryCount = new Set(industries.flatMap((i) => i.countries.map((c) => c.iso2))).size;
   const roleCount = industries.reduce((n, i) => n + i.roles.length, 0);
+  const photos = allHavePhotos(industries);
 
   const crumbs = [
     { name: t("pages.crumbs.home"), href: "/" },
@@ -54,10 +55,10 @@ export default function IndustriesIndex({ industries }: { industries: Row[] }) {
         lead={t("pages.industries.lead", { n: industries.length })}
         actions={
           <>
-            <ButtonLink href="/apply" size="lg">
+            <ButtonLink href="/contact?type=job" size="lg">
               {t("pages.apply")} <ArrowRight />
             </ButtonLink>
-            <ButtonLink href="/employers/request" size="lg" variant="quiet">
+            <ButtonLink href="/contact?type=employer" size="lg" variant="quiet">
               {t("pages.request")}
             </ButtonLink>
           </>
@@ -71,7 +72,7 @@ export default function IndustriesIndex({ industries }: { industries: Row[] }) {
             ].map(([v, l]) => (
               <div key={String(l)} className="bg-night-2/90 p-5">
                 <dd className="text-[30px] leading-9 font-semibold tracking-[-0.02em] text-white tabular-nums">{v}</dd>
-                <dt className="text-[13px] text-night-muted">{l}</dt>
+                <dt className="text-sm text-night-muted">{l}</dt>
               </div>
             ))}
           </dl>
@@ -133,7 +134,7 @@ export default function IndustriesIndex({ industries }: { industries: Row[] }) {
                     transition={{ duration: dur.md, ease: ease.out }}
                     className="flex"
                   >
-                    <IndustryCard industry={ind} countries={ind.countries} />
+                    <IndustryCard industry={ind} countries={ind.countries} media={photos} />
                   </m.li>
                 ))}
               </AnimatePresence>

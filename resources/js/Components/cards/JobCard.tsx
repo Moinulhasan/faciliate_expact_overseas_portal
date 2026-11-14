@@ -8,7 +8,8 @@ import { useLocale } from "@/hooks/useLocale";
 import type { JobDetail } from "@/types";
 
 const n = new Intl.NumberFormat("en");
-const d = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short" });
+// Year included (UX audit) — "2 Dec 2026", not "2 Dec".
+const d = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric" });
 
 // No job detail page yet: the card opens a WhatsApp / Call dialog with the job summary.
 export function JobCard({ job: j }: { job: JobDetail }) {
@@ -25,7 +26,7 @@ export function JobCard({ job: j }: { job: JobDetail }) {
         className="card group flex h-full w-full cursor-pointer flex-col gap-3 p-5 text-left"
       >
         <span className="flex w-full items-center justify-between gap-2">
-          <span className="inline-flex min-w-0 items-center gap-2 text-[13px] text-muted">
+          <span className="inline-flex min-w-0 items-center gap-2 text-sm text-muted">
             <FlagIcon iso2={j.country.iso2} className="h-3.5 w-5" />
             <span className="truncate">{j.country.name}</span>
           </span>
@@ -36,14 +37,21 @@ export function JobCard({ job: j }: { job: JobDetail }) {
         </span>
         <span className="block">
           <span className="block text-[17px] leading-6 font-semibold tracking-[-0.01em] group-hover:text-brand">{j.title}</span>
-          {j.industry && <span className="block text-[13px] text-faint">{j.industry.name}</span>}
+          {j.industry && <span className="block text-sm text-faint">{j.industry.name}</span>}
         </span>
         <span className="block text-[22px] leading-7 font-semibold tracking-[-0.02em] tabular-nums">
-          <span className="mr-1 text-[13px] font-medium tracking-normal text-muted">{j.currency}</span>
+          <span className="mr-1 text-sm font-medium tracking-normal text-muted">{j.currency}</span>
           {n.format(j.salary_min)}–{n.format(j.salary_max)}
-          <span className="ml-1 text-[13px] font-normal tracking-normal text-faint">{t("hubs.jobs.per_month")}</span>
+          <span className="ml-1 text-sm font-normal tracking-normal text-faint">{t("hubs.jobs.per_month")}</span>
+          {j.salary_bdt_min && (
+            // Workers think in taka (UX audit). Approximate, rate date shown in the dialog.
+            <span className="mt-0.5 block text-base font-semibold tracking-normal text-brand">
+              ≈ ৳{n.format(j.salary_bdt_min)}
+              {j.salary_bdt_max ? `–${n.format(j.salary_bdt_max)}` : "+"}
+            </span>
+          )}
         </span>
-        <span className="flex flex-wrap gap-1.5 text-[12px] leading-5">
+        <span className="flex flex-wrap gap-1.5 text-sm leading-5">
           <span className="rounded-full bg-surface-2 px-2.5 py-0.5">{t("hubs.jobs.contract", { n: j.contract_months })}</span>
           <span className="rounded-full bg-surface-2 px-2.5 py-0.5">{t(`hubs.jobs.gender.${j.gender}`)}</span>
           {j.positions && (
@@ -52,15 +60,16 @@ export function JobCard({ job: j }: { job: JobDetail }) {
             </span>
           )}
         </span>
-        <span className="mt-auto flex w-full items-center justify-between gap-3 border-t border-line pt-3 text-[13px]">
-          {j.deadline ? (
-            <span className={`inline-flex items-center gap-1.5 ${j.status === "closing" ? "text-warning" : "text-brand"}`}>
-              <CalendarClock className="size-4" strokeWidth={1.75} />
-              {t("hubs.jobs.apply_by", { date: d.format(new Date(j.deadline)) })}
-            </span>
-          ) : (
-            <span />
-          )}
+        <span className="mt-auto flex w-full items-end justify-between gap-3 border-t border-line pt-3 text-sm">
+          <span className="grid gap-0.5">
+            {j.deadline && (
+              <span className={`inline-flex items-center gap-1.5 font-medium ${j.status === "closing" ? "text-urgent" : "text-brand"}`}>
+                <CalendarClock className="size-4" strokeWidth={1.75} />
+                {t("hubs.jobs.apply_by", { date: d.format(new Date(j.deadline)) })}
+              </span>
+            )}
+            {j.posted_at && <span className="text-faint">{t("hubs.jobs.posted", { date: d.format(new Date(j.posted_at)) })}</span>}
+          </span>
           <span className="inline-flex size-8 items-center justify-center rounded-full border border-line text-muted transition-colors group-hover:border-brand group-hover:bg-brand group-hover:text-white">
             <ArrowUpRight className="size-4" strokeWidth={2} />
           </span>

@@ -47,7 +47,7 @@ export default function Employers({ industries, countries }: { industries: Indus
         lead={t("hubs.employers.lead")}
         actions={
           <>
-            <ButtonLink href="/employers/request" size="lg">
+            <ButtonLink href="/contact?type=employer" size="lg">
               {t("hubs.employers.cta")} <ArrowRight />
             </ButtonLink>
             <ButtonAnchor href={`tel:${site.contact.phone_href}`} size="lg" variant="quiet">
@@ -57,16 +57,16 @@ export default function Employers({ industries, countries }: { industries: Indus
         }
         aside={
           <div className="card-night p-5">
-            <p className="text-[13px] text-night-muted">{t("hubs.employers.countries_title")}</p>
+            <p className="text-sm text-night-muted">{t("hubs.employers.countries_title")}</p>
             <ul className="mt-3 grid grid-cols-2 gap-1.5">
               {countries.slice(0, 10).map((c) => (
-                <li key={c.slug} className="flex items-center gap-2 rounded-lg bg-night-2 px-2.5 py-2 text-[13px]">
+                <li key={c.slug} className="flex items-center gap-2 rounded-lg bg-night-2 px-2.5 py-2 text-sm">
                   <FlagIcon iso2={c.iso2} className="h-3.5 w-5" />
                   <span className="truncate">{c.name}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-3 text-[13px] text-night-muted">+{Math.max(0, countries.length - 10)} more</p>
+            <p className="mt-3 text-sm text-night-muted">+{Math.max(0, countries.length - 10)} more</p>
           </div>
         }
       />
@@ -102,7 +102,7 @@ export default function Employers({ industries, countries }: { industries: Indus
               {steps.map((s, i) => (
                 <li key={s.title} className="relative border-t border-line py-5">
                   <span aria-hidden className="absolute -top-px left-0 h-px w-10 bg-brand" />
-                  <span className="text-[13px] font-semibold text-brand tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="text-sm font-semibold text-brand tabular-nums">{String(i + 1).padStart(2, "0")}</span>
                   <h3 className="mt-1.5 text-h3">{s.title}</h3>
                   <p className="mt-1 text-[15px] leading-[22px] text-muted">{s.body}</p>
                 </li>
@@ -120,7 +120,7 @@ export default function Employers({ industries, countries }: { industries: Indus
                   </li>
                 ))}
               </ul>
-              <ButtonLink href="/employers/request" className="mt-2 w-full">
+              <ButtonLink href="/contact?type=employer" className="mt-2 w-full">
                 {t("hubs.employers.cta")} <ArrowRight />
               </ButtonLink>
             </Card>

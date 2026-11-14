@@ -11,10 +11,15 @@ import { Container, Section, SectionHead } from "@/Components/ui/Section";
 import { useSearchQuery } from "@/hooks/useSearchQuery";
 import { matches } from "@/lib/search";
 import { useLocale } from "@/hooks/useLocale";
+import { cn } from "@/lib/cn";
 import { SiteLayout } from "@/Layouts/SiteLayout";
 import type { CountryCard as CountryCardT, Region, SharedProps } from "@/types";
 
 const regions: Region[] = ["gcc", "east_asia", "se_asia", "europe"];
+
+// Rows always fill (UX audit: 2 cards in a 4-column grid left a gap). Literal classes so Tailwind keeps them.
+const colsFor = (n: number) =>
+  n <= 1 ? "lg:grid-cols-1 lg:max-w-md" : n === 2 ? "lg:grid-cols-2" : n === 3 ? "lg:grid-cols-3" : "lg:grid-cols-3 xl:grid-cols-4";
 
 export default function CountriesIndex({ countries }: { countries: (CountryCardT & { keywords: string })[] }) {
   const { t } = useLocale();
@@ -55,7 +60,7 @@ export default function CountriesIndex({ countries }: { countries: (CountryCardT
         accent={t("pages.countries.accent")}
         lead={t("pages.countries.lead", { n: countries.length })}
         actions={
-          <ButtonLink href="/apply" size="lg">
+          <ButtonLink href="/contact?type=job" size="lg">
             {t("pages.apply")} <ArrowRight />
           </ButtonLink>
         }
@@ -72,7 +77,7 @@ export default function CountriesIndex({ countries }: { countries: (CountryCardT
                 >
                   <span>
                     <span className="block text-[15px] font-semibold">{t(`pages.countries.regions.${r}`)}</span>
-                    <span className="text-[13px] text-night-muted">{t("pages.countries.n_countries", { n: list.length })}</span>
+                    <span className="text-sm text-night-muted">{t("pages.countries.n_countries", { n: list.length })}</span>
                   </span>
                   <span className="flex -space-x-1.5">
                     {list.slice(0, 5).map((c) => (
@@ -101,7 +106,7 @@ export default function CountriesIndex({ countries }: { countries: (CountryCardT
                 aside={i === 0 ? search : undefined}
               />
               {r ? (
-                <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <ul className={cn("grid gap-4 sm:grid-cols-2", colsFor(list.length))}>
                   {list.map((c) => (
                     <li key={c.slug} className="flex">
                       <CountryCard country={c} />
@@ -122,7 +127,7 @@ export default function CountriesIndex({ countries }: { countries: (CountryCardT
       })}
 
       <Container>
-        <p className="py-6 text-[13px] text-faint">{t("pages.typical")}</p>
+        <p className="py-6 text-sm text-faint">{t("pages.typical")}</p>
       </Container>
 
       <FinalCta />

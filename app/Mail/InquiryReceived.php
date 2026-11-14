@@ -21,8 +21,8 @@ class InquiryReceived extends Mailable
         $types = ['job' => 'Job seeker', 'employer' => 'Employer', 'other' => 'General'];
 
         return new Envelope(
-            // Reply goes straight to the person who asked.
-            replyTo: [new Address($this->inquiry->email, $this->inquiry->name)],
+            // Reply goes straight to the person who asked (email is optional — then the team replies on WhatsApp).
+            replyTo: $this->inquiry->email ? [new Address($this->inquiry->email, $this->inquiry->name)] : [],
             subject: "[{$types[$this->inquiry->type]}] New inquiry from {$this->inquiry->name}",
         );
     }

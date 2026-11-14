@@ -31,7 +31,7 @@ export function TrustBar() {
               <BadgeCheck className="size-5 text-brand" strokeWidth={1.75} />
               <div>
                 <dd className="text-[17px] leading-6 font-semibold tabular-nums">{value}</dd>
-                <dt className="text-[13px] leading-[18px] text-muted">{t(`home.trust.${key}`)}</dt>
+                <dt className="text-sm leading-[18px] text-muted">{t(`home.trust.${key}`)}</dt>
               </div>
             </div>
           ))}

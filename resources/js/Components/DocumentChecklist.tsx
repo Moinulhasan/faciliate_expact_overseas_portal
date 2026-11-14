@@ -19,10 +19,10 @@ export function DocumentChecklist({ items }: { items: string[] }) {
   return (
     <div className="card p-5 md:p-6">
       <div className="flex items-center justify-between gap-4">
-        <p className="text-[13px] font-semibold tabular-nums" aria-live="polite">
+        <p className="text-sm font-semibold tabular-nums" aria-live="polite">
           {t("pages.countries.docs_ready", { done: done.size, total: items.length })}
         </p>
-        <p className="text-[13px] text-faint tabular-nums">{Math.round(pct)}%</p>
+        <p className="text-sm text-faint tabular-nums">{Math.round(pct)}%</p>
       </div>
       <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface-2" aria-hidden>
         <div

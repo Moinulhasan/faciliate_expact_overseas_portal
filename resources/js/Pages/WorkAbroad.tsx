@@ -39,7 +39,7 @@ export default function WorkAbroad({ documents, countries }: { documents: string
         lead={t("hubs.work_abroad.lead")}
         actions={
           <>
-            <ButtonLink href="/apply" size="lg">
+            <ButtonLink href="/contact?type=job" size="lg">
               {t("hubs.work_abroad.cta")} <ArrowRight />
             </ButtonLink>
             <ButtonLink href="/jobs" size="lg" variant="quiet">
@@ -58,7 +58,7 @@ export default function WorkAbroad({ documents, countries }: { documents: string
                   </span>
                   <span>
                     <span className="block text-[15px] font-semibold">{p.title}</span>
-                    <span className="block text-[13px] leading-5 text-night-muted">{p.body}</span>
+                    <span className="block text-sm leading-5 text-night-muted">{p.body}</span>
                   </span>
                 </li>
               );

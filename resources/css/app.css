@@ -15,6 +15,23 @@
     font-size: 16px;
     line-height: 24px;
   }
+  /* Grid/flex children default to min-width:auto, so long or truncated text can push a column past the
+     screen (the phone overflow bug). :where() keeps specificity at 0 so utilities still override. */
+  :where(.grid) > * {
+    min-width: 0;
+  }
+  html,
+  body {
+    overflow-x: clip; /* last-resort guard; real overflow is fixed at the source */
+  }
+  /* Bangla: taller line-height (CLAUDE.md §4.2: +0.15) and no negative tracking, which crushes conjuncts. */
+  html[lang="bn"] body {
+    line-height: 1.75;
+  }
+  html[lang="bn"] :is(h1, h2, h3, .text-display, .text-h2, .text-h3) {
+    letter-spacing: 0;
+    line-height: 1.3;
+  }
   :focus-visible {
     outline: 2px solid var(--color-brand);
     outline-offset: 2px;

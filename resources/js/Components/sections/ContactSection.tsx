@@ -1,12 +1,12 @@
 import { usePage } from "@inertiajs/react";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { InquiryForm } from "@/Components/InquiryForm";
+import { InquiryForm, type FormOptions } from "@/Components/InquiryForm";
 import { Container, Section, SectionHead } from "@/Components/ui/Section";
 import { useLocale } from "@/hooks/useLocale";
 import type { SharedProps } from "@/types";
 
 // Contact details (inquiry email shown prominently) + inquiry form. Used on Home and /contact.
-export function ContactSection({ tone = "bg", id = "inquiry" }: { tone?: "bg" | "alt"; id?: string }) {
+export function ContactSection({ tone = "bg", id = "inquiry", options }: { tone?: "bg" | "alt"; id?: string; options: FormOptions }) {
   const { t } = useLocale();
   const { site } = usePage<SharedProps>().props;
   const c = site.contact;
@@ -15,11 +15,12 @@ export function ContactSection({ tone = "bg", id = "inquiry" }: { tone?: "bg" | 
     { Icon: Phone, label: t("contact.phone_label"), value: c.phone, href: `tel:${c.phone_href}` },
     { Icon: MessageCircle, label: t("contact.whatsapp_label"), value: c.phone, href: `https://wa.me/${c.whatsapp}`, external: true },
     { Icon: MapPin, label: t("contact.office_label"), value: c.address },
+    ...(c.address_my ? [{ Icon: MapPin, label: t("contact.office_my_label"), value: c.address_my }] : []),
   ];
 
   return (
     <Section tone={tone} id={id} className="scroll-mt-20">
-      <Container className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+      <Container className="grid grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <SectionHead title={t("contact.section_title")} lead={t("contact.section_lead")} />
 
@@ -32,9 +33,9 @@ export function ContactSection({ tone = "bg", id = "inquiry" }: { tone?: "bg" | 
               <Mail className="size-5" strokeWidth={1.75} />
             </span>
             <span className="min-w-0">
-              <span className="block text-[13px] text-night-muted">{t("contact.email_label")}</span>
+              <span className="block text-sm text-night-muted">{t("contact.email_label")}</span>
               <span className="block truncate text-[19px] leading-7 font-semibold tracking-[-0.01em] group-hover:text-cta">{c.inquiry_email}</span>
-              <span className="block text-[12px] text-night-muted">{t("contact.email_note")}</span>
+              <span className="block text-[13px] text-night-muted">{t("contact.email_note")}</span>
             </span>
           </a>
 
@@ -46,7 +47,7 @@ export function ContactSection({ tone = "bg", id = "inquiry" }: { tone?: "bg" | 
                     <Icon className="size-[18px]" strokeWidth={1.75} />
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-[12px] text-faint">{label}</span>
+                    <span className="block text-[13px] text-faint">{label}</span>
                     <span className="block text-[15px] font-medium">{value}</span>
                   </span>
                 </>
@@ -66,7 +67,7 @@ export function ContactSection({ tone = "bg", id = "inquiry" }: { tone?: "bg" | 
           </ul>
         </div>
 
-        <InquiryForm />
+        <InquiryForm options={options} />
       </Container>
     </Section>
   );

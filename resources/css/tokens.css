@@ -1,6 +1,6 @@
 /* Measured from facilitatexpat.com :root on 2026-11-11 — keep the sites siblings. */
 @theme {
-  --font-sans: "Geist Variable", "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Geist Variable", "Geist", "Hind Siliguri", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* Light surfaces */
   --color-bg: #f6f8f5;
@@ -21,6 +21,16 @@
   --color-cta-hi: #a6db80;
   --color-wa: #25d366;
 
+  /* Action — main buttons only (UX audit 13 Nov 2026: warm amber on cool green draws the eye). Dark text ≈ 9:1. */
+  --color-action: #f5a524;
+  --color-action-hi: #ffb940;
+  --color-action-lo: #e8900f;
+  --color-on-action: #241500;
+
+  /* Status */
+  --color-urgent: #c2410c;   /* "Closing soon" only */
+  --color-verified: #0e7c86; /* "Verified" badges */
+
   /* Night (dark sections) */
   --color-night: #06120d;
   --color-night-2: #0d1f17;
@@ -39,6 +49,8 @@
   --shadow-card: 0 1px 2px rgba(10, 15, 36, 0.05), 0 16px 40px rgba(10, 15, 36, 0.08);
   --shadow-cta: 0 8px 24px -10px rgba(28, 121, 73, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.18);
   --shadow-cta-hover: 0 14px 32px -10px rgba(28, 121, 73, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  --shadow-action: 0 8px 24px -10px rgba(232, 144, 15, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  --shadow-action-hover: 0 14px 32px -10px rgba(232, 144, 15, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }

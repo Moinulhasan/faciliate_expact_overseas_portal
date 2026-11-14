@@ -21,12 +21,12 @@ class Testimonial extends Model
         return $this->belongsTo(Country::class);
     }
 
-    // Real reviews need recorded consent; sample rows are allowed only outside production.
+    // Real reviews need recorded consent; sample rows only with the explicit opt-in (see JobOpening::samplesAllowed).
     public function scopeVisible(Builder $q): void
     {
         $q->where('is_published', true)->where(function ($q) {
             $q->whereNotNull('consent_at');
-            if (! app()->isProduction()) {
+            if (JobOpening::samplesAllowed()) {
                 $q->orWhere('is_sample', true);
             }
         });

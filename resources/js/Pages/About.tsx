@@ -59,7 +59,7 @@ export default function About({ countryCount, industryCount }: { countryCount: n
             {figures.map(([v, l]) => (
               <div key={l} className="bg-night-2/90 p-5">
                 <dd className="text-[30px] leading-9 font-semibold tracking-[-0.02em] text-white tabular-nums">{v}</dd>
-                <dt className="text-[13px] text-night-muted">{l}</dt>
+                <dt className="text-sm text-night-muted">{l}</dt>
               </div>
             ))}
           </dl>
@@ -114,7 +114,7 @@ export default function About({ countryCount, industryCount }: { countryCount: n
                       <BadgeCheck className="size-[18px] text-brand" strokeWidth={1.75} />
                       {t(`home.trust.${k}`)}
                     </dt>
-                    <dd className={v ? "text-[15px] font-semibold tabular-nums" : "text-[13px] text-faint"}>{v ?? t("home.footer.pending")}</dd>
+                    <dd className={v ? "text-[15px] font-semibold tabular-nums" : "text-sm text-faint"}>{v ?? t("home.footer.pending")}</dd>
                   </div>
                 );
               })}
@@ -127,8 +127,20 @@ export default function About({ countryCount, industryCount }: { countryCount: n
             <ul className="mt-2 grid gap-3 text-[15px]">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 size-[18px] shrink-0 text-brand" strokeWidth={1.75} />
-                <address className="not-italic">{contact.address}</address>
+                <address className="not-italic">
+                  <span className="block font-semibold">{t("contact.office_label")}</span>
+                  {contact.address}
+                </address>
               </li>
+              {contact.address_my && (
+                <li className="flex gap-3">
+                  <MapPin className="mt-0.5 size-[18px] shrink-0 text-brand" strokeWidth={1.75} />
+                  <address className="not-italic">
+                    <span className="block font-semibold">{t("contact.office_my_label")}</span>
+                    {contact.address_my}
+                  </address>
+                </li>
+              )}
               <li>
                 <a href={`tel:${contact.phone_href}`} className="flex gap-3 hover:text-brand">
                   <Phone className="mt-0.5 size-[18px] shrink-0 text-brand" strokeWidth={1.75} />

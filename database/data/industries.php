@@ -12,7 +12,7 @@
 
 return [
     [
-        'slug' => 'construction', 'name' => 'Construction & Infrastructure', 'group' => 'construction',
+        'slug' => 'construction', 'short' => 'Construction', 'name' => 'Construction & Infrastructure', 'group' => 'construction',
         'image' => '/images/service_construction.png',
         'summary' => 'Skilled, trained and certified site workers for buildings, roads, bridges and large projects.',
         'intro' => 'Construction is the largest employer of Bangladeshi workers abroad. We recruit tradespeople and site supervisors for contractors in the Gulf, Asia and Europe, and trade-test them before they are put forward to an employer.',
@@ -26,7 +26,7 @@ return [
         ],
     ],
     [
-        'slug' => 'oil-gas', 'name' => 'Oil & Gas', 'group' => 'construction',
+        'slug' => 'oil-gas', 'short' => 'Oil & Gas', 'name' => 'Oil & Gas', 'group' => 'construction',
         'image' => '/images/service_oil.png',
         'summary' => 'Certified personnel for upstream, midstream and downstream oil & gas operations.',
         'intro' => 'Oil & gas projects need workers who meet strict safety and compliance standards. We source drilling crew, pipeline teams and refinery technicians, and check certifications before candidates reach the employer.',
@@ -40,7 +40,7 @@ return [
         ],
     ],
     [
-        'slug' => 'mep', 'name' => 'MEP (Mechanical, Electrical & Plumbing)', 'group' => 'construction',
+        'slug' => 'mep', 'short' => 'MEP', 'name' => 'MEP (Mechanical, Electrical & Plumbing)', 'group' => 'construction',
         'image' => null,
         'summary' => 'Licensed electricians, plumbers and HVAC technicians for installation and maintenance.',
         'intro' => 'MEP work requires certified technicians who can install and maintain building systems to code. We recruit electricians, plumbers, HVAC and duct technicians for construction and facilities projects.',
@@ -54,7 +54,7 @@ return [
         ],
     ],
     [
-        'slug' => 'engineering-technical', 'name' => 'Engineering & Technical', 'group' => 'construction',
+        'slug' => 'engineering-technical', 'short' => 'Engineering', 'name' => 'Engineering & Technical', 'group' => 'construction',
         'image' => null,
         'summary' => 'Engineers, technicians and IT staff for projects, plants and technical operations.',
         'intro' => 'Employers in Europe and Asia increasingly hire technical staff from Bangladesh. We recruit diploma and degree holders for engineering, maintenance and IT support roles, with documents and experience verified.',
@@ -68,7 +68,7 @@ return [
         ],
     ],
     [
-        'slug' => 'manufacturing', 'name' => 'Manufacturing & Production', 'group' => 'industrial',
+        'slug' => 'manufacturing', 'short' => 'Manufacturing', 'name' => 'Manufacturing & Production', 'group' => 'industrial',
         'image' => null,
         'summary' => 'Production workers, machine operators and quality inspectors for factories.',
         'intro' => 'Factories in Malaysia, Japan and Central Europe hire production staff from Bangladesh. We recruit workers trained in modern industrial processes for production lines, quality control and operations.',
@@ -82,7 +82,7 @@ return [
         ],
     ],
     [
-        'slug' => 'agriculture', 'name' => 'Agriculture & Farming', 'group' => 'industrial',
+        'slug' => 'agriculture', 'short' => 'Agriculture', 'name' => 'Agriculture & Farming', 'group' => 'industrial',
         'image' => null,
         'summary' => 'Farm, plantation and greenhouse workers for seasonal and long-term contracts.',
         'intro' => 'Plantations in Malaysia and farms in Eastern Europe hire agricultural workers on seasonal and longer contracts. We recruit workers with farm experience and explain contract terms, housing and seasons before they apply.',
@@ -96,7 +96,7 @@ return [
         ],
     ],
     [
-        'slug' => 'hospitality', 'name' => 'Hospitality & Catering', 'group' => 'services',
+        'slug' => 'hospitality', 'short' => 'Hospitality', 'name' => 'Hospitality & Catering', 'group' => 'services',
         'image' => null,
         'summary' => 'Hotel, restaurant and catering staff trained to international service standards.',
         'intro' => 'Hotels, restaurants and catering companies hire Bangladeshi staff for kitchens and service. We recruit cooks, waiters and housekeeping staff, and check experience and basic English before shortlisting.',
@@ -110,7 +110,7 @@ return [
         ],
     ],
     [
-        'slug' => 'healthcare', 'name' => 'Healthcare & Medical Services', 'group' => 'services',
+        'slug' => 'healthcare', 'short' => 'Healthcare', 'name' => 'Healthcare & Medical Services', 'group' => 'services',
         'image' => null,
         'summary' => 'Nurses, caregivers and technicians compliant with international medical standards.',
         'intro' => 'Hospitals, clinics and care homes hire qualified healthcare workers from Bangladesh. We verify registration and qualifications before candidates are put forward, and guide licensing steps in the destination.',
@@ -124,7 +124,7 @@ return [
         ],
     ],
     [
-        'slug' => 'beauty-wellness', 'name' => 'Beauty, Spa & Wellness', 'group' => 'services',
+        'slug' => 'beauty-wellness', 'short' => 'Beauty & Spa', 'name' => 'Beauty, Spa & Wellness', 'group' => 'services',
         'image' => null,
         'summary' => 'Beauty therapists, hairdressers and spa staff for salons, hotels and resorts.',
         'intro' => 'Salons, spas and hotels in the Gulf hire trained beauty and wellness staff. We recruit therapists with practical experience and check skills before shortlisting.',
@@ -138,7 +138,7 @@ return [
         ],
     ],
     [
-        'slug' => 'education', 'name' => 'Education & Training', 'group' => 'services',
+        'slug' => 'education', 'short' => 'Education', 'name' => 'Education & Training', 'group' => 'services',
         'image' => null,
         'summary' => 'Teachers and trainers for international curricula and vocational programmes.',
         'intro' => 'Schools and training centres hire qualified teachers and vocational trainers. We recruit graduates with teaching experience and verify qualifications and language ability.',
@@ -152,7 +152,7 @@ return [
         ],
     ],
     [
-        'slug' => 'security', 'name' => 'Security Services', 'group' => 'operations',
+        'slug' => 'security', 'short' => 'Security', 'name' => 'Security Services', 'group' => 'operations',
         'image' => '/images/service_secuirity.png',
         'summary' => 'Trained security guards and supervisors for sites, buildings and events.',
         'intro' => 'Security companies hire disciplined, trained guards for commercial, residential and industrial sites. We recruit candidates with security or uniformed-service experience and check physical fitness.',
@@ -166,7 +166,7 @@ return [
         ],
     ],
     [
-        'slug' => 'facility-management', 'name' => 'Facility Management & Maintenance', 'group' => 'operations',
+        'slug' => 'facility-management', 'short' => 'Facility Management', 'name' => 'Facility Management & Maintenance', 'group' => 'operations',
         'image' => null,
         'summary' => 'Cleaning, maintenance and support staff for commercial and residential facilities.',
         'intro' => 'Facility management companies need reliable staff for cleaning, maintenance and grounds work. We recruit workers for buildings, malls, hospitals and residential compounds.',
@@ -180,7 +180,7 @@ return [
         ],
     ],
     [
-        'slug' => 'transport-logistics', 'name' => 'Transportation & Logistics', 'group' => 'operations',
+        'slug' => 'transport-logistics', 'short' => 'Logistics', 'name' => 'Transportation & Logistics', 'group' => 'operations',
         'image' => null,
         'summary' => 'Warehouse, storekeeping and logistics staff for supply-chain operations.',
         'intro' => 'Warehouses and logistics companies in Europe and the Gulf hire Bangladeshi staff for storage, picking and delivery. We recruit workers with warehouse experience and forklift skills.',
@@ -194,7 +194,7 @@ return [
         ],
     ],
     [
-        'slug' => 'drivers', 'name' => 'Taxi, Limousine & Chauffeur Services', 'group' => 'operations',
+        'slug' => 'drivers', 'short' => 'Drivers & Chauffeurs', 'name' => 'Taxi, Limousine & Chauffeur Services', 'group' => 'operations',
         'image' => null,
         'summary' => 'Licensed light and heavy vehicle drivers with local and international road knowledge.',
         'intro' => 'Transport companies hire experienced drivers for taxis, limousines, buses and trucks. We check licences and driving experience, and explain the local licence conversion process in the destination.',
@@ -208,7 +208,7 @@ return [
         ],
     ],
     [
-        'slug' => 'retail', 'name' => 'Retail & Trading', 'group' => 'operations',
+        'slug' => 'retail', 'short' => 'Retail', 'name' => 'Retail & Trading', 'group' => 'operations',
         'image' => null,
         'summary' => 'Sales, cashier and merchandising staff for shops, malls and supermarkets.',
         'intro' => 'Supermarkets, malls and trading companies hire retail staff from Bangladesh. We recruit sales associates and cashiers trained in modern retail systems and customer service.',
@@ -222,7 +222,7 @@ return [
         ],
     ],
     [
-        'slug' => 'office-admin', 'name' => 'Office & Administration', 'group' => 'operations',
+        'slug' => 'office-admin', 'short' => 'Office & Admin', 'name' => 'Office & Administration', 'group' => 'operations',
         'image' => null,
         'summary' => 'Admin, accounts and front-desk staff for offices and projects.',
         'intro' => 'Companies and project offices hire administrative staff with computer and English skills. We recruit graduates with office experience for admin, accounts and front-desk roles.',

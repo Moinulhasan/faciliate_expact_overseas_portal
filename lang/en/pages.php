@@ -3,7 +3,7 @@
 return [
     'crumbs' => ['home' => 'Home', 'industries' => 'Industries', 'countries' => 'Countries'],
     'typical' => 'Typical ranges — your advisor confirms the current timeline for your case.',
-    'apply' => 'Apply now',
+    'apply' => 'Ask an advisor',
     'request' => 'Request workers',
     'whatsapp' => 'Ask on WhatsApp',
     'open_jobs' => 'Open jobs',
@@ -39,6 +39,7 @@ return [
         ],
         'roles_count' => ':n roles',
         'roles_label' => 'Roles',
+        'more' => '+:n more',
         'hiring_in' => 'Hiring in',
         'view' => 'View industry',
         // show
@@ -85,8 +86,9 @@ return [
         ],
         'facts_short' => ['processing' => 'Processing', 'contract' => 'Contract', 'currency' => 'Paid in'],
         'days' => ':min–:max days',
-        'days_short' => ':min–:maxd',
-        'months_short' => ':n mo',
+        'pay' => 'Current jobs pay',
+        'per_month' => '/ month',
+        'time_label' => 'Typical time',
         'months' => ':n months',
         'view' => 'View country',
         // show

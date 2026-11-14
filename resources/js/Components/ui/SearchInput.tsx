@@ -55,7 +55,7 @@ export function SearchInput({
       <div className="absolute top-1/2 right-1.5 flex -translate-y-1/2 items-center gap-1">
         {value ? (
           <>
-            {count && <span className="text-xs text-faint tabular-nums">{count}</span>}
+            {count && <span className="text-[13px] text-faint tabular-nums">{count}</span>}
             <button
               type="button"
               onClick={() => {
@@ -69,7 +69,7 @@ export function SearchInput({
             </button>
           </>
         ) : (
-          <kbd aria-hidden className="mr-1.5 hidden rounded-md border border-line px-1.5 text-xs leading-5 text-faint sm:inline">
+          <kbd aria-hidden className="mr-1.5 hidden rounded-md border border-line px-1.5 text-[13px] leading-5 text-faint sm:inline">
             /
           </kbd>
         )}

@@ -1,4 +1,8 @@
 import "@fontsource-variable/geist/wght.css";
+// Bengali glyphs only (unicode-range) — Latin text keeps Geist, Bangla falls through to Hind Siliguri.
+import "@fontsource/hind-siliguri/bengali-400.css";
+import "@fontsource/hind-siliguri/bengali-500.css";
+import "@fontsource/hind-siliguri/bengali-600.css";
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { hydrateRoot } from "react-dom/client";

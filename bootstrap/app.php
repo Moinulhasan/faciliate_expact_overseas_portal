@@ -12,13 +12,14 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->web(append: [
+            \App\Http\Middleware\SetLocale::class,           // must run before Inertia shares translations
             \App\Http\Middleware\HandleInertiaRequests::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // Rate-limited inquiry form: show a friendly form error instead of a raw 429 page.
         $exceptions->render(function (\Illuminate\Http\Exceptions\ThrottleRequestsException $e, \Illuminate\Http\Request $request) {
-            if ($request->routeIs('inquiries.store')) {
+            if ($request->routeIs('inquiries.store', 'bn.inquiries.store')) {
                 return back()->withErrors(['form' => __('contact.too_many')])->withInput();
             }
         });

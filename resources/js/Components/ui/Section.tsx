@@ -78,7 +78,7 @@ export function Pill({ className, children }: { className?: string; children: Re
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1 rounded-full border border-line px-2.5 py-1 text-[13px] leading-5 whitespace-nowrap text-muted",
+        "inline-flex items-center gap-1 rounded-full border border-line px-2.5 py-1 text-sm leading-5 whitespace-nowrap text-muted",
         className,
       )}
     >

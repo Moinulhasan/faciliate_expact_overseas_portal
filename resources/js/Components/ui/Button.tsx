@@ -1,4 +1,4 @@
-import { Link } from "@inertiajs/react";
+import { Link } from "@/Components/ui/Link";
 import { cva, type VariantProps } from "class-variance-authority";
 import type { ComponentProps } from "react";
 import { cn } from "@/lib/cn";
@@ -9,7 +9,9 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        cta: "bg-[linear-gradient(135deg,var(--color-brand-hi),var(--color-brand-lo))] text-white shadow-(--shadow-cta) hover:-translate-y-px hover:shadow-(--shadow-cta-hover)",
+        // Main action: amber (UX audit) — one per view. Green stays for brand/secondary filled buttons.
+        cta: "bg-[linear-gradient(135deg,var(--color-action-hi),var(--color-action-lo))] text-on-action shadow-(--shadow-action) hover:-translate-y-px hover:shadow-(--shadow-action-hover)",
+        green: "bg-[linear-gradient(135deg,var(--color-brand-hi),var(--color-brand-lo))] text-white shadow-(--shadow-cta) hover:-translate-y-px hover:shadow-(--shadow-cta-hover)",
         ghost: "border-line bg-transparent text-ink hover:border-brand",
         soft: "bg-surface-2 text-ink hover:bg-brand hover:text-white",
         quiet: "border-night-line text-night-ink hover:bg-white/[0.08]",

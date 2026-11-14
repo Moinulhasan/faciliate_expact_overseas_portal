@@ -6,8 +6,8 @@ import { useLocale } from "@/hooks/useLocale";
 import { cn } from "@/lib/cn";
 
 const doors = [
-  { key: "candidate", href: "/apply", Icon: HardHat, night: true },
-  { key: "employer", href: "/employers/request", Icon: Building2, night: false },
+  { key: "candidate", href: "/contact?type=job", Icon: HardHat, night: true },
+  { key: "employer", href: "/contact?type=employer", Icon: Building2, night: false },
 ] as const;
 
 export function AudienceFork() {
@@ -33,7 +33,7 @@ export function AudienceFork() {
                 </span>
                 <span
                   className={cn(
-                    "rounded-full border px-2.5 py-1 text-[13px] leading-5",
+                    "rounded-full border px-2.5 py-1 text-sm leading-5",
                     night ? "border-night-line text-night-muted" : "border-line text-muted",
                   )}
                 >

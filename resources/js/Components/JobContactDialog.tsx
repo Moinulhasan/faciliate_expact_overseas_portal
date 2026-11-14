@@ -8,7 +8,7 @@ import { useLocale } from "@/hooks/useLocale";
 import type { JobDetail, SharedProps } from "@/types";
 
 const n = new Intl.NumberFormat("en");
-const longDate = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long" });
+const longDate = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric" });
 const BENEFITS = ["accommodation", "food", "transport", "ticket", "medical", "overtime"] as const;
 
 // Native <dialog>: focus trap, Esc and inert background for free. Lenis paused while open (CLAUDE.md §5.3).
@@ -52,7 +52,7 @@ export function JobContactDialog({ job: j, open, onClose }: { job: JobDetail; op
           <X className="size-5" strokeWidth={1.75} />
           <span className="sr-only">{t("hubs.jobs.close")}</span>
         </button>
-        <p className="flex items-center gap-2 text-[13px] text-night-muted">
+        <p className="flex items-center gap-2 text-sm text-night-muted">
           <FlagIcon iso2={j.country.iso2} className="h-3.5 w-5" />
           {[j.city, j.country.name].filter(Boolean).join(", ")}
           {j.is_sample && <Badge status="sample">{t("hubs.jobs.sample")}</Badge>}
@@ -66,10 +66,17 @@ export function JobContactDialog({ job: j, open, onClose }: { job: JobDetail; op
           {n.format(j.salary_min)}–{n.format(j.salary_max)}
           <span className="ml-1.5 text-sm font-normal tracking-normal text-night-muted">{t("hubs.jobs.per_month")}</span>
         </p>
+        {j.salary_bdt_min && (
+          <p className="mt-1 text-lg font-semibold text-cta tabular-nums">
+            ≈ ৳{n.format(j.salary_bdt_min)}
+            {j.salary_bdt_max ? `–${n.format(j.salary_bdt_max)}` : "+"}
+            {j.fx_as_of && <span className="ml-2 text-sm font-normal text-night-muted">{t("hubs.jobs.fx_note", { date: j.fx_as_of })}</span>}
+          </p>
+        )}
       </div>
 
       <div className="grid gap-4 px-6 py-5">
-        <ul className="flex flex-wrap gap-1.5 text-[13px]">
+        <ul className="flex flex-wrap gap-1.5 text-sm">
           <li className="rounded-full bg-surface-2 px-2.5 py-1">{t("hubs.jobs.contract", { n: j.contract_months })}</li>
           <li className="rounded-full bg-surface-2 px-2.5 py-1">{t(`hubs.jobs.gender.${j.gender}`)}</li>
           {j.positions && <li className="rounded-full bg-surface-2 px-2.5 py-1">{t("hubs.jobs.positions", { n: j.positions })}</li>}
@@ -86,7 +93,7 @@ export function JobContactDialog({ job: j, open, onClose }: { job: JobDetail; op
           <div className="grid gap-4 sm:grid-cols-2">
             {j.requirements.length > 0 && (
               <div>
-                <p className="text-[13px] font-semibold">{t("hubs.jobs.requirements")}</p>
+                <p className="text-sm font-semibold">{t("hubs.jobs.requirements")}</p>
                 <ul className="mt-1.5 grid gap-1 text-[14px] leading-5 text-muted">
                   {j.requirements.map((r) => (
                     <li key={r}>• {r}</li>
@@ -96,7 +103,7 @@ export function JobContactDialog({ job: j, open, onClose }: { job: JobDetail; op
             )}
             {included.length > 0 && (
               <div>
-                <p className="text-[13px] font-semibold">{t("hubs.jobs.benefits")}</p>
+                <p className="text-sm font-semibold">{t("hubs.jobs.benefits")}</p>
                 <ul className="mt-1.5 grid gap-1 text-[14px] leading-5 text-muted">
                   {included.map((b) => (
                     <li key={b} className="flex items-center gap-1.5">
@@ -119,7 +126,7 @@ export function JobContactDialog({ job: j, open, onClose }: { job: JobDetail; op
           </ButtonAnchor>
         </div>
 
-        <div className="flex items-start gap-2.5 rounded-xl bg-warning/[0.06] px-3.5 py-3 text-[13px] leading-[18px] text-muted">
+        <div className="flex items-start gap-2.5 rounded-xl bg-warning/[0.06] px-3.5 py-3 text-sm leading-[18px] text-muted">
           <ShieldAlert className="mt-px size-4 shrink-0 text-warning" strokeWidth={1.75} />
           <span>
             {t("hubs.jobs.reference")}: <strong className="font-semibold text-ink">{j.slug}</strong>. {t("hubs.jobs.safety")}

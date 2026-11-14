@@ -1,4 +1,5 @@
 import { Head, usePage } from "@inertiajs/react";
+import { localizePath } from "@/hooks/useLocale";
 import type { SharedProps } from "@/types";
 
 type JsonLd = Record<string, unknown>;
@@ -15,7 +16,19 @@ export function Seo({
   jsonLd?: JsonLd[];
   type?: "website" | "article";
 }) {
-  const { canonical, site } = usePage<SharedProps>().props;
+  const { canonical, site, alternates, locale, appUrl } = usePage<SharedProps>().props;
+  // Breadcrumb URLs are built from English paths; point them at the /bn mirror on Bangla pages.
+  const ld = jsonLd.map((block) =>
+    block["@type"] === "BreadcrumbList"
+      ? {
+          ...block,
+          itemListElement: (block.itemListElement as { item: string }[]).map((li) => ({
+            ...li,
+            item: appUrl + localizePath(li.item.slice(appUrl.length) || "/", locale),
+          })),
+        }
+      : block,
+  );
   const fullTitle = `${title} — Facilitate Expat Overseas`;
 
   return (
@@ -27,13 +40,16 @@ export function Seo({
       <meta head-key="og:title" property="og:title" content={fullTitle} />
       <meta head-key="og:description" property="og:description" content={description} />
       <meta head-key="og:url" property="og:url" content={canonical} />
-      <meta head-key="og:locale" property="og:locale" content="en_US" />
+      <meta head-key="og:locale" property="og:locale" content={locale === "bn" ? "bn_BD" : "en_US"} />
+      <link head-key="alt-en" rel="alternate" hrefLang="en" href={alternates.en} />
+      <link head-key="alt-bn" rel="alternate" hrefLang="bn" href={alternates.bn} />
+      <link head-key="alt-default" rel="alternate" hrefLang="x-default" href={alternates.en} />
       <meta head-key="twitter:card" name="twitter:card" content="summary_large_image" />
       <meta head-key="twitter:title" name="twitter:title" content={fullTitle} />
       <meta head-key="twitter:description" name="twitter:description" content={description} />
-      {jsonLd.length > 0 && (
+      {ld.length > 0 && (
         <script head-key="jsonld" type="application/ld+json">
-          {JSON.stringify(jsonLd.length === 1 ? jsonLd[0] : jsonLd).replace(/</g, "\\u003c")}
+          {JSON.stringify(ld.length === 1 ? ld[0] : ld).replace(/</g, "\\u003c")}
         </script>
       )}
     </Head>

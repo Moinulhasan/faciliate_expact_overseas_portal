@@ -1,5 +1,7 @@
-import { Link, usePage } from "@inertiajs/react";
+import { usePage } from "@inertiajs/react";
+import { Link } from "@/Components/ui/Link";
 import { ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { LangSwitch } from "@/Components/sections/Nav";
 import { Container } from "@/Components/ui/Section";
 import { useLocale } from "@/hooks/useLocale";
 import type { SharedProps } from "@/types";
@@ -17,10 +19,10 @@ export function Footer() {
   const { t } = useLocale();
   const { site } = usePage<SharedProps>().props;
   const { contact, licence } = site;
-  const heading = "text-[13px] font-semibold text-night-ink";
+  const heading = "text-sm font-semibold text-night-ink";
 
   return (
-    <footer className="night bg-night pt-12 pb-8 text-night-muted">
+    <footer className="night bg-night pt-12 pb-24 text-night-muted md:pb-10">
       <Container>
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
@@ -52,8 +54,20 @@ export function Footer() {
             <ul className="mt-4 grid gap-3 text-sm">
               <li className="flex gap-2.5">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-cta" strokeWidth={1.75} />
-                <address className="not-italic">{contact.address}</address>
+                <address className="not-italic">
+                  <span className="block text-night-ink">{t("contact.office_label")}</span>
+                  {contact.address}
+                </address>
               </li>
+              {contact.address_my && (
+                <li className="flex gap-2.5">
+                  <MapPin className="mt-0.5 size-4 shrink-0 text-cta" strokeWidth={1.75} />
+                  <address className="not-italic">
+                    <span className="block text-night-ink">{t("contact.office_my_label")}</span>
+                    {contact.address_my}
+                  </address>
+                </li>
+              )}
               <li>
                 <a href={`tel:${contact.phone_href}`} className="flex gap-2.5 hover:text-night-ink">
                   <Phone className="mt-0.5 size-4 shrink-0 text-cta" strokeWidth={1.75} />
@@ -87,7 +101,7 @@ export function Footer() {
                 const value = { rl: licence.rl_number, bmet: licence.bmet, baira: licence.baira }[key];
                 return (
                   <div key={key}>
-                    <dt className="text-[13px] text-faint">{t(`home.trust.${key}`)}</dt>
+                    <dt className="text-sm text-night-muted">{t(`home.trust.${key}`)}</dt>
                     <dd className="text-night-ink">{value ?? t("home.footer.pending")}</dd>
                   </div>
                 );
@@ -96,11 +110,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-night-line pt-6 text-[13px] sm:flex-row sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-night-line pt-6 text-sm sm:flex-row sm:justify-between">
           <p>
             © {new Date().getFullYear()} {site.name}. {t("home.footer.rights")}
           </p>
-          <span className="text-night-ink">EN</span>
+          <LangSwitch className="self-start px-0 sm:self-auto" />
         </div>
       </Container>
     </footer>

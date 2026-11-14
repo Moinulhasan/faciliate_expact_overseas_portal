@@ -3,7 +3,7 @@
 return [
     'meta' => [
         'title' => 'Work abroad with a licensed recruiter',
-        'description' => 'Verified overseas jobs in 20+ countries and manpower supply from Bangladesh. Clear costs, documents checked twice, one advisor from application to arrival.',
+        'description' => 'Verified overseas jobs in :n countries and manpower supply from Bangladesh. Clear costs, documents checked twice, one advisor from application to arrival.',
     ],
 
     'nav' => [
@@ -17,6 +17,10 @@ return [
         'apply' => 'Apply now',
         'call' => 'Call us',
         'call_now' => 'Call now',
+        'brand' => 'Facilitate Expat',
+        'brand_sub' => 'Overseas',
+        'switch_lang' => 'বাংলা',
+        'whatsapp_short' => 'WhatsApp',
         'menu' => 'Menu',
         'close' => 'Close',
         'whatsapp' => 'Chat on WhatsApp',
@@ -26,22 +30,14 @@ return [
         'eyebrow' => 'Work visas · Job placement · Manpower supply',
         'title_a' => 'Work abroad with people',
         'title_b' => 'you can trust.',
-        'lead' => 'Verified jobs in 20+ countries. Clear costs, documents checked twice, and one advisor from application to arrival.',
+        'lead' => 'Verified jobs in :n countries. Clear costs, documents checked twice, and one advisor from application to arrival.',
         'cta_candidate' => 'Find a job abroad',
-        'cta_employer' => 'Hire workers',
+        'cta_employer' => 'Hiring workers? See how we help',
         'stat_countries' => 'Destination countries',
         'stat_industries' => 'Industries we recruit for',
-        'stat_checked' => 'Every file checked twice',
-        'picker' => [
-            'title' => 'What do you need?',
-            'items' => [
-                ['key' => 'jobs', 'href' => '/jobs', 'title' => 'Find a job abroad', 'body' => 'Verified openings in the Gulf, Asia and Europe'],
-                ['key' => 'apply', 'href' => '/apply', 'title' => 'Apply to work abroad', 'body' => 'Free application, one advisor for your file'],
-                ['key' => 'employer', 'href' => '/employers/request', 'title' => 'Hire workers', 'body' => 'Screened, trade-tested manpower from Bangladesh'],
-                ['key' => 'track', 'href' => '/apply/track', 'title' => 'Track my application', 'body' => 'Check your status with your reference number'],
-            ],
-        ],
+        'trust_title' => 'Why workers trust us',
         'destinations' => 'Where we send workers',
+        'all_countries' => 'All countries',
     ],
 
     'trust' => [
@@ -84,6 +80,7 @@ return [
         'title' => 'Jobs open right now',
         'lead' => 'Every opening is verified with the employer before it is posted.',
         'see_all' => 'See all jobs',
+        'filter_label' => 'Filter jobs by country',
         'contract' => ':months-month contract',
         'deadline' => 'Apply by :date',
         'apply' => 'Apply',
@@ -92,15 +89,27 @@ return [
 
     'journey' => [
         'title' => 'How it works',
-        'lead' => 'Seven steps from application to arrival. We walk every one with you.',
+        'lead' => 'Seven steps from application to arrival, with the typical time for each. We walk every one with you.',
+        'time_label' => 'Typical',
+        // Boarding pass (example route; the note below says times vary by country).
+        'from' => 'Dhaka',
+        'to' => 'Riyadh',
+        'from_code' => 'DAC',
+        'to_code' => 'RUH',
+        'pass_label' => 'Facilitate Expat · Work visa',
+        'step_of' => 'Step :n of :total',
+        'now' => 'Now',
+        'arrived' => 'All 7 steps',
+        'note' => 'Times vary by country and employer — each country page shows its own timeline.',
+        // TODO(ops): confirm typical times. TODO(legal): add 'cost' => '…' (who pays / how much) per step once signed off — the route shows it automatically.
         'steps' => [
-            ['title' => 'Apply & screening', 'body' => 'Send your details and documents. We check them and call you.'],
-            ['title' => 'Trade test / interview', 'body' => 'Show your skill to the employer, in person or online.'],
-            ['title' => 'Medical', 'body' => 'Health check at an approved centre (GAMCA where applicable).'],
-            ['title' => 'Visa & work permit', 'body' => 'We prepare and submit your visa and work permit papers.'],
-            ['title' => 'BMET clearance', 'body' => 'Government emigration clearance and your BMET smart card.'],
-            ['title' => 'Briefing & ticket', 'body' => 'Pre-departure briefing, contract explained, flight booked.'],
-            ['title' => 'Arrival & aftercare', 'body' => 'We stay in touch after you land and start work.'],
+            ['title' => 'Apply & screening', 'body' => 'Send your details and documents. We check them and call you.', 'time' => '1–3 days'],
+            ['title' => 'Trade test / interview', 'body' => 'Show your skill to the employer, in person or online.', 'time' => '1–3 weeks'],
+            ['title' => 'Medical', 'body' => 'Health check at an approved centre (GAMCA where applicable).', 'time' => '2–7 days'],
+            ['title' => 'Visa & work permit', 'body' => 'We prepare and submit your visa and work permit papers.', 'time' => '3–10 weeks'],
+            ['title' => 'BMET clearance', 'body' => 'Government emigration clearance and your BMET smart card.', 'time' => '3–7 days'],
+            ['title' => 'Briefing & ticket', 'body' => 'Pre-departure briefing, contract explained, flight booked.', 'time' => '1–2 weeks'],
+            ['title' => 'Arrival & aftercare', 'body' => 'We stay in touch after you land and start work.', 'time' => 'Whole contract'],
         ],
     ],
 
@@ -146,6 +155,9 @@ return [
             'Cash to a middleman (dalal) who says they work for us.',
             'Anything without a receipt on company letterhead.',
         ],
+        // Ticket labels
+        'admit' => 'Admit',
+        'void' => 'Void',
         'verify_title' => 'How to check a job is real',
         'verify' => 'Ask us for the employer name and visa number, then confirm the job with BMET before you pay anything. Our staff will never ask you to send money to a personal account.',
     ],
@@ -158,6 +170,10 @@ return [
         'sample' => 'Sample — replace before launch',
         'placed_in' => 'Placed in :country',
         'rating' => ':n out of 5',
+        // Phone slider controls
+        'slide' => 'Review :n of :total',
+        'pause' => 'Pause reviews',
+        'play' => 'Play reviews',
     ],
 
     'faq' => [
@@ -175,10 +191,11 @@ return [
     'final' => [
         'title_a' => 'Ready when',
         'title_b' => 'you are.',
-        'lead' => 'Apply in a few minutes, or talk to an advisor on WhatsApp first.',
+        'lead' => 'Message an advisor on WhatsApp. It is free, and you can ask anything before you decide.',
         'apply' => 'Apply now',
         'employer' => 'Request workers',
-        'whatsapp' => 'WhatsApp us',
+        'whatsapp' => 'Chat on WhatsApp',
+        'inquiry' => 'Send an inquiry',
     ],
 
     'footer' => [
