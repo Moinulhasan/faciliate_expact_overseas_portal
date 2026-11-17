@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Country;
 use App\Models\Industry;
+use App\Support\SiteContent;
 use Database\Seeders\CountrySeeder;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -14,7 +15,7 @@ class PageController extends Controller
     public function workAbroad(): Response
     {
         return Inertia::render('WorkAbroad', [
-            'documents' => CountrySeeder::BASE_DOCS,
+            'documents' => SiteContent::get('documents.base', CountrySeeder::BASE_DOCS),
             'countries' => Country::active()->orderBy('sort')->get()->map->toCard(),
         ]);
     }

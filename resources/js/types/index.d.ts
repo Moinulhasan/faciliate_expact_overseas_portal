@@ -86,11 +86,12 @@ export interface Testimonial {
     is_sample: boolean;
 }
 
+/** config/site.php with editable keys (site.company/contact/licence/stats/privacy) overridden from site_contents. */
 export interface Site {
     name: string;
     main_site: string;
     licence: {
-        rl_number: "RL-2533";
+        rl_number: string | null;
         bmet: string | null;
         baira: string | null;
     };
@@ -163,6 +164,7 @@ export interface SharedProps {
     alternates: { en: string; bn: string };
     appUrl: string;
     locale: "en" | "bn";
+    /** lang/{locale}/*.php over English, with editable keys overridden from site_contents (same shape). */
     translations: Record<string, unknown>;
     site: Site;
     [key: string]: unknown;

@@ -1,0 +1,1796 @@
+{
+    "site": "overseas",
+    "version": 1,
+    "keys": {
+        "site.company": {
+            "label": "Company name & main site",
+            "section": "Company & contact",
+            "translatable": false,
+            "value": {
+                "type": "group",
+                "label": "Company name & main site",
+                "required": true,
+                "fields": {
+                    "name": {
+                        "type": "text",
+                        "label": "Company name",
+                        "required": true,
+                        "max": 150
+                    },
+                    "main_site": {
+                        "type": "url",
+                        "label": "Main website (visit visas & air tickets)",
+                        "required": true,
+                        "max": 255
+                    }
+                }
+            }
+        },
+        "site.contact": {
+            "label": "Contact details",
+            "section": "Company & contact",
+            "translatable": false,
+            "value": {
+                "type": "group",
+                "label": "Contact details",
+                "required": true,
+                "fields": {
+                    "phone": {
+                        "type": "phone",
+                        "label": "Phone (as displayed)",
+                        "required": true,
+                        "max": 30
+                    },
+                    "phone_href": {
+                        "type": "phone",
+                        "label": "Phone (for tel: links, digits with +)",
+                        "required": true,
+                        "max": 20
+                    },
+                    "email": {
+                        "type": "email",
+                        "label": "Public email",
+                        "required": true,
+                        "max": 150
+                    },
+                    "inquiry_email": {
+                        "type": "email",
+                        "label": "Inquiry form recipient email",
+                        "required": true,
+                        "max": 150
+                    },
+                    "whatsapp": {
+                        "type": "phone",
+                        "label": "WhatsApp number (digits only, with country code)",
+                        "required": true,
+                        "max": 20
+                    },
+                    "address": {
+                        "type": "textarea",
+                        "label": "Dhaka office address",
+                        "required": true,
+                        "max": 255
+                    },
+                    "address_my": {
+                        "type": "textarea",
+                        "label": "Malaysia office address",
+                        "required": false,
+                        "max": 255
+                    },
+                    "hours": {
+                        "type": "text",
+                        "label": "Office hours, e.g. Sat–Thu, 10:00–18:00",
+                        "required": false,
+                        "max": 100
+                    }
+                }
+            }
+        },
+        "site.licence": {
+            "label": "Licence & registrations",
+            "section": "Company & contact",
+            "translatable": false,
+            "value": {
+                "type": "group",
+                "label": "Licence & registrations",
+                "required": true,
+                "fields": {
+                    "rl_number": {
+                        "type": "text",
+                        "label": "Recruiting licence (RL) number",
+                        "required": false,
+                        "max": 50
+                    },
+                    "bmet": {
+                        "type": "text",
+                        "label": "BMET registration",
+                        "required": false,
+                        "max": 50
+                    },
+                    "baira": {
+                        "type": "text",
+                        "label": "BAIRA membership number",
+                        "required": false,
+                        "max": 50
+                    }
+                }
+            }
+        },
+        "site.stats": {
+            "label": "Key figures (hidden while empty)",
+            "section": "Company & contact",
+            "translatable": false,
+            "value": {
+                "type": "group",
+                "label": "Key figures (hidden while empty)",
+                "required": true,
+                "fields": {
+                    "years_licensed": {
+                        "type": "number",
+                        "label": "Years licensed",
+                        "required": false,
+                        "min": 0,
+                        "max": 200
+                    },
+                    "workers_deployed": {
+                        "type": "number",
+                        "label": "Workers deployed",
+                        "required": false,
+                        "min": 0,
+                        "max": 10000000
+                    },
+                    "employer_partners": {
+                        "type": "number",
+                        "label": "Employer partners",
+                        "required": false,
+                        "min": 0,
+                        "max": 100000
+                    },
+                    "avg_days_to_deploy": {
+                        "type": "number",
+                        "label": "Average days to deployment",
+                        "required": false,
+                        "min": 0,
+                        "max": 1000
+                    }
+                }
+            }
+        },
+        "site.privacy": {
+            "label": "Privacy notice facts",
+            "section": "Privacy",
+            "translatable": false,
+            "value": {
+                "type": "group",
+                "label": "Privacy notice facts",
+                "required": true,
+                "fields": {
+                    "retention_months": {
+                        "type": "number",
+                        "label": "Keep inquiries for (months)",
+                        "required": true,
+                        "min": 1,
+                        "max": 120
+                    },
+                    "updated": {
+                        "type": "text",
+                        "label": "Last updated (YYYY-MM-DD)",
+                        "required": true,
+                        "max": 10
+                    }
+                }
+            }
+        },
+        "home.meta": {
+            "label": "Home page — search title & description",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Home page — search title & description",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "description": {
+                        "type": "textarea",
+                        "label": "Meta description (keep :n)",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "home.nav": {
+            "label": "Header brand",
+            "section": "Header & footer",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Header brand",
+                "required": true,
+                "fields": {
+                    "brand": {
+                        "type": "text",
+                        "label": "Brand name",
+                        "required": true,
+                        "max": 40
+                    },
+                    "brand_sub": {
+                        "type": "text",
+                        "label": "Brand subtitle",
+                        "required": true,
+                        "max": 40
+                    }
+                }
+            }
+        },
+        "home.hero": {
+            "label": "Home — hero",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Home — hero",
+                "required": true,
+                "fields": {
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow line",
+                        "required": true,
+                        "max": 100
+                    },
+                    "title_a": {
+                        "type": "text",
+                        "label": "Headline (first part)",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title_b": {
+                        "type": "text",
+                        "label": "Headline (highlighted part)",
+                        "required": true,
+                        "max": 60
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead paragraph (keep :n)",
+                        "required": true,
+                        "max": 300
+                    },
+                    "stat_countries": {
+                        "type": "text",
+                        "label": "Caption under the country count",
+                        "required": true,
+                        "max": 50
+                    },
+                    "stat_industries": {
+                        "type": "text",
+                        "label": "Caption under the industry count",
+                        "required": true,
+                        "max": 50
+                    },
+                    "trust_title": {
+                        "type": "text",
+                        "label": "Promise panel heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "destinations": {
+                        "type": "text",
+                        "label": "Country slider heading",
+                        "required": true,
+                        "max": 80
+                    }
+                }
+            }
+        },
+        "home.fork": {
+            "label": "Home — two audiences (heading)",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Home — two audiences (heading)",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 60
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 60
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "home.fork.candidate": {
+            "label": "Home — card for workers",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Home — card for workers",
+                "required": true,
+                "fields": {
+                    "label": {
+                        "type": "text",
+                        "label": "Tag",
+                        "required": true,
+                        "max": 40
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Title",
+                        "required": true,
+                        "max": 80
+                    },
+                    "points": {
+                        "type": "list",
+                        "label": "Points",
+                        "required": true,
+                        "max": 150,
+                        "max_items": 6
+                    }
+                }
+            }
+        },
+        "home.fork.employer": {
+            "label": "Home — card for employers",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Home — card for employers",
+                "required": true,
+                "fields": {
+                    "label": {
+                        "type": "text",
+                        "label": "Tag",
+                        "required": true,
+                        "max": 40
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Title",
+                        "required": true,
+                        "max": 80
+                    },
+                    "points": {
+                        "type": "list",
+                        "label": "Points",
+                        "required": true,
+                        "max": 150,
+                        "max_items": 6
+                    }
+                }
+            }
+        },
+        "home.jobs": {
+            "label": "Home — open jobs section",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Home — open jobs section",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "home.journey": {
+            "label": "How it works (7 steps, boarding pass)",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "How it works (7 steps, boarding pass)",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "from": {
+                        "type": "text",
+                        "label": "Example route — from city",
+                        "required": true,
+                        "max": 40
+                    },
+                    "from_code": {
+                        "type": "text",
+                        "label": "From airport code",
+                        "required": true,
+                        "max": 3
+                    },
+                    "to": {
+                        "type": "text",
+                        "label": "Example route — to city",
+                        "required": true,
+                        "max": 40
+                    },
+                    "to_code": {
+                        "type": "text",
+                        "label": "To airport code",
+                        "required": true,
+                        "max": 3
+                    },
+                    "pass_label": {
+                        "type": "text",
+                        "label": "Boarding-pass header",
+                        "required": true,
+                        "max": 60
+                    },
+                    "note": {
+                        "type": "textarea",
+                        "label": "Note under the steps",
+                        "required": true,
+                        "max": 300
+                    },
+                    "steps": {
+                        "type": "items",
+                        "label": "Steps (the page shows 'All N steps' from this list)",
+                        "required": true,
+                        "min_items": 1,
+                        "max_items": 10,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Step title",
+                                "required": true,
+                                "max": 60
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Step text",
+                                "required": true,
+                                "max": 250
+                            },
+                            "time": {
+                                "type": "text",
+                                "label": "Typical time",
+                                "required": true,
+                                "max": 40
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "home.industries": {
+            "label": "Home — industries section",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Home — industries section",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "home.destinations": {
+            "label": "Destinations section",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Destinations section",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "note": {
+                        "type": "textarea",
+                        "label": "Note",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "home.costs": {
+            "label": "What you pay / never pay",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "What you pay / never pay",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "pay_title": {
+                        "type": "text",
+                        "label": "'You pay' heading",
+                        "required": true,
+                        "max": 60
+                    },
+                    "pay": {
+                        "type": "list",
+                        "label": "You pay",
+                        "required": true,
+                        "max": 200,
+                        "max_items": 6
+                    },
+                    "never_title": {
+                        "type": "text",
+                        "label": "'You never pay' heading",
+                        "required": true,
+                        "max": 60
+                    },
+                    "never": {
+                        "type": "list",
+                        "label": "You never pay",
+                        "required": true,
+                        "max": 200,
+                        "max_items": 6
+                    },
+                    "verify_title": {
+                        "type": "text",
+                        "label": "'Check a job' heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "verify": {
+                        "type": "textarea",
+                        "label": "'Check a job' text",
+                        "required": true,
+                        "max": 400
+                    }
+                }
+            }
+        },
+        "home.reviews": {
+            "label": "Reviews section",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Reviews section",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "home.faq": {
+            "label": "Home — questions",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Home — questions",
+                "required": true,
+                "fields": {
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "items": {
+                        "type": "items",
+                        "label": "Questions",
+                        "required": true,
+                        "max_items": 12,
+                        "fields": {
+                            "q": {
+                                "type": "text",
+                                "label": "Question",
+                                "required": true,
+                                "max": 150
+                            },
+                            "a": {
+                                "type": "textarea",
+                                "label": "Answer",
+                                "required": true,
+                                "max": 600
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "home.final": {
+            "label": "Closing call to action",
+            "section": "Home",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Closing call to action",
+                "required": true,
+                "fields": {
+                    "title_a": {
+                        "type": "text",
+                        "label": "Heading (first part)",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title_b": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 60
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "home.footer": {
+            "label": "Footer tagline",
+            "section": "Header & footer",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Footer tagline",
+                "required": true,
+                "fields": {
+                    "tagline": {
+                        "type": "textarea",
+                        "label": "Tagline",
+                        "required": true,
+                        "max": 200
+                    }
+                }
+            }
+        },
+        "pages.common": {
+            "label": "Shared notes on industry & country pages",
+            "section": "Industries & countries",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Shared notes on industry & country pages",
+                "required": true,
+                "fields": {
+                    "typical": {
+                        "type": "textarea",
+                        "label": "'Typical ranges' note",
+                        "required": true,
+                        "max": 250
+                    },
+                    "no_jobs": {
+                        "type": "textarea",
+                        "label": "Text when no jobs are open",
+                        "required": true,
+                        "max": 300
+                    },
+                    "faq_title": {
+                        "type": "text",
+                        "label": "Questions heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "faq_lead": {
+                        "type": "textarea",
+                        "label": "Questions lead",
+                        "required": true,
+                        "max": 250
+                    }
+                }
+            }
+        },
+        "pages.industries": {
+            "label": "Industries pages",
+            "section": "Industries & countries",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Industries pages",
+                "required": true,
+                "fields": {
+                    "meta_title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "meta_description": {
+                        "type": "textarea",
+                        "label": "Meta description",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead (keep :n)",
+                        "required": true,
+                        "max": 300
+                    },
+                    "roles_title": {
+                        "type": "text",
+                        "label": "Detail — roles heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "roles_lead": {
+                        "type": "textarea",
+                        "label": "Detail — roles lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "certs_title": {
+                        "type": "text",
+                        "label": "Detail — requirements heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "certs_lead": {
+                        "type": "textarea",
+                        "label": "Detail — requirements lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "screening_title": {
+                        "type": "text",
+                        "label": "Detail — screening heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "screening": {
+                        "type": "items",
+                        "label": "Detail — screening steps",
+                        "required": true,
+                        "max_items": 8,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Title",
+                                "required": true,
+                                "max": 60
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Text",
+                                "required": true,
+                                "max": 250
+                            }
+                        }
+                    },
+                    "countries_title": {
+                        "type": "text",
+                        "label": "Detail — countries heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "countries_lead": {
+                        "type": "textarea",
+                        "label": "Detail — countries lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "employer_cta_title": {
+                        "type": "text",
+                        "label": "Detail — employer box heading (keep :industry)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "employer_cta_lead": {
+                        "type": "textarea",
+                        "label": "Detail — employer box text",
+                        "required": true,
+                        "max": 250
+                    }
+                }
+            }
+        },
+        "pages.countries": {
+            "label": "Countries pages",
+            "section": "Industries & countries",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Countries pages",
+                "required": true,
+                "fields": {
+                    "meta_title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "meta_description": {
+                        "type": "textarea",
+                        "label": "Meta description",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead (keep :n)",
+                        "required": true,
+                        "max": 300
+                    },
+                    "title_show": {
+                        "type": "text",
+                        "label": "Detail — heading (keep :country)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent_show": {
+                        "type": "text",
+                        "label": "Detail — heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "sectors_title": {
+                        "type": "text",
+                        "label": "Detail — industries heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "sectors_lead": {
+                        "type": "textarea",
+                        "label": "Detail — industries lead (keep :country)",
+                        "required": true,
+                        "max": 250
+                    },
+                    "process_title": {
+                        "type": "text",
+                        "label": "Detail — steps heading (keep :country)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "process_lead": {
+                        "type": "textarea",
+                        "label": "Detail — steps lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "docs_title": {
+                        "type": "text",
+                        "label": "Detail — documents heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "docs_lead": {
+                        "type": "textarea",
+                        "label": "Detail — documents lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "docs_note": {
+                        "type": "textarea",
+                        "label": "Detail — documents note",
+                        "required": true,
+                        "max": 250
+                    }
+                }
+            }
+        },
+        "pages.countries.region_lead": {
+            "label": "Countries — region introductions",
+            "section": "Industries & countries",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Countries — region introductions",
+                "required": true,
+                "fields": {
+                    "gcc": {
+                        "type": "textarea",
+                        "label": "Gulf (GCC)",
+                        "required": true,
+                        "max": 250
+                    },
+                    "east_asia": {
+                        "type": "textarea",
+                        "label": "East Asia",
+                        "required": true,
+                        "max": 250
+                    },
+                    "se_asia": {
+                        "type": "textarea",
+                        "label": "South-East Asia",
+                        "required": true,
+                        "max": 250
+                    },
+                    "europe": {
+                        "type": "textarea",
+                        "label": "Europe",
+                        "required": true,
+                        "max": 250
+                    }
+                }
+            }
+        },
+        "hubs.jobs": {
+            "label": "Jobs pages",
+            "section": "Jobs",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Jobs pages",
+                "required": true,
+                "fields": {
+                    "meta_title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "meta_description": {
+                        "type": "textarea",
+                        "label": "Meta description",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "none_title": {
+                        "type": "text",
+                        "label": "No matches — heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "none_body": {
+                        "type": "textarea",
+                        "label": "No matches — text",
+                        "required": true,
+                        "max": 300
+                    },
+                    "empty_title": {
+                        "type": "text",
+                        "label": "No jobs posted — heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "empty_body": {
+                        "type": "textarea",
+                        "label": "No jobs posted — text",
+                        "required": true,
+                        "max": 300
+                    },
+                    "empty_where": {
+                        "type": "text",
+                        "label": "No jobs posted — countries heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "how_title": {
+                        "type": "text",
+                        "label": "Job detail — 'how to apply' heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "how": {
+                        "type": "items",
+                        "label": "Job detail — how to apply steps",
+                        "required": true,
+                        "max_items": 6,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Title",
+                                "required": true,
+                                "max": 60
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Text",
+                                "required": true,
+                                "max": 250
+                            }
+                        }
+                    },
+                    "safety_title": {
+                        "type": "text",
+                        "label": "Job detail — safety heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "safety": {
+                        "type": "textarea",
+                        "label": "Job detail — safety text",
+                        "required": true,
+                        "max": 400
+                    },
+                    "dialog_lead": {
+                        "type": "textarea",
+                        "label": "Job contact pop-up text",
+                        "required": true,
+                        "max": 200
+                    },
+                    "wa_message": {
+                        "type": "textarea",
+                        "label": "Pre-filled WhatsApp message (keep :title, :country, :ref)",
+                        "required": true,
+                        "max": 250
+                    },
+                    "sample_note": {
+                        "type": "textarea",
+                        "label": "Note on sample listings",
+                        "required": true,
+                        "max": 200
+                    }
+                }
+            }
+        },
+        "hubs.work_abroad": {
+            "label": "Work abroad page (for workers)",
+            "section": "Workers & employers",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Work abroad page (for workers)",
+                "required": true,
+                "fields": {
+                    "meta_title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "meta_description": {
+                        "type": "textarea",
+                        "label": "Meta description",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eligible_title": {
+                        "type": "text",
+                        "label": "Eligibility heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "eligible_lead": {
+                        "type": "textarea",
+                        "label": "Eligibility lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "eligible": {
+                        "type": "items",
+                        "label": "Eligibility items",
+                        "required": true,
+                        "max_items": 10,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Title",
+                                "required": true,
+                                "max": 60
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Text",
+                                "required": true,
+                                "max": 200
+                            }
+                        }
+                    },
+                    "promise_title": {
+                        "type": "text",
+                        "label": "Promises heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "promise": {
+                        "type": "items",
+                        "label": "Promises (also shown in the home hero panel)",
+                        "required": true,
+                        "max_items": 6,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Title",
+                                "required": true,
+                                "max": 60
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Text",
+                                "required": true,
+                                "max": 200
+                            }
+                        }
+                    },
+                    "journey_title": {
+                        "type": "text",
+                        "label": "Steps heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "docs_title": {
+                        "type": "text",
+                        "label": "Documents heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "docs_lead": {
+                        "type": "textarea",
+                        "label": "Documents lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "flags_title": {
+                        "type": "text",
+                        "label": "Fake-job warning heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "flags_lead": {
+                        "type": "textarea",
+                        "label": "Fake-job warning lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "flags": {
+                        "type": "list",
+                        "label": "Warning signs",
+                        "required": true,
+                        "max": 200,
+                        "max_items": 10
+                    },
+                    "countries_title": {
+                        "type": "text",
+                        "label": "Countries heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "faq": {
+                        "type": "items",
+                        "label": "Questions",
+                        "required": true,
+                        "max_items": 12,
+                        "fields": {
+                            "q": {
+                                "type": "text",
+                                "label": "Question",
+                                "required": true,
+                                "max": 150
+                            },
+                            "a": {
+                                "type": "textarea",
+                                "label": "Answer",
+                                "required": true,
+                                "max": 600
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "hubs.employers": {
+            "label": "Employers page",
+            "section": "Workers & employers",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Employers page",
+                "required": true,
+                "fields": {
+                    "meta_title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "meta_description": {
+                        "type": "textarea",
+                        "label": "Meta description",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "pillars": {
+                        "type": "items",
+                        "label": "Pillars",
+                        "required": true,
+                        "max_items": 3,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Title",
+                                "required": true,
+                                "max": 60
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Text",
+                                "required": true,
+                                "max": 250
+                            }
+                        }
+                    },
+                    "process_title": {
+                        "type": "text",
+                        "label": "Process heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "process_lead": {
+                        "type": "textarea",
+                        "label": "Process lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "process": {
+                        "type": "items",
+                        "label": "Process steps",
+                        "required": true,
+                        "max_items": 10,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Title",
+                                "required": true,
+                                "max": 60
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Text",
+                                "required": true,
+                                "max": 250
+                            }
+                        }
+                    },
+                    "needs_title": {
+                        "type": "text",
+                        "label": "'What we need' heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "needs_lead": {
+                        "type": "textarea",
+                        "label": "'What we need' lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "needs": {
+                        "type": "list",
+                        "label": "Documents we need",
+                        "required": true,
+                        "max": 200,
+                        "max_items": 10
+                    },
+                    "industries_title": {
+                        "type": "text",
+                        "label": "Industries heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "industries_lead": {
+                        "type": "textarea",
+                        "label": "Industries lead",
+                        "required": true,
+                        "max": 250
+                    },
+                    "countries_title": {
+                        "type": "text",
+                        "label": "Countries heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "faq": {
+                        "type": "items",
+                        "label": "Questions",
+                        "required": true,
+                        "max_items": 12,
+                        "fields": {
+                            "q": {
+                                "type": "text",
+                                "label": "Question",
+                                "required": true,
+                                "max": 150
+                            },
+                            "a": {
+                                "type": "textarea",
+                                "label": "Answer",
+                                "required": true,
+                                "max": 600
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "hubs.about": {
+            "label": "About page",
+            "section": "About",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "About page",
+                "required": true,
+                "fields": {
+                    "meta_title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "meta_description": {
+                        "type": "textarea",
+                        "label": "Meta description",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "story_title": {
+                        "type": "text",
+                        "label": "Story heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "story": {
+                        "type": "list",
+                        "label": "Story paragraphs",
+                        "required": true,
+                        "max": 600,
+                        "max_items": 6
+                    },
+                    "principles_title": {
+                        "type": "text",
+                        "label": "Principles heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "principles": {
+                        "type": "items",
+                        "label": "Principles",
+                        "required": true,
+                        "max_items": 4,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Title",
+                                "required": true,
+                                "max": 60
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Text",
+                                "required": true,
+                                "max": 200
+                            }
+                        }
+                    },
+                    "licence_title": {
+                        "type": "text",
+                        "label": "Licence heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "licence_lead": {
+                        "type": "textarea",
+                        "label": "Licence lead",
+                        "required": true,
+                        "max": 200
+                    },
+                    "office_title": {
+                        "type": "text",
+                        "label": "Office heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "office_lead": {
+                        "type": "textarea",
+                        "label": "Office lead",
+                        "required": true,
+                        "max": 200
+                    },
+                    "group_title": {
+                        "type": "text",
+                        "label": "Parent company heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "group_body": {
+                        "type": "textarea",
+                        "label": "Parent company text",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "contact.page": {
+            "label": "Contact page",
+            "section": "Contact",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Contact page",
+                "required": true,
+                "fields": {
+                    "meta_title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "meta_description": {
+                        "type": "textarea",
+                        "label": "Meta description",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "section_title": {
+                        "type": "text",
+                        "label": "Inquiry section heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "section_lead": {
+                        "type": "textarea",
+                        "label": "Inquiry section lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "email_note": {
+                        "type": "text",
+                        "label": "Note under the email address",
+                        "required": true,
+                        "max": 120
+                    },
+                    "sent_title": {
+                        "type": "text",
+                        "label": "After sending — heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "sent_body": {
+                        "type": "textarea",
+                        "label": "After sending — text",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "contact.consent": {
+            "label": "Inquiry form consent text",
+            "section": "Contact",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Inquiry form consent text",
+                "required": true,
+                "fields": {
+                    "consent": {
+                        "type": "textarea",
+                        "label": "Consent sentence (followed by the privacy-notice link)",
+                        "required": true,
+                        "max": 300
+                    }
+                }
+            }
+        },
+        "privacy.page": {
+            "label": "Privacy notice",
+            "section": "Privacy",
+            "translatable": true,
+            "value": {
+                "type": "group",
+                "label": "Privacy notice",
+                "required": true,
+                "fields": {
+                    "meta_title": {
+                        "type": "text",
+                        "label": "Page title",
+                        "required": true,
+                        "max": 70
+                    },
+                    "meta_description": {
+                        "type": "textarea",
+                        "label": "Meta description",
+                        "required": true,
+                        "max": 300
+                    },
+                    "eyebrow": {
+                        "type": "text",
+                        "label": "Eyebrow",
+                        "required": true,
+                        "max": 60
+                    },
+                    "title": {
+                        "type": "text",
+                        "label": "Heading",
+                        "required": true,
+                        "max": 80
+                    },
+                    "accent": {
+                        "type": "text",
+                        "label": "Heading (highlighted part)",
+                        "required": true,
+                        "max": 80
+                    },
+                    "lead": {
+                        "type": "textarea",
+                        "label": "Lead",
+                        "required": true,
+                        "max": 300
+                    },
+                    "draft": {
+                        "type": "text",
+                        "label": "Draft banner (empty to hide)",
+                        "required": true,
+                        "max": 120
+                    },
+                    "sections": {
+                        "type": "items",
+                        "label": "Sections",
+                        "required": true,
+                        "max_items": 12,
+                        "fields": {
+                            "title": {
+                                "type": "text",
+                                "label": "Title",
+                                "required": true,
+                                "max": 80
+                            },
+                            "body": {
+                                "type": "textarea",
+                                "label": "Text (keep :months, :address, :email)",
+                                "required": true,
+                                "max": 1000
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "documents.base": {
+            "label": "Work abroad — base document checklist",
+            "section": "Workers & employers",
+            "translatable": true,
+            "value": {
+                "type": "list",
+                "label": "Documents",
+                "required": true,
+                "max": 150,
+                "min_items": 1,
+                "max_items": 15
+            }
+        }
+    }
+}
