@@ -6,9 +6,11 @@ use App\Http\Middleware\HandleInertiaRequests;
 use App\Support\SiteContent;
 use Database\Seeders\CountrySeeder;
 use Database\Seeders\IndustrySeeder;
+use App\Mail\InquiryReceived;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Testing\TestResponse;
 use Tests\TestCase;
@@ -18,7 +20,10 @@ class SiteContentTest extends TestCase
 {
     use RefreshDatabase;
 
-    private const PAGES = ['/', '/industries', '/countries', '/jobs', '/about', '/contact', '/privacy', '/work-abroad', '/employers'];
+    private const INQUIRY = ['type' => 'employer', 'name' => 'Test Person', 'phone' => '+880 1711 000000', 'email' => 'person@example.com',
+        'company' => 'Example Co', 'message' => 'We need 20 welders for Qatar next month.', 'page' => '/contact', 'consent' => '1'];
+
+    private const PAGES =['/', '/industries', '/countries', '/jobs', '/about', '/contact', '/privacy', '/work-abroad', '/employers'];
 
     protected function setUp(): void
     {
@@ -106,11 +111,137 @@ class SiteContentTest extends TestCase
         $this->get('/')->assertSee('New EN headline'); // reaches the rendered HTML
     }
 
-    public function test_bangla_falls_back_to_the_english_row(): void
+    public function test_a_missing_bn_row_shows_the_bangla_file_text_not_the_english_row(): void
     {
-        $this->edited('home.final', 'en', ['lead' => 'English-only lead']);
+        $this->edited('home.hero', 'en', ['title_a' => 'English-only headline']); // bn row deleted / never saved
 
-        $this->assertSame('English-only lead', $this->props($this->get('/bn'))['translations']['home']['final']['lead']);
+        $this->assertSame(__('home.hero.title_a', [], 'bn'), $this->props($this->get('/bn'))['translations']['home']['hero']['title_a']);
+        $this->assertSame('English-only headline', $this->props($this->get('/'))['translations']['home']['hero']['title_a']);
+    }
+
+    public function test_an_invalid_bn_row_shows_the_bangla_file_text_not_the_english_row(): void
+    {
+        $this->edited('home.hero', 'en', ['title_a' => 'English-only headline']);
+        $this->row('home.hero', 'bn', ['title_a' => 'অসম্পূর্ণ']); // required fields missing
+
+        $this->assertSame(__('home.hero', [], 'bn'), $this->props($this->get('/bn'))['translations']['home']['hero']);
+    }
+
+    public function test_an_update_shows_on_the_next_request_even_with_the_same_updated_at(): void
+    {
+        $this->edited('home.footer', 'en', ['tagline' => 'First']);
+        $this->assertSame('First', $this->props($this->get('/'))['translations']['home']['footer']['tagline']);
+
+        $this->edited('home.footer', 'en', ['tagline' => 'Second']); // same second, same row count
+        $this->assertSame('Second', $this->props($this->get('/'))['translations']['home']['footer']['tagline']);
+    }
+
+    public function test_one_site_contents_query_per_request(): void
+    {
+        $this->edited('home.hero', 'bn', ['title_a' => 'নতুন']);
+        $queries = 0;
+        DB::connection()->beforeExecuting(function (string $sql) use (&$queries) {
+            $queries += str_contains($sql, 'site_contents') ? 1 : 0;
+        });
+
+        $this->get('/bn')->assertOk(); // bn keys + en-only keys
+
+        $this->assertSame(1, $queries);
+    }
+
+    public function test_url_phone_email_shape_and_lengths_are_enforced(): void
+    {
+        $this->edited('site.company', 'en', ['main_site' => 'javascript:alert(1)']);
+        $this->edited('site.contact', 'en', ['email' => 'not-an-email']);
+        $this->edited('home.hero', 'en', ['title_a' => str_repeat('x', 1000)]);                    // over max
+        $this->edited('home.faq', 'en', ['items' => array_fill(0, 200, ['q' => 'Q?', 'a' => 'A.'])]); // over max_items
+        $this->edited('site.stats', 'en', ['years_licensed' => -5]);                                 // below min
+
+        $this->assertUnchanged();
+
+        $this->edited('site.contact', 'en', ['phone' => 'call me']);
+        $this->assertSame(config('site.contact.phone'), $this->props($this->get('/'))['site']['contact']['phone']);
+    }
+
+    public function test_env_backed_fields_use_the_row_then_the_server_setting(): void
+    {
+        config(['site.contact.whatsapp' => '8800000000001', 'site.licence.rl_number' => 'RL-ENV']);
+        $site = fn () => $this->props($this->get('/'))['site'];
+
+        $this->assertSame('8800000000001', $site()['contact']['whatsapp']);                // no row → .env
+
+        $this->edited('site.contact', 'en', ['whatsapp' => null, 'phone' => '+880 1 000']);
+        $this->edited('site.licence', 'en', ['rl_number' => null, 'bmet' => 'BMET-1']);
+        $this->assertSame('8800000000001', $site()['contact']['whatsapp']);                // blank in row → .env
+        $this->assertSame('+880 1 000', $site()['contact']['phone']);
+        $this->assertSame(['rl_number' => 'RL-ENV', 'bmet' => 'BMET-1', 'baira' => null], $site()['licence']);
+
+        $this->edited('site.contact', 'en', ['whatsapp' => '8800000000002']);
+        $this->assertSame('8800000000002', $site()['contact']['whatsapp']);                // row wins
+    }
+
+    public function test_the_inquiry_recipient_is_not_editable(): void
+    {
+        $this->assertArrayNotHasKey('inquiry_email', SiteContent::schema()['site.contact']['value']['fields']);
+        $this->row('site.contact', 'en', [...SiteContent::defaults('en')['site.contact'], 'inquiry_email' => 'evil@example.com']);
+        Mail::fake();
+
+        $this->assertSame(config('site.contact.inquiry_email'), $this->props($this->get('/'))['site']['contact']['inquiry_email']);
+        $this->post('/inquiries', self::INQUIRY)->assertSessionHas('inquiry_sent', true);
+        Mail::assertSent(InquiryReceived::class, fn ($m) => $m->hasTo(config('site.contact.inquiry_email')) && ! $m->hasTo('evil@example.com'));
+    }
+
+    public function test_down_refuses_while_the_table_has_rows_and_drops_it_when_empty(): void
+    {
+        $migration = require database_path('migrations/2026_11_17_090000_create_site_contents_table.php');
+        DB::table('site_contents')->insert(['site' => 'main', 'key' => 'k', 'locale' => 'en', 'value' => '"x"']);
+
+        try {
+            $migration->down();
+            $this->fail('down() dropped a table with content');
+        } catch (\RuntimeException $e) {
+            $this->assertSame('site_contents has content rows; export or delete them first', $e->getMessage());
+        }
+        $this->assertSame(1, DB::table('site_contents')->count());
+
+        DB::table('site_contents')->delete();
+        $migration->down();
+        $this->assertFalse(Schema::hasTable('site_contents'));
+    }
+
+    public function test_prune_untranslated_deletes_only_bn_rows_equal_to_en(): void
+    {
+        $d = ['en' => SiteContent::defaults('en'), 'bn' => SiteContent::defaults('bn')];
+        $this->row('hubs.about', 'en', $d['en']['hubs.about']);
+        $this->row('hubs.about', 'bn', $d['en']['hubs.about']);   // English in the bn row → pruned
+        $this->row('home.hero', 'en', $d['en']['home.hero']);
+        $this->row('home.hero', 'bn', $d['bn']['home.hero']);     // real Bangla → kept
+        $this->row('home.fork', 'bn', $d['en']['home.fork']);     // no en row to compare → kept
+        DB::table('site_contents')->insert(['site' => 'main', 'key' => 'hubs.about', 'locale' => 'bn', 'value' => json_encode($d['en']['hubs.about'])]);
+
+        $this->artisan('site-content:prune-untranslated', ['--dry-run' => true])
+            ->expectsOutput('hubs.about (bn)')->expectsOutputToContain('1 rows would be deleted')->assertOk();
+        $this->assertSame(6, DB::table('site_contents')->count());
+
+        $this->artisan('site-content:prune-untranslated')->expectsOutputToContain('1 rows deleted')->assertOk();
+        $this->assertFalse(DB::table('site_contents')->where(['site' => 'overseas', 'key' => 'hubs.about', 'locale' => 'bn'])->exists());
+        $this->assertSame(5, DB::table('site_contents')->count());
+    }
+
+    public function test_prune_env_keys_deletes_only_export_rows_of_env_backed_keys(): void
+    {
+        $row = fn ($site, $key, $by = 'site-content:export') => ['site' => $site, 'key' => $key, 'locale' => 'en', 'value' => '{}', 'updated_by' => $by];
+        DB::table('site_contents')->insert([$row('overseas', 'site.licence'), $row('overseas', 'site.contact'), $row('overseas', 'site.stats'), $row('main', 'site.contact')]);
+
+        $this->artisan('site-content:prune-untranslated', ['--env-keys' => true, '--dry-run' => true])
+            ->expectsOutput('site.contact (en)')->expectsOutput('site.licence (en)')->expectsOutputToContain('2 rows would be deleted')->assertOk();
+        $this->assertSame(4, DB::table('site_contents')->count());
+
+        $this->artisan('site-content:prune-untranslated', ['--env-keys' => true])->expectsOutputToContain('2 rows deleted')->assertOk();
+        $this->assertSame(['site.contact', 'site.stats'], DB::table('site_contents')->orderBy('key')->pluck('key')->all());
+
+        DB::table('site_contents')->insert($row('overseas', 'site.licence', 'Owner')); // an ERP edit is kept
+        $this->artisan('site-content:prune-untranslated', ['--env-keys' => true])->expectsOutputToContain('0 rows deleted')->assertOk();
     }
 
     public function test_partial_row_falls_back_to_the_default(): void
@@ -129,28 +260,28 @@ class SiteContentTest extends TestCase
         $this->edited('site.stats', 'en', ['workers_deployed' => 'lots']);
         $this->edited('home.costs', 'en', ['pay' => 'not a list']);
         $this->row('documents.base', 'en', [['nested' => 'object']]);
-        $this->row('home.journey', 'bn', ['oops']); // broken bn row → valid en row would be next; none → file
+        $this->row('home.journey', 'bn', ['oops']); // broken bn row → bn file
 
         $this->assertUnchanged();
     }
 
-    public function test_cache_rebuilds_when_a_row_is_updated(): void
-    {
-        $this->edited('home.footer', 'en', ['tagline' => 'First']);
-        $this->assertSame('First', $this->props($this->get('/'))['translations']['home']['footer']['tagline']);
-
-        $this->edited('home.footer', 'en', ['tagline' => 'Second'], '2026-11-17 11:00:00');
-        $this->assertSame('Second', $this->props($this->get('/'))['translations']['home']['footer']['tagline']);
-    }
-
     public function test_export_is_idempotent_and_force_overwrites(): void
     {
-        $translatable = collect(SiteContent::schema())->where('translatable', true)->count();
-        $total = $translatable * 2 + (count(SiteContent::schema()) - $translatable);
+        $en = SiteContent::defaults('en');
+        $bn = SiteContent::defaults('bn');
+        $translated = collect(SiteContent::schema())->filter(fn ($d, $k) => $d['translatable'] && $bn[$k] !== $en[$k])->count();
+        $untranslated = collect(SiteContent::schema())->where('translatable', true)->count() - $translated;
+        $total = count(SiteContent::schema()) - 1 + $translated; // every en row except site.licence (all .env) + real Bangla rows
         $footer = fn () => json_decode(DB::table('site_contents')->where('key', 'home.footer')->where('locale', 'en')->value('value'), true);
 
-        $this->artisan('site-content:export')->expectsOutputToContain("{$total} created, 0 updated, 0 skipped")->assertOk();
+        $this->artisan('site-content:export')
+            ->expectsOutputToContain("{$total} created, 0 updated, 0 skipped, {$untranslated} untranslated bn (not written), 1 left to the server setting")->assertOk();
         $this->assertSame($total, DB::table('site_contents')->count());
+        $this->assertFalse(DB::table('site_contents')->where('key', 'hubs.about')->where('locale', 'bn')->exists()); // English in bn: not written
+        $this->assertFalse(DB::table('site_contents')->where('key', 'site.licence')->exists());
+        $contact = json_decode(DB::table('site_contents')->where('key', 'site.contact')->value('value'), true);
+        $this->assertNull($contact['whatsapp']); // .env stays effective
+        $this->assertArrayNotHasKey('inquiry_email', $contact);
         $this->assertUnchanged(); // exported rows are valid and render exactly like the files
 
         $this->edited('home.footer', 'en', ['tagline' => 'Edited'], '2026-11-17 12:00:00');

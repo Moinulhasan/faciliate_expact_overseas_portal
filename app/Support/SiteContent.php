@@ -3,7 +3,6 @@
 namespace App\Support;
 
 use App\Http\Middleware\HandleInertiaRequests;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Throwable;
@@ -56,25 +55,39 @@ class SiteContent
 
     private static array $logged = [];
 
-    /** Valid row for the current locale → valid en row → $default. A stored value is always the complete value of the key. */
+    /** Schema note on fields whose default comes from .env: a blank (null) stored value means "use the server setting". */
+    public const ENV_NOTE = 'Defaults to the server setting';
+
+    /**
+     * Valid row for the current locale → $default (the locale's own file value; never another locale's row).
+     * Non-translatable keys use the en row. A stored value is always the complete value of the key.
+     */
     public static function get(string $key, mixed $default): mixed
     {
         $def = self::schema()[$key] ?? null;
         $locale = ($def['translatable'] ?? true) ? app()->getLocale() : 'en';
 
-        foreach (array_unique([$locale, 'en']) as $l) {
-            $row = self::rows($l)[$key] ?? null;
-            if ($row === null) {
-                continue;
-            }
-            $value = $def ? self::validate($def['value'], $row) : null;
-            if ($value !== null) {
-                return $value;
-            }
-            self::logOnce("invalid:{$key}:{$l}", "SiteContent: row {$key} ({$l}) does not match the schema; using the default.");
+        $row = self::rows()[$locale][$key] ?? null;
+        if ($row === null) {
+            return $default;
+        }
+        $value = $def ? self::validate($def['value'], $row) : null;
+        if ($value === null) {
+            self::logOnce("invalid:{$key}:{$locale}", "SiteContent: row {$key} ({$locale}) does not match the schema; using the default.");
+
+            return $default;
+        }
+        foreach (self::envFields($key) as $f) {
+            $value[$f] ??= $default[$f] ?? null;
         }
 
-        return $default;
+        return $value;
+    }
+
+    /** Fields of $key marked ENV_NOTE in the schema (their default is read from .env via config/site.php). */
+    public static function envFields(string $key): array
+    {
+        return array_keys(array_filter(self::schema()[$key]['value']['fields'] ?? [], fn ($f) => ($f['note'] ?? null) === self::ENV_NOTE));
     }
 
     /** Applies every key whose source is "<kind>:<path>" to $tree (the lang tree, or ['site' => config('site')]). */
@@ -113,7 +126,7 @@ class SiteContent
         return self::$schema ??= json_decode(file_get_contents(base_path(self::SCHEMA)), true, flags: JSON_THROW_ON_ERROR)['keys'];
     }
 
-    /** $value normalised to the field's shape, or null when it does not match (wrong type, missing required, too few items, bad option). */
+    /** $value normalised to the field's shape, or null when it does not match (wrong type or shape, missing required, item count, length, range, bad option). */
     public static function validate(array $field, mixed $value): mixed
     {
         $required = $field['required'] ?? false;
@@ -123,17 +136,18 @@ class SiteContent
 
         switch ($field['type']) {
             case 'number':
-                $ok = is_int($value) || is_float($value);
+                $ok = (is_int($value) || is_float($value)) && $value >= ($field['min'] ?? -INF) && $value <= ($field['max'] ?? INF);
                 break;
             case 'list':
             case 'items':
-                if (! is_array($value) || ! array_is_list($value) || count($value) < ($field['min_items'] ?? 0)) {
+                if (! is_array($value) || ! array_is_list($value) || count($value) < ($field['min_items'] ?? 0)
+                    || count($value) > ($field['max_items'] ?? PHP_INT_MAX)) {
                     return null;
                 }
                 $out = [];
                 foreach ($value as $item) {
                     $item = $field['type'] === 'list'
-                        ? (is_string($item) ? $item : null)
+                        ? (is_string($item) && mb_strlen($item) <= ($field['max'] ?? PHP_INT_MAX) ? $item : null)
                         : self::validate(['type' => 'group', 'required' => true, 'fields' => $field['fields']], $item);
                     if ($item === null) {
                         return null;
@@ -157,40 +171,38 @@ class SiteContent
 
                 return $out;
             default: // text, textarea, url, email, phone, image
-                $ok = is_string($value);
+                $ok = is_string($value) && mb_strlen($value) <= ($field['max'] ?? PHP_INT_MAX) && match ($field['type']) {
+                    'url' => (bool) preg_match('#^https?://\S+$#i', $value),
+                    'phone' => (bool) preg_match('/^\+?[0-9 ()-]{6,20}$/', $value),
+                    'email' => filter_var($value, FILTER_VALIDATE_EMAIL) !== false,
+                    default => true,
+                };
         }
 
         return $ok && (! isset($field['options']) || in_array($value, $field['options'], true)) ? $value : null;
     }
 
-    /** key => decoded value for one locale. Cached 10 min; the cache key changes whenever a row is added, removed or updated. */
-    private static function rows(string $locale): array
+    /**
+     * locale => key => decoded value. One query per request, memoised (no cache: ~60 small rows cost less than a
+     * database-cache lookup, and an ERP save shows on the next request). After a failure no further DB attempts.
+     */
+    private static function rows(): array
     {
-        $memo = request()->attributes; // per request: one lookup, and after a failure no further DB attempts
-        if ($memo->get('site_content.failed')) {
-            return [];
-        }
-        if ($memo->has("site_content.{$locale}")) {
-            return $memo->get("site_content.{$locale}");
+        $memo = request()->attributes;
+        if ($memo->has('site_content.rows')) {
+            return $memo->get('site_content.rows');
         }
 
+        $rows = [];
         try {
-            $stamp = DB::table('site_contents')->where('site', self::SITE)
-                ->selectRaw('max(updated_at) as u, count(*) as c')->first();
-            $rows = Cache::remember(
-                'site_content:'.self::SITE.":{$locale}:".md5($stamp->u.'|'.$stamp->c),
-                600,
-                fn () => DB::table('site_contents')->where('site', self::SITE)->where('locale', $locale)
-                    ->pluck('value', 'key')->map(fn ($v) => json_decode($v, true))->all(),
-            );
+            foreach (DB::table('site_contents')->where('site', self::SITE)->get(['key', 'locale', 'value']) as $r) {
+                $rows[$r->locale][$r->key] = json_decode($r->value, true);
+            }
         } catch (Throwable $e) {
-            $memo->set('site_content.failed', true);
+            $rows = [];
             self::logOnce('db', 'SiteContent: site_contents unavailable, using file defaults: '.$e->getMessage());
-
-            return [];
         }
-
-        $memo->set("site_content.{$locale}", $rows);
+        $memo->set('site_content.rows', $rows);
 
         return $rows;
     }

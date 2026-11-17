@@ -4,14 +4,29 @@ Editable copy of this site now lives in table `site_contents` (shared `delight_b
 The lang/config files stay as the defaults: with an empty table, the site looks exactly as before.
 
 - **Reader:** `App\Support\SiteContent` (`get($key, $default)`, `apply()` for the shared `translations` / `site` props).
-  Order: valid row in the current locale → valid `en` row → file default. Non-translatable keys only use the `en` row.
-  Rows are validated against the schema (types, required fields, `min_items`); a broken row is ignored (logged once).
-  Cached per site + locale for 10 minutes; the cache key includes `max(updated_at)` and the row count, so **the ERP must
-  set `updated_at` on every save**. A DB error is tried once per request, logged once, and the page uses the files.
+  Order: valid row in the current locale → that locale's file default (`lang/bn/…` for bn). A bn page never shows the en row:
+  deleting a bn row ("reset") brings back the Bangla file text. Non-translatable keys only use the `en` row.
+  Rows are validated against the schema (types, required, `min_items`/`max_items`, `max` length or number range, url = http(s),
+  phone, email shape); a broken row is ignored (logged once). One query per request for all of this site's rows (no cache), so an ERP save
+  shows on the next request. A missing table is tried once per request, logged once, and the page uses the files. Note: a real MySQL
+  outage still returns 500s, because sessions and the cache store are in the same database; and `PDO::ATTR_TIMEOUT => 2` applies to every
+  MySQL connection (queue workers, artisan too).
+- **Server settings (`.env`):** fields marked `"note": "Defaults to the server setting"` (`site.contact.whatsapp`, `site.licence.*`):
+  a non-empty row value wins, a blank (null) one falls back to `.env` (`SITE_WHATSAPP`, `SITE_RL_NUMBER`, `SITE_BMET_REG`,
+  `SITE_BAIRA_MEMBER`), then the default. The export never writes them. The inquiry form recipient (`SITE_INQUIRY_EMAIL`) is a server
+  setting only and is not editable: it receives applicants' personal data.
 - **Table:** `site_contents(id, site, key, locale, value json, updated_by, timestamps)`, unique `(site, key, locale)`; this site = `overseas`.
 - **Schema for the ERP editor:** `resources/content/site-content.schema.json` (label, section, translatable, value field tree).
   A stored value is always the **complete** value of the key. `max` = characters (for a `list`, per item); for `number`, `min`/`max` = range.
-- **Seed rows from the files:** `php artisan site-content:export` (missing rows only; `--force` overwrites).
+- **Seed rows from the files:** `php artisan site-content:export` on each server (never copy rows between servers); missing rows only,
+  `--force` overwrites ERP edits (asks first in production). It does not write bn rows identical to en (no Bangla yet: the bn file stays in
+  charge and picks up future translations; the ERP should show a missing bn row as "not translated") nor .env-backed fields.
+  `hubs.jobs` and `hubs.work_abroad` are only partly translated in the files: once their bn row exists, translate them in the ERP, not in the files.
+- **One-off cleanup:** `php artisan site-content:prune-untranslated [--dry-run]` deletes bn rows equal to their en row;
+  `--env-keys` instead deletes export-written rows of keys with .env-backed fields.
+- **Deploy:** `php artisan migrate --pretend`, then `migrate --force`, *before* switching the code (otherwise every request logs
+  "site_contents unavailable"). This project owns the `site_contents` table for all sites (`overseas`, the sibling's `main`, ERP edits);
+  its migration's `down()` refuses to drop it while it has rows.
 - **Adding a key:** add it to `SiteContent::SOURCES` and to the schema; `SiteContentTest` fails if they drift or a default does not validate.
 
 ## Inventory (key → where it lived → shape)
@@ -22,8 +37,8 @@ Only the listed fields are editable; other entries in the same array (button tex
 | Key | Lived in | Locales | Fields |
 |---|---|---|---|
 | `site.company` | `config:site` | en only | name, main_site (url) |
-| `site.contact` | `config:site.contact` | en only | phone (phone), phone_href (phone), email (email), inquiry_email (email), whatsapp (phone), address (textarea), address_my (textarea), hours |
-| `site.licence` | `config:site.licence` | en only | rl_number, bmet, baira |
+| `site.contact` | `config:site.contact` | en only | phone (phone), phone_href (phone), email (email), whatsapp (phone, .env), address (textarea), address_my (textarea), hours |
+| `site.licence` | `config:site.licence` | en only | rl_number, bmet, baira (all .env) |
 | `site.stats` | `config:site.stats` | en only | years_licensed (number), workers_deployed (number), employer_partners (number), avg_days_to_deploy (number) |
 | `site.privacy` | `config:site.privacy` | en only | retention_months (number), updated |
 | `home.meta` | `lang:home.meta` | en/bn | title, description (textarea) |

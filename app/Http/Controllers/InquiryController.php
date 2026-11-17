@@ -7,7 +7,6 @@ use App\Mail\InquiryReceived;
 use App\Models\Country;
 use App\Models\Industry;
 use App\Models\Inquiry;
-use App\Support\SiteContent;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -42,7 +41,8 @@ class InquiryController extends Controller
         ]);
 
         try {
-            Mail::to(SiteContent::get('site.contact', config('site.contact'))['inquiry_email'])->send(new InquiryReceived($inquiry));
+            // Server setting only (SITE_INQUIRY_EMAIL): applicants' personal data must not be redirectable from the ERP.
+            Mail::to(config('site.contact.inquiry_email'))->send(new InquiryReceived($inquiry));
             $inquiry->update(['mailed_at' => now()]);
         } catch (Throwable $e) {
             // Don't fail the visitor — the inquiry is saved; ops can find unsent ones by mailed_at IS NULL.
