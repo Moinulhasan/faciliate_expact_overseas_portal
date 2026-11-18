@@ -1,0 +1,1005 @@
+{
+    "site.company": {
+        "en": {
+            "name": "Facilitate Expat Overseas Limited",
+            "main_site": "https://facilitatexpat.com"
+        },
+        "bn": null
+    },
+    "site.contact": {
+        "en": {
+            "phone": "+880 17 1970 6041",
+            "phone_href": "+8801719706041",
+            "email": "rafik@facilitatexpat.com",
+            "whatsapp": null,
+            "address": "18/3 Naya Paltan, Level-04/B, Mashjid Goli, Dhaka-1000",
+            "address_my": "A-LG-1, Connaught Avenue Cheras, Jalan 9 Taman Bukit Cheras, 56000 Kuala Lumpur, Malaysia",
+            "hours": null
+        },
+        "bn": null
+    },
+    "site.licence": {
+        "en": {
+            "rl_number": null,
+            "bmet": null,
+            "baira": null
+        },
+        "bn": null
+    },
+    "site.stats": {
+        "en": {
+            "years_licensed": null,
+            "workers_deployed": null,
+            "employer_partners": null,
+            "avg_days_to_deploy": null
+        },
+        "bn": null
+    },
+    "site.privacy": {
+        "en": {
+            "retention_months": 24,
+            "updated": "2026-11-13"
+        },
+        "bn": null
+    },
+    "home.meta": {
+        "en": {
+            "title": "Work abroad with a licensed recruiter",
+            "description": "Verified overseas jobs in :n countries and manpower supply from Bangladesh. Clear costs, documents checked twice, one advisor from application to arrival."
+        },
+        "bn": {
+            "title": "লাইসেন্সপ্রাপ্ত রিক্রুটারের মাধ্যমে বিদেশে কাজ",
+            "description": ":nটি দেশে যাচাই করা বিদেশি চাকরি এবং বাংলাদেশ থেকে জনশক্তি সরবরাহ। খরচ লিখিত, কাগজপত্র দুইবার যাচাই, আবেদন থেকে পৌঁছানো পর্যন্ত একজন উপদেষ্টা।"
+        }
+    },
+    "home.nav": {
+        "en": {
+            "brand": "Facilitate Expat",
+            "brand_sub": "Overseas"
+        },
+        "bn": {
+            "brand": "Facilitate Expat",
+            "brand_sub": "ওভারসিজ"
+        }
+    },
+    "home.hero": {
+        "en": {
+            "eyebrow": "Work visas · Job placement · Manpower supply",
+            "title_a": "Work abroad with people",
+            "title_b": "you can trust.",
+            "lead": "Verified jobs in :n countries. Clear costs, documents checked twice, and one advisor from application to arrival.",
+            "stat_countries": "Destination countries",
+            "stat_industries": "Industries we recruit for",
+            "trust_title": "Why workers trust us",
+            "destinations": "Where we send workers"
+        },
+        "bn": {
+            "eyebrow": "ওয়ার্ক ভিসা · চাকরি · জনশক্তি সরবরাহ",
+            "title_a": "বিদেশে কাজ করুন",
+            "title_b": "বিশ্বস্ত মানুষের সাথে।",
+            "lead": ":nটি দেশে যাচাই করা চাকরি। খরচ লিখিতভাবে জানানো হয়, কাগজপত্র দুইবার যাচাই করা হয়, আর আবেদন থেকে বিদেশে পৌঁছানো পর্যন্ত একজন উপদেষ্টা আপনার পাশে থাকেন।",
+            "stat_countries": "গন্তব্য দেশ",
+            "stat_industries": "যে খাতে নিয়োগ দিই",
+            "trust_title": "কর্মীরা কেন আমাদের বিশ্বাস করেন",
+            "destinations": "যেসব দেশে কর্মী পাঠাই"
+        }
+    },
+    "home.fork": {
+        "en": {
+            "title": "Two ways in.",
+            "accent": "One team.",
+            "lead": "Whether you want to work abroad or need workers, you get one advisor who owns your file."
+        },
+        "bn": null
+    },
+    "home.fork.candidate": {
+        "en": {
+            "label": "For workers",
+            "title": "I want to work abroad",
+            "points": [
+                "Real job offers from verified employers",
+                "Every cost written down before you pay anything",
+                "One advisor from application to arrival"
+            ]
+        },
+        "bn": null
+    },
+    "home.fork.employer": {
+        "en": {
+            "label": "For employers",
+            "title": "I need workers",
+            "points": [
+                "Screened and trade-tested candidates",
+                "Visa, BMET clearance and travel handled end to end",
+                "Single point of contact for bulk and specialist hiring"
+            ]
+        },
+        "bn": null
+    },
+    "home.jobs": {
+        "en": {
+            "title": "Jobs open right now",
+            "lead": "Every opening is verified with the employer before it is posted."
+        },
+        "bn": {
+            "title": "এখন যেসব চাকরি খোলা আছে",
+            "lead": "প্রতিটি চাকরি পোস্ট করার আগে নিয়োগকর্তার সাথে যাচাই করা হয়।"
+        }
+    },
+    "home.journey": {
+        "en": {
+            "title": "How it works",
+            "lead": "Seven steps from application to arrival, with the typical time for each. We walk every one with you.",
+            "from": "Dhaka",
+            "from_code": "DAC",
+            "to": "Riyadh",
+            "to_code": "RUH",
+            "pass_label": "Facilitate Expat · Work visa",
+            "note": "Times vary by country and employer — each country page shows its own timeline.",
+            "steps": [
+                {
+                    "title": "Apply & screening",
+                    "body": "Send your details and documents. We check them and call you.",
+                    "time": "1–3 days"
+                },
+                {
+                    "title": "Trade test / interview",
+                    "body": "Show your skill to the employer, in person or online.",
+                    "time": "1–3 weeks"
+                },
+                {
+                    "title": "Medical",
+                    "body": "Health check at an approved centre (GAMCA where applicable).",
+                    "time": "2–7 days"
+                },
+                {
+                    "title": "Visa & work permit",
+                    "body": "We prepare and submit your visa and work permit papers.",
+                    "time": "3–10 weeks"
+                },
+                {
+                    "title": "BMET clearance",
+                    "body": "Government emigration clearance and your BMET smart card.",
+                    "time": "3–7 days"
+                },
+                {
+                    "title": "Briefing & ticket",
+                    "body": "Pre-departure briefing, contract explained, flight booked.",
+                    "time": "1–2 weeks"
+                },
+                {
+                    "title": "Arrival & aftercare",
+                    "body": "We stay in touch after you land and start work.",
+                    "time": "Whole contract"
+                }
+            ]
+        },
+        "bn": {
+            "title": "কীভাবে কাজ হয়",
+            "lead": "আবেদন থেকে বিদেশে পৌঁছানো পর্যন্ত সাতটি ধাপ, প্রতিটির সাধারণ সময়সহ। প্রতিটি ধাপে আমরা আপনার সাথে আছি।",
+            "from": "ঢাকা",
+            "from_code": "DAC",
+            "to": "রিয়াদ",
+            "to_code": "RUH",
+            "pass_label": "Facilitate Expat · ওয়ার্ক ভিসা",
+            "note": "দেশ ও নিয়োগকর্তাভেদে সময় আলাদা হয় — প্রতিটি দেশের পাতায় তার নিজস্ব সময়সূচি আছে।",
+            "steps": [
+                {
+                    "title": "আবেদন ও যাচাই",
+                    "body": "আপনার তথ্য ও কাগজপত্র পাঠান। আমরা যাচাই করে আপনাকে কল করব।",
+                    "time": "১–৩ দিন"
+                },
+                {
+                    "title": "ট্রেড টেস্ট / ইন্টারভিউ",
+                    "body": "নিয়োগকর্তাকে আপনার দক্ষতা দেখান — সরাসরি বা অনলাইনে।",
+                    "time": "১–৩ সপ্তাহ"
+                },
+                {
+                    "title": "মেডিকেল",
+                    "body": "অনুমোদিত সেন্টারে স্বাস্থ্য পরীক্ষা (প্রযোজ্য হলে GAMCA)।",
+                    "time": "২–৭ দিন"
+                },
+                {
+                    "title": "ভিসা ও ওয়ার্ক পারমিট",
+                    "body": "আমরা আপনার ভিসা ও ওয়ার্ক পারমিটের কাগজ তৈরি করে জমা দিই।",
+                    "time": "৩–১০ সপ্তাহ"
+                },
+                {
+                    "title": "বিএমইটি ক্লিয়ারেন্স",
+                    "body": "সরকারি বহির্গমন ছাড়পত্র ও আপনার বিএমইটি স্মার্ট কার্ড।",
+                    "time": "৩–৭ দিন"
+                },
+                {
+                    "title": "ব্রিফিং ও টিকিট",
+                    "body": "যাত্রার আগে ব্রিফিং, চুক্তি বুঝিয়ে দেওয়া, বিমান টিকিট।",
+                    "time": "১–২ সপ্তাহ"
+                },
+                {
+                    "title": "পৌঁছানো ও পরবর্তী সহায়তা",
+                    "body": "বিদেশে পৌঁছে কাজ শুরু করার পরও আমরা যোগাযোগ রাখি।",
+                    "time": "পুরো চুক্তিকাল"
+                }
+            ]
+        }
+    },
+    "home.industries": {
+        "en": {
+            "title": "Trades we recruit for",
+            "lead": "Skilled, semi-skilled and general workers across the sectors employers hire for most."
+        },
+        "bn": {
+            "title": "যেসব পেশায় নিয়োগ দিই",
+            "lead": "নিয়োগকর্তারা যেসব খাতে সবচেয়ে বেশি কর্মী চান — দক্ষ, আধা-দক্ষ ও সাধারণ কর্মী।"
+        }
+    },
+    "home.destinations": {
+        "en": {
+            "title": "Where our workers go",
+            "lead": "Top trades by country. Your advisor confirms current timelines for your case.",
+            "note": "Processing times vary by employer and trade. Your advisor gives you a timeline for your case."
+        },
+        "bn": null
+    },
+    "home.costs": {
+        "en": {
+            "title": "What you pay,",
+            "accent": "and what you never pay.",
+            "lead": "Brokers (dalal) cost workers their savings. Here is how to protect yourself.",
+            "pay_title": "You pay",
+            "pay": [
+                "Only the government-set migration cost for your destination, with a written receipt.",
+                "Your own passport and medical fees, paid directly to the office or centre."
+            ],
+            "never_title": "You never pay",
+            "never": [
+                "Any fee to apply or to be shortlisted.",
+                "Cash to a middleman (dalal) who says they work for us.",
+                "Anything without a receipt on company letterhead."
+            ],
+            "verify_title": "How to check a job is real",
+            "verify": "Ask us for the employer name and visa number, then confirm the job with BMET before you pay anything. Our staff will never ask you to send money to a personal account."
+        },
+        "bn": {
+            "title": "আপনি কী দেবেন,",
+            "accent": "আর কী কখনোই দেবেন না।",
+            "lead": "দালালের কারণে অনেক পরিবার সঞ্চয় হারায়। নিজেকে কীভাবে রক্ষা করবেন, জেনে নিন।",
+            "pay_title": "আপনি দেবেন",
+            "pay": [
+                "শুধু আপনার গন্তব্য দেশের জন্য সরকার-নির্ধারিত অভিবাসন খরচ, লিখিত রসিদসহ।",
+                "নিজের পাসপোর্ট ও মেডিকেল ফি — সরাসরি সংশ্লিষ্ট অফিস বা সেন্টারে।"
+            ],
+            "never_title": "আপনি কখনোই দেবেন না",
+            "never": [
+                "আবেদন বা শর্টলিস্ট হওয়ার জন্য কোনো ফি।",
+                "আমাদের লোক বলে দাবি করা কোনো দালালকে নগদ টাকা।",
+                "কোম্পানির প্যাডে রসিদ ছাড়া কোনো টাকা।"
+            ],
+            "verify_title": "চাকরিটি আসল কিনা কীভাবে যাচাই করবেন",
+            "verify": "আমাদের কাছে নিয়োগকর্তার নাম ও ভিসা নম্বর চান, তারপর টাকা দেওয়ার আগে বিএমইটি-তে চাকরিটি যাচাই করুন। আমাদের কর্মীরা কখনো ব্যক্তিগত অ্যাকাউন্টে টাকা পাঠাতে বলবেন না।"
+        }
+    },
+    "home.reviews": {
+        "en": {
+            "title": "What our clients say",
+            "lead": "Workers and employers we have placed and supplied, in their own words."
+        },
+        "bn": {
+            "title": "আমাদের ক্লায়েন্টরা যা বলেন",
+            "lead": "যেসব কর্মী ও নিয়োগকর্তার সাথে আমরা কাজ করেছি, তাঁদের নিজের ভাষায়।"
+        }
+    },
+    "home.faq": {
+        "en": {
+            "title": "Questions, answered",
+            "lead": "Still unsure? Ask us on WhatsApp — it is free.",
+            "items": [
+                {
+                    "q": "Can you guarantee my visa?",
+                    "a": "No. The embassy and the employer decide. We make sure your file is complete and correct, which gives you the best chance."
+                },
+                {
+                    "q": "Do I pay to apply?",
+                    "a": "No. Applying and being shortlisted is free. Any cost is explained in writing before you pay."
+                },
+                {
+                    "q": "How long does it take?",
+                    "a": "It depends on the country and the job. Gulf countries are usually faster than Europe. Your advisor gives you a timeline for your case."
+                },
+                {
+                    "q": "What documents do I need to start?",
+                    "a": "A passport valid for at least 6 months, your national ID, a photo, and any work certificates you have."
+                },
+                {
+                    "q": "Can employers hire in bulk?",
+                    "a": "Yes. Send us the trades, numbers and start date, and we will reply with a deployment plan."
+                }
+            ]
+        },
+        "bn": {
+            "title": "প্রশ্ন ও উত্তর",
+            "lead": "এখনো প্রশ্ন আছে? হোয়াটসঅ্যাপে জিজ্ঞেস করুন — বিনামূল্যে।",
+            "items": [
+                {
+                    "q": "আপনারা কি ভিসার গ্যারান্টি দেন?",
+                    "a": "না। দূতাবাস ও নিয়োগকর্তা সিদ্ধান্ত নেন। আমরা নিশ্চিত করি আপনার ফাইল সম্পূর্ণ ও সঠিক, যাতে আপনার সুযোগ সবচেয়ে ভালো থাকে।"
+                },
+                {
+                    "q": "আবেদন করতে কি টাকা লাগে?",
+                    "a": "না। আবেদন ও শর্টলিস্ট হওয়া বিনামূল্যে। কোনো খরচ থাকলে টাকা দেওয়ার আগে লিখিতভাবে জানানো হয়।"
+                },
+                {
+                    "q": "কত সময় লাগে?",
+                    "a": "দেশ ও চাকরির উপর নির্ভর করে। সাধারণত ইউরোপের চেয়ে উপসাগরীয় দেশে কম সময় লাগে। আপনার উপদেষ্টা আপনার কেসের জন্য সময়সূচি জানাবেন।"
+                },
+                {
+                    "q": "শুরু করতে কী কী কাগজ লাগবে?",
+                    "a": "কমপক্ষে ৬ মাস মেয়াদসহ পাসপোর্ট, জাতীয় পরিচয়পত্র, ছবি, আর কাজের সনদ থাকলে সেগুলো।"
+                },
+                {
+                    "q": "নিয়োগকর্তারা কি একসাথে অনেক কর্মী নিতে পারেন?",
+                    "a": "হ্যাঁ। পেশা, সংখ্যা ও শুরুর তারিখ জানান — আমরা একটি পরিকল্পনা পাঠাব।"
+                }
+            ]
+        }
+    },
+    "home.final": {
+        "en": {
+            "title_a": "Ready when",
+            "title_b": "you are.",
+            "lead": "Message an advisor on WhatsApp. It is free, and you can ask anything before you decide."
+        },
+        "bn": {
+            "title_a": "আপনি প্রস্তুত হলেই",
+            "title_b": "আমরা আছি।",
+            "lead": "হোয়াটসঅ্যাপে একজন উপদেষ্টাকে মেসেজ করুন। এটি বিনামূল্যে, আর সিদ্ধান্ত নেওয়ার আগে যেকোনো প্রশ্ন করতে পারেন।"
+        }
+    },
+    "home.footer": {
+        "en": {
+            "tagline": "Working visas, recruitment and manpower supply from Bangladesh."
+        },
+        "bn": {
+            "tagline": "বাংলাদেশ থেকে ওয়ার্ক ভিসা, নিয়োগ ও জনশক্তি সরবরাহ।"
+        }
+    },
+    "pages.common": {
+        "en": {
+            "typical": "Typical ranges — your advisor confirms the current timeline for your case.",
+            "no_jobs": "No openings are posted right now. Apply once and we will match you when one opens.",
+            "faq_title": "Questions, answered",
+            "faq_lead": "Still unsure? Ask us on WhatsApp — it is free."
+        },
+        "bn": {
+            "typical": "এগুলো সাধারণ সময় — আপনার কেসের সঠিক সময় উপদেষ্টা জানাবেন।",
+            "no_jobs": "এখন কোনো চাকরি পোস্ট করা নেই। একবার যোগাযোগ করুন — উপযুক্ত চাকরি এলে আমরা জানাব।",
+            "faq_title": "প্রশ্ন ও উত্তর",
+            "faq_lead": "এখনো প্রশ্ন আছে? হোয়াটসঅ্যাপে জিজ্ঞেস করুন — বিনামূল্যে।"
+        }
+    },
+    "pages.industries": {
+        "en": {
+            "meta_title": "Industries we recruit for",
+            "meta_description": "16 industries we recruit Bangladeshi workers for — construction, oil & gas, MEP, manufacturing, hospitality, healthcare and more — for employers in the Gulf, Asia and Europe.",
+            "eyebrow": "Industries",
+            "title": "Trades we recruit for,",
+            "accent": "checked before they travel.",
+            "lead": "Skilled, semi-skilled and general workers across :n industries. Every candidate’s documents and trade are checked before an employer sees them.",
+            "roles_title": "Roles we recruit",
+            "roles_lead": "Common positions employers request. Ask us if yours is not listed.",
+            "certs_title": "What you need",
+            "certs_lead": "Documents and certificates we check before shortlisting.",
+            "screening_title": "How we screen",
+            "screening": [
+                {
+                    "title": "Documents verified",
+                    "body": "Passport, NID, certificates and experience letters checked against originals."
+                },
+                {
+                    "title": "Trade tested",
+                    "body": "Skills tested or reviewed for the specific role before shortlisting."
+                },
+                {
+                    "title": "Interview prepared",
+                    "body": "Candidates briefed on the job, contract and employer before interview."
+                },
+                {
+                    "title": "Second check",
+                    "body": "A second advisor reviews every file before submission."
+                }
+            ],
+            "countries_title": "Where these workers go",
+            "countries_lead": "Countries currently hiring for this industry.",
+            "employer_cta_title": "Need :industry workers?",
+            "employer_cta_lead": "Tell us the trades, numbers and start date. We reply with a deployment plan."
+        },
+        "bn": {
+            "meta_title": "যেসব পেশায় নিয়োগ দিই",
+            "meta_description": "উপসাগরীয় দেশ, এশিয়া ও ইউরোপের নিয়োগকর্তাদের জন্য ১৬টি খাতে বাংলাদেশি কর্মী নিয়োগ — নির্মাণ, তেল-গ্যাস, এমইপি, কারখানা, হোটেল, স্বাস্থ্যসেবা ও আরও।",
+            "eyebrow": "পেশা ও খাত",
+            "title": "যেসব পেশায় নিয়োগ দিই,",
+            "accent": "যাত্রার আগেই যাচাই।",
+            "lead": ":nটি খাতে দক্ষ, আধা-দক্ষ ও সাধারণ কর্মী। নিয়োগকর্তা দেখার আগেই প্রতিটি প্রার্থীর কাগজপত্র ও কাজ যাচাই করা হয়।",
+            "roles_title": "যেসব পদে নিয়োগ দিই",
+            "roles_lead": "নিয়োগকর্তারা সাধারণত যেসব পদ চান। আপনার পদ না থাকলে আমাদের জিজ্ঞেস করুন।",
+            "certs_title": "যা যা লাগবে",
+            "certs_lead": "শর্টলিস্টের আগে যেসব কাগজ ও সনদ আমরা যাচাই করি।",
+            "screening_title": "আমরা কীভাবে যাচাই করি",
+            "screening": [
+                {
+                    "title": "কাগজপত্র যাচাই",
+                    "body": "পাসপোর্ট, এনআইডি, সনদ ও অভিজ্ঞতার সনদ মূল কপির সাথে মিলিয়ে দেখা হয়।"
+                },
+                {
+                    "title": "ট্রেড টেস্ট",
+                    "body": "শর্টলিস্টের আগে নির্দিষ্ট পদের জন্য দক্ষতা পরীক্ষা বা যাচাই।"
+                },
+                {
+                    "title": "ইন্টারভিউয়ের প্রস্তুতি",
+                    "body": "ইন্টারভিউয়ের আগে চাকরি, চুক্তি ও নিয়োগকর্তা সম্পর্কে বুঝিয়ে দেওয়া হয়।"
+                },
+                {
+                    "title": "দ্বিতীয়বার যাচাই",
+                    "body": "জমা দেওয়ার আগে দ্বিতীয় একজন উপদেষ্টা প্রতিটি ফাইল দেখেন।"
+                }
+            ],
+            "countries_title": "এই কর্মীরা কোথায় যান",
+            "countries_lead": "যেসব দেশ এখন এই খাতে কর্মী নিচ্ছে।",
+            "employer_cta_title": "Need :industry workers?",
+            "employer_cta_lead": "Tell us the trades, numbers and start date. We reply with a deployment plan."
+        }
+    },
+    "pages.countries": {
+        "en": {
+            "meta_title": "Work abroad destinations",
+            "meta_description": "Work visas from Bangladesh to 21 countries in the Gulf, Asia and Europe: visa types, typical processing times, contracts and in-demand trades.",
+            "eyebrow": "Destinations",
+            "title": "Where you can work,",
+            "accent": "and what it takes.",
+            "lead": ":n countries across the Gulf, Asia and Europe. Visa type, typical timeline and in-demand trades for each — in one place.",
+            "title_show": "Work in :country",
+            "accent_show": "from Bangladesh.",
+            "sectors_title": "In-demand industries",
+            "sectors_lead": "What employers in :country are hiring for right now.",
+            "process_title": "How it works for :country",
+            "process_lead": "The steps your file goes through, from application to arrival.",
+            "docs_title": "Find your document list",
+            "docs_lead": "Tick off what you already have. Bring the rest when you apply.",
+            "docs_note": "Your advisor confirms the final list for your job and employer."
+        },
+        "bn": {
+            "meta_title": "বিদেশে কাজের গন্তব্য",
+            "meta_description": "বাংলাদেশ থেকে উপসাগরীয় দেশ, এশিয়া ও ইউরোপের ২১টি দেশে ওয়ার্ক ভিসা: ভিসার ধরন, সাধারণ সময়, চুক্তি ও চাহিদার পেশা।",
+            "eyebrow": "গন্তব্য",
+            "title": "কোথায় কাজ করতে পারেন,",
+            "accent": "আর কী কী লাগে।",
+            "lead": "উপসাগরীয় দেশ, এশিয়া ও ইউরোপের :nটি দেশ। প্রতিটির ভিসার ধরন, সাধারণ সময় ও চাহিদার পেশা — এক জায়গায়।",
+            "title_show": "বাংলাদেশ থেকে :country-এ",
+            "accent_show": "কাজ করুন।",
+            "sectors_title": "চাহিদার খাত",
+            "sectors_lead": ":country-এর নিয়োগকর্তারা এখন যেসব কর্মী খুঁজছেন।",
+            "process_title": ":country: কীভাবে কাজ হয়",
+            "process_lead": "আবেদন থেকে পৌঁছানো পর্যন্ত আপনার ফাইল যেসব ধাপ পার হয়।",
+            "docs_title": "আপনার কাগজের তালিকা",
+            "docs_lead": "যা আছে তাতে টিক দিন। বাকিগুলো আবেদনের সময় আনুন।",
+            "docs_note": "আপনার চাকরি ও নিয়োগকর্তা অনুযায়ী চূড়ান্ত তালিকা উপদেষ্টা জানাবেন।"
+        }
+    },
+    "pages.countries.region_lead": {
+        "en": {
+            "gcc": "The largest and fastest routes for Bangladeshi workers. Two-year contracts are typical.",
+            "east_asia": "Language and skills tests come first, then longer, well-structured contracts.",
+            "se_asia": "Skills tests and employer quotas decide intake. Contracts of two to three years.",
+            "europe": "Employer applies for the work permit first; the embassy may be outside Bangladesh."
+        },
+        "bn": {
+            "gcc": "বাংলাদেশি কর্মীদের সবচেয়ে বড় ও দ্রুততম পথ। সাধারণত দুই বছরের চুক্তি।",
+            "east_asia": "আগে ভাষা ও দক্ষতা পরীক্ষা, তারপর দীর্ঘ ও সুসংগঠিত চুক্তি।",
+            "se_asia": "দক্ষতা পরীক্ষা ও নিয়োগকর্তার কোটা অনুযায়ী নিয়োগ। দুই থেকে তিন বছরের চুক্তি।",
+            "europe": "নিয়োগকর্তা আগে ওয়ার্ক পারমিটের আবেদন করেন; দূতাবাস বাংলাদেশের বাইরে হতে পারে।"
+        }
+    },
+    "hubs.jobs": {
+        "en": {
+            "meta_title": "Jobs abroad for Bangladeshi workers",
+            "meta_description": "Verified overseas job openings in the Gulf, Asia and Europe. Salary, contract, benefits and deadline on every job. Apply free.",
+            "eyebrow": "Job board",
+            "title": "Verified jobs abroad,",
+            "accent": "with the details up front.",
+            "lead": "Salary, contract length, benefits and deadline on every opening. Applying is free.",
+            "none_title": "No jobs match these filters",
+            "none_body": "Try another country or trade — or apply once and we will match you when a suitable job opens.",
+            "empty_title": "New openings are being verified",
+            "empty_body": "We only post jobs after checking the employer and visa. Apply once, and your advisor will contact you when a match opens.",
+            "empty_where": "Where employers are hiring",
+            "how_title": "How to apply",
+            "how": [
+                {
+                    "title": "Apply free",
+                    "body": "Send your details in a few minutes. No fee to apply or be shortlisted."
+                },
+                {
+                    "title": "We check your file",
+                    "body": "Your advisor reviews your documents and calls you."
+                },
+                {
+                    "title": "Employer interview",
+                    "body": "If shortlisted, you meet the employer or take a trade test."
+                }
+            ],
+            "safety_title": "Before you pay anything",
+            "safety": "Ask for this job’s reference and confirm it with us. We never ask for money to a personal account, and every payment gets a receipt on company letterhead.",
+            "dialog_lead": "Talk to an advisor about this job. Applying is free.",
+            "wa_message": "Hi, I am interested in the job: :title in :country (ref: :ref).",
+            "sample_note": "This is a sample listing for design review and is not a real vacancy."
+        },
+        "bn": {
+            "meta_title": "Jobs abroad for Bangladeshi workers",
+            "meta_description": "Verified overseas job openings in the Gulf, Asia and Europe. Salary, contract, benefits and deadline on every job. Apply free.",
+            "eyebrow": "Job board",
+            "title": "Verified jobs abroad,",
+            "accent": "with the details up front.",
+            "lead": "Salary, contract length, benefits and deadline on every opening. Applying is free.",
+            "none_title": "No jobs match these filters",
+            "none_body": "Try another country or trade — or apply once and we will match you when a suitable job opens.",
+            "empty_title": "New openings are being verified",
+            "empty_body": "We only post jobs after checking the employer and visa. Apply once, and your advisor will contact you when a match opens.",
+            "empty_where": "Where employers are hiring",
+            "how_title": "How to apply",
+            "how": [
+                {
+                    "title": "Apply free",
+                    "body": "Send your details in a few minutes. No fee to apply or be shortlisted."
+                },
+                {
+                    "title": "We check your file",
+                    "body": "Your advisor reviews your documents and calls you."
+                },
+                {
+                    "title": "Employer interview",
+                    "body": "If shortlisted, you meet the employer or take a trade test."
+                }
+            ],
+            "safety_title": "Before you pay anything",
+            "safety": "এই চাকরির রেফারেন্স জেনে আমাদের সাথে মিলিয়ে নিন। আমরা কখনো ব্যক্তিগত অ্যাকাউন্টে টাকা চাই না, আর প্রতিটি টাকার জন্য কোম্পানির প্যাডে রসিদ দিই।",
+            "dialog_lead": "এই চাকরি নিয়ে একজন উপদেষ্টার সাথে কথা বলুন। আবেদন বিনামূল্যে।",
+            "wa_message": "আসসালামু আলাইকুম, আমি এই চাকরিতে আগ্রহী: :title, :country (রেফ: :ref)।",
+            "sample_note": "This is a sample listing for design review and is not a real vacancy."
+        }
+    },
+    "hubs.work_abroad": {
+        "en": {
+            "meta_title": "Work abroad from Bangladesh",
+            "meta_description": "How to work abroad safely from Bangladesh: eligibility, the 7 steps, real costs, documents and how to spot fake jobs. Free application.",
+            "eyebrow": "For workers",
+            "title": "Work abroad,",
+            "accent": "the safe way.",
+            "lead": "A real job, a written contract and one advisor who stays with you — from your first call to your first month abroad.",
+            "eligible_title": "Can I apply?",
+            "eligible_lead": "Most of our jobs ask for these. Your advisor checks the exact rules for each job.",
+            "eligible": [
+                {
+                    "title": "Age",
+                    "body": "Usually 21–45. Some jobs and countries differ."
+                },
+                {
+                    "title": "Passport",
+                    "body": "Valid for at least 6 months. We help you renew if needed."
+                },
+                {
+                    "title": "Skill or experience",
+                    "body": "A trade, certificate or work history for the job."
+                },
+                {
+                    "title": "Health",
+                    "body": "Fit for work — checked at an approved medical centre."
+                },
+                {
+                    "title": "Clean record",
+                    "body": "A police clearance certificate."
+                },
+                {
+                    "title": "Language",
+                    "body": "Needed for some countries, such as Japan and Korea."
+                }
+            ],
+            "promise_title": "What we do for you",
+            "promise": [
+                {
+                    "title": "Real jobs only",
+                    "body": "We check the employer and the visa before a job is offered to you."
+                },
+                {
+                    "title": "Costs in writing",
+                    "body": "Every cost is written down before you pay — with a receipt."
+                },
+                {
+                    "title": "Documents checked twice",
+                    "body": "A second advisor reviews your file so nothing is missing."
+                },
+                {
+                    "title": "With you after arrival",
+                    "body": "We stay in touch after you land and start work."
+                }
+            ],
+            "journey_title": "Your journey, step by step",
+            "docs_title": "Documents to start",
+            "docs_lead": "Tick what you already have. Bring the rest when you apply.",
+            "flags_title": "How to spot a fake job",
+            "flags_lead": "Brokers (dalal) cost families their savings. Walk away if you see any of these.",
+            "flags": [
+                "Someone asks for money before you have a written job offer.",
+                "Payment to a personal bKash, Nagad or bank account.",
+                "No receipt, or a receipt without the company name.",
+                "“Guaranteed visa” or “100% success” promises.",
+                "A job you cannot confirm with BMET or the company.",
+                "Pressure to decide today, or to hide it from family."
+            ],
+            "countries_title": "Where you can go",
+            "faq": [
+                {
+                    "q": "Is applying really free?",
+                    "a": "Yes. Applying and being shortlisted is free. Any cost later is the government-set migration cost or your own passport and medical fees, explained in writing first."
+                },
+                {
+                    "q": "I have no certificate. Can I still apply?",
+                    "a": "Often yes, if you have real work experience. Some jobs need a trade test, which we arrange before the employer interview."
+                },
+                {
+                    "q": "How long until I fly?",
+                    "a": "It depends on the country and the job — weeks for some Gulf jobs, several months for Europe and Japan. Your advisor gives you a timeline for your case."
+                },
+                {
+                    "q": "Can my family contact you?",
+                    "a": "Yes. Your family can call or WhatsApp us, and visit our office in Naya Paltan, Dhaka."
+                },
+                {
+                    "q": "What if there is a problem after I arrive?",
+                    "a": "Contact your advisor on WhatsApp. We work with the employer to solve it and stay in touch during your contract."
+                }
+            ]
+        },
+        "bn": {
+            "meta_title": "Work abroad from Bangladesh",
+            "meta_description": "How to work abroad safely from Bangladesh: eligibility, the 7 steps, real costs, documents and how to spot fake jobs. Free application.",
+            "eyebrow": "For workers",
+            "title": "Work abroad,",
+            "accent": "the safe way.",
+            "lead": "A real job, a written contract and one advisor who stays with you — from your first call to your first month abroad.",
+            "eligible_title": "Can I apply?",
+            "eligible_lead": "Most of our jobs ask for these. Your advisor checks the exact rules for each job.",
+            "eligible": [
+                {
+                    "title": "Age",
+                    "body": "Usually 21–45. Some jobs and countries differ."
+                },
+                {
+                    "title": "Passport",
+                    "body": "Valid for at least 6 months. We help you renew if needed."
+                },
+                {
+                    "title": "Skill or experience",
+                    "body": "A trade, certificate or work history for the job."
+                },
+                {
+                    "title": "Health",
+                    "body": "Fit for work — checked at an approved medical centre."
+                },
+                {
+                    "title": "Clean record",
+                    "body": "A police clearance certificate."
+                },
+                {
+                    "title": "Language",
+                    "body": "Needed for some countries, such as Japan and Korea."
+                }
+            ],
+            "promise_title": "What we do for you",
+            "promise": [
+                {
+                    "title": "শুধু আসল চাকরি",
+                    "body": "চাকরি দেওয়ার আগে নিয়োগকর্তা ও ভিসা যাচাই করি।"
+                },
+                {
+                    "title": "খরচ লিখিতভাবে",
+                    "body": "টাকা দেওয়ার আগে প্রতিটি খরচ লিখে দেওয়া হয় — রসিদসহ।"
+                },
+                {
+                    "title": "কাগজপত্র দুইবার যাচাই",
+                    "body": "দ্বিতীয় একজন উপদেষ্টা আপনার ফাইল দেখেন, যাতে কিছু বাদ না যায়।"
+                },
+                {
+                    "title": "পৌঁছানোর পরও পাশে",
+                    "body": "বিদেশে পৌঁছে কাজ শুরু করার পরও আমরা যোগাযোগ রাখি।"
+                }
+            ],
+            "journey_title": "Your journey, step by step",
+            "docs_title": "Documents to start",
+            "docs_lead": "Tick what you already have. Bring the rest when you apply.",
+            "flags_title": "How to spot a fake job",
+            "flags_lead": "Brokers (dalal) cost families their savings. Walk away if you see any of these.",
+            "flags": [
+                "Someone asks for money before you have a written job offer.",
+                "Payment to a personal bKash, Nagad or bank account.",
+                "No receipt, or a receipt without the company name.",
+                "“Guaranteed visa” or “100% success” promises.",
+                "A job you cannot confirm with BMET or the company.",
+                "Pressure to decide today, or to hide it from family."
+            ],
+            "countries_title": "Where you can go",
+            "faq": [
+                {
+                    "q": "Is applying really free?",
+                    "a": "Yes. Applying and being shortlisted is free. Any cost later is the government-set migration cost or your own passport and medical fees, explained in writing first."
+                },
+                {
+                    "q": "I have no certificate. Can I still apply?",
+                    "a": "Often yes, if you have real work experience. Some jobs need a trade test, which we arrange before the employer interview."
+                },
+                {
+                    "q": "How long until I fly?",
+                    "a": "It depends on the country and the job — weeks for some Gulf jobs, several months for Europe and Japan. Your advisor gives you a timeline for your case."
+                },
+                {
+                    "q": "Can my family contact you?",
+                    "a": "Yes. Your family can call or WhatsApp us, and visit our office in Naya Paltan, Dhaka."
+                },
+                {
+                    "q": "What if there is a problem after I arrive?",
+                    "a": "Contact your advisor on WhatsApp. We work with the employer to solve it and stay in touch during your contract."
+                }
+            ]
+        }
+    },
+    "hubs.employers": {
+        "en": {
+            "meta_title": "Hire workers from Bangladesh",
+            "meta_description": "Screened, trade-tested manpower from Bangladesh for employers in the Gulf, Asia and Europe. One accountable contact from demand letter to deployment.",
+            "eyebrow": "For employers",
+            "title": "Hire screened workers",
+            "accent": "from Bangladesh.",
+            "lead": "Skilled, semi-skilled and general manpower — sourced, trade-tested and documented by one accountable team, from demand letter to deployment.",
+            "pillars": [
+                {
+                    "title": "Screened & trade-tested",
+                    "body": "Every candidate’s documents are verified and their trade tested before you interview them."
+                },
+                {
+                    "title": "One accountable contact",
+                    "body": "A single coordinator manages your demand — sourcing, interviews, visas and travel."
+                },
+                {
+                    "title": "Compliant end to end",
+                    "body": "Licensed recruitment with BMET emigration clearance and contracts explained to every worker."
+                }
+            ],
+            "process_title": "How we deliver your workforce",
+            "process_lead": "A clear path from your demand to workers on site.",
+            "process": [
+                {
+                    "title": "Share your demand",
+                    "body": "Trades, quantities, salary, contract terms and start date."
+                },
+                {
+                    "title": "Agreement & documents",
+                    "body": "Recruitment agreement, demand letter and power of attorney."
+                },
+                {
+                    "title": "Sourcing & shortlist",
+                    "body": "We source, pre-screen and verify candidates for each trade."
+                },
+                {
+                    "title": "Interview & trade test",
+                    "body": "You interview and test candidates — in Dhaka or online."
+                },
+                {
+                    "title": "Medical & visa",
+                    "body": "Medical fitness, visa processing and contract signing."
+                },
+                {
+                    "title": "BMET clearance",
+                    "body": "Government emigration clearance and smart cards."
+                },
+                {
+                    "title": "Deployment & aftercare",
+                    "body": "Briefing, flights, arrival support and follow-up."
+                }
+            ],
+            "needs_title": "What we need from you",
+            "needs_lead": "Standard documents for Bangladesh emigration clearance. We guide you through each one.",
+            "needs": [
+                "Demand letter (attested by the Bangladesh mission in your country)",
+                "Power of attorney in favour of our agency",
+                "Employment contract template with salary and benefits",
+                "Visa / work permit approvals or block visa copy",
+                "Company registration / commercial licence copy"
+            ],
+            "industries_title": "Trades we supply",
+            "industries_lead": "16 industries — from construction and oil & gas to hospitality and healthcare.",
+            "countries_title": "Countries we deploy to",
+            "faq": [
+                {
+                    "q": "How quickly can you deploy workers?",
+                    "a": "It depends on the destination’s visa and emigration process. Gulf deployments are typically faster than Europe or East Asia. We share a timeline with your demand."
+                },
+                {
+                    "q": "Can we interview and trade-test candidates?",
+                    "a": "Yes. You can interview in Dhaka or online, and we arrange trade tests for skilled roles."
+                },
+                {
+                    "q": "Do you handle bulk requirements?",
+                    "a": "Yes. Send the trades and numbers and we plan sourcing in batches to match your project schedule."
+                },
+                {
+                    "q": "What happens if a worker is not suitable?",
+                    "a": "Contact your coordinator. Replacement terms are agreed in the recruitment agreement before deployment."
+                },
+                {
+                    "q": "Do workers understand their contract?",
+                    "a": "Yes. Contracts are explained in Bangla before signing and at the pre-departure briefing."
+                }
+            ]
+        },
+        "bn": null
+    },
+    "hubs.about": {
+        "en": {
+            "meta_title": "About us",
+            "meta_description": "Facilitate Expat Overseas Limited is the overseas employment arm of Facilitate Expat — licensed recruitment and manpower supply from Dhaka, Bangladesh.",
+            "eyebrow": "About us",
+            "title": "Recruitment built on",
+            "accent": "trust, not promises.",
+            "lead": "Facilitate Expat Overseas Limited is the overseas employment arm of Facilitate Expat, the Dhaka visa and travel company.",
+            "story_title": "Why we exist",
+            "story": [
+                "Every year, thousands of Bangladeshi families invest their savings in a job abroad. Too many lose them to brokers, fake visas and hidden fees.",
+                "We built Facilitate Expat Overseas to do it differently: real jobs from verified employers, every cost in writing, documents checked twice, and one advisor who stays with the worker — and the employer — from application to arrival."
+            ],
+            "principles_title": "What we stand by",
+            "principles": [
+                {
+                    "title": "Honest numbers",
+                    "body": "No “guaranteed visa”. We tell you the real timeline and the real cost."
+                },
+                {
+                    "title": "Checked twice",
+                    "body": "A second advisor reviews every file before it is submitted."
+                },
+                {
+                    "title": "One advisor",
+                    "body": "The person who knows your file answers your calls. No hand-offs."
+                },
+                {
+                    "title": "Worker welfare",
+                    "body": "Contracts explained in Bangla, and support after arrival."
+                }
+            ],
+            "licence_title": "Licence & compliance",
+            "licence_lead": "Verify us before you trust us.",
+            "office_title": "Visit our office",
+            "office_lead": "Workers, families and employers are welcome.",
+            "group_title": "Part of Facilitate Expat",
+            "group_body": "For visit visas, student visas and air tickets, our parent company Facilitate Expat can help."
+        },
+        "bn": null
+    },
+    "contact.page": {
+        "en": {
+            "meta_title": "Contact us",
+            "meta_description": "Contact Facilitate Expat Overseas by WhatsApp, phone or email. Office in Naya Paltan, Dhaka. We reply within one working day.",
+            "eyebrow": "Contact",
+            "title": "Talk to a real advisor,",
+            "accent": "not a broker.",
+            "lead": "Send an inquiry, WhatsApp or call us. We reply within one working day.",
+            "section_title": "Send us an inquiry",
+            "section_lead": "Tell us what you need. We reply on WhatsApp or email, usually within one working day.",
+            "email_note": "Your inquiry goes straight to this inbox.",
+            "sent_title": "Inquiry sent — thank you!",
+            "sent_body": "We have received your message and will reply on WhatsApp or email, usually within one working day. For anything urgent, call us."
+        },
+        "bn": {
+            "meta_title": "যোগাযোগ",
+            "meta_description": "হোয়াটসঅ্যাপ, ফোন বা ইমেইলে Facilitate Expat Overseas-এর সাথে যোগাযোগ করুন। অফিস: নয়া পল্টন, ঢাকা। এক কর্মদিবসের মধ্যে উত্তর দিই।",
+            "eyebrow": "যোগাযোগ",
+            "title": "কথা বলুন একজন আসল উপদেষ্টার সাথে,",
+            "accent": "দালালের সাথে নয়।",
+            "lead": "অনুসন্ধান পাঠান, হোয়াটসঅ্যাপ করুন বা কল করুন। এক কর্মদিবসের মধ্যে উত্তর দিই।",
+            "section_title": "আমাদের অনুসন্ধান পাঠান",
+            "section_lead": "আপনার কী দরকার জানান। সাধারণত এক কর্মদিবসের মধ্যে হোয়াটসঅ্যাপ বা ইমেইলে উত্তর দিই।",
+            "email_note": "আপনার অনুসন্ধান সরাসরি এই ইনবক্সে যায়।",
+            "sent_title": "অনুসন্ধান পাঠানো হয়েছে — ধন্যবাদ!",
+            "sent_body": "আপনার বার্তা পেয়েছি। সাধারণত এক কর্মদিবসের মধ্যে হোয়াটসঅ্যাপ বা ইমেইলে উত্তর দেব। জরুরি হলে কল করুন।"
+        }
+    },
+    "contact.consent": {
+        "en": {
+            "consent": "I agree that Facilitate Expat Overseas may contact me about this inquiry and store my details as described in the"
+        },
+        "bn": {
+            "consent": "আমি সম্মতি দিচ্ছি যে এই অনুসন্ধান নিয়ে Facilitate Expat Overseas আমার সাথে যোগাযোগ করতে পারবে এবং আমার তথ্য সংরক্ষণ করতে পারবে, যেমনটা বলা আছে"
+        }
+    },
+    "privacy.page": {
+        "en": {
+            "meta_title": "Privacy notice",
+            "meta_description": "How Facilitate Expat Overseas collects, uses and protects the details you send us.",
+            "eyebrow": "Privacy",
+            "title": "Your details,",
+            "accent": "kept safe.",
+            "lead": "What we collect when you contact us, why, and how long we keep it.",
+            "draft": "Draft notice — pending legal review.",
+            "sections": [
+                {
+                    "title": "What we collect",
+                    "body": "When you send an inquiry we collect your name, phone or WhatsApp number, and — if you give them — your email, company, country and trade of interest, and your message. We also record the page you sent it from, the date, and your IP address to prevent spam."
+                },
+                {
+                    "title": "Why we use it",
+                    "body": "Only to reply to your inquiry and, if you ask, to help you find a job abroad or to supply workers. We never sell your details or use them for unrelated advertising."
+                },
+                {
+                    "title": "Who sees it",
+                    "body": "Our recruitment team in Dhaka. If you go ahead with a job, we share only what is needed with the employer and the government offices that process your visa and emigration clearance."
+                },
+                {
+                    "title": "How long we keep it",
+                    "body": "We keep inquiries for up to :months months, then delete them, unless you become a candidate or client and need us to keep your file."
+                },
+                {
+                    "title": "Your choices",
+                    "body": "You can ask us to show, correct or delete your details at any time. Contact us by WhatsApp, phone or email and we will do it."
+                },
+                {
+                    "title": "Contact",
+                    "body": "Facilitate Expat Overseas Limited, :address. Email :email."
+                }
+            ]
+        },
+        "bn": {
+            "meta_title": "গোপনীয়তা নীতি",
+            "meta_description": "আপনার পাঠানো তথ্য Facilitate Expat Overseas কীভাবে সংগ্রহ, ব্যবহার ও সুরক্ষা করে।",
+            "eyebrow": "গোপনীয়তা",
+            "title": "আপনার তথ্য,",
+            "accent": "নিরাপদে রাখা হয়।",
+            "lead": "যোগাযোগ করলে আমরা কী তথ্য নিই, কেন নিই এবং কতদিন রাখি।",
+            "draft": "খসড়া নীতি — আইনি পর্যালোচনা বাকি।",
+            "sections": [
+                {
+                    "title": "আমরা কী সংগ্রহ করি",
+                    "body": "অনুসন্ধান পাঠালে আমরা আপনার নাম, ফোন বা হোয়াটসঅ্যাপ নম্বর এবং — আপনি দিলে — ইমেইল, কোম্পানি, পছন্দের দেশ ও পেশা এবং আপনার বার্তা সংগ্রহ করি। স্প্যাম ঠেকাতে কোন পাতা থেকে পাঠিয়েছেন, তারিখ এবং আইপি ঠিকানাও রাখা হয়।"
+                },
+                {
+                    "title": "কেন ব্যবহার করি",
+                    "body": "শুধু আপনার অনুসন্ধানের উত্তর দিতে এবং আপনি চাইলে বিদেশে চাকরি খুঁজে দিতে বা কর্মী সরবরাহ করতে। আমরা কখনো আপনার তথ্য বিক্রি করি না বা অন্য বিজ্ঞাপনে ব্যবহার করি না।"
+                },
+                {
+                    "title": "কারা দেখতে পায়",
+                    "body": "ঢাকায় আমাদের নিয়োগ দল। আপনি চাকরিতে এগোলে, ভিসা ও বহির্গমন ছাড়পত্রের জন্য যতটুকু দরকার শুধু ততটুকুই নিয়োগকর্তা ও সংশ্লিষ্ট সরকারি দপ্তরকে দেওয়া হয়।"
+                },
+                {
+                    "title": "কতদিন রাখি",
+                    "body": "অনুসন্ধানের তথ্য সর্বোচ্চ :months মাস রাখি, তারপর মুছে ফেলি — যদি না আপনি প্রার্থী বা ক্লায়েন্ট হন এবং আপনার ফাইল রাখার দরকার হয়।"
+                },
+                {
+                    "title": "আপনার অধিকার",
+                    "body": "যেকোনো সময় আপনার তথ্য দেখতে, সংশোধন করতে বা মুছে ফেলতে বলতে পারেন। হোয়াটসঅ্যাপ, ফোন বা ইমেইলে জানালেই আমরা করে দেব।"
+                },
+                {
+                    "title": "যোগাযোগ",
+                    "body": "Facilitate Expat Overseas Limited, :address। ইমেইল :email।"
+                }
+            ]
+        }
+    },
+    "documents.base": {
+        "en": [
+            "Passport valid for at least 6 months, with 2 blank pages",
+            "National ID (NID) or birth certificate",
+            "Recent passport-size photos (white background)",
+            "Educational certificates",
+            "Experience letters / trade certificates",
+            "Police clearance certificate",
+            "Medical fitness report from an approved centre"
+        ],
+        "bn": null
+    }
+}

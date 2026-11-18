@@ -15,6 +15,9 @@ class SiteContent
 
     public const SCHEMA = 'resources/content/site-content.schema.json';
 
+    /** The defaults for the ERP editor's prefill, written by `php artisan site-content:export --json`. */
+    public const DEFAULTS_FILE = 'resources/content/site-content.defaults.json';
+
     /** Where each key's default lives: lang:<file>.<path> (the shared translations), config:<path>, const:<PHP constant>. */
     public const SOURCES = [
         'site.company' => 'config:site',
@@ -119,6 +122,26 @@ class SiteContent
 
             return array_map(fn ($f) => data_get($trees[$kind], "{$path}.{$f}"), array_combine(array_keys($fields), array_keys($fields)));
         })->all();
+    }
+
+    /**
+     * key => [en => value, bn => value|null]: what the site falls back to with no row. .env-backed fields are null
+     * (so the server setting keeps winning); bn is null when the key is not translatable or its bn text is still the en text.
+     */
+    public static function defaultsForEditor(): array
+    {
+        $en = self::defaults('en');
+        $bn = self::defaults('bn');
+        $out = [];
+        foreach (self::schema() as $key => $def) {
+            $null = array_fill_keys(self::envFields($key), null);
+            $out[$key] = [
+                'en' => array_replace($en[$key], $null),
+                'bn' => $def['translatable'] && $bn[$key] !== $en[$key] ? array_replace($bn[$key], $null) : null,
+            ];
+        }
+
+        return $out;
     }
 
     public static function schema(): array

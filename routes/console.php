@@ -12,7 +12,15 @@ Artisan::command('inspire', function () {
 // Seeds site_contents with what the site shows today (lang/config files), so the ERP editor starts from real copy.
 // Not written: bn values identical to en (no Bangla yet: the bn file stays in charge and picks up future translations)
 // and .env-backed fields (stored as null, so the server's .env stays effective until someone edits them in the ERP).
-Artisan::command('site-content:export {--force : Overwrite rows that already exist}', function () {
+// --json instead writes those defaults to SiteContent::DEFAULTS_FILE for the ERP editor's prefill (no DB access).
+Artisan::command('site-content:export {--force : Overwrite rows that already exist} {--json : Write the defaults file for the ERP instead}', function () {
+    if ($this->option('json')) {
+        file_put_contents(base_path(SiteContent::DEFAULTS_FILE), json_encode(SiteContent::defaultsForEditor(),
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR)."\n");
+        $this->info('Wrote '.SiteContent::DEFAULTS_FILE.'. Copy it to the ERP as resources/site-content/overseas.defaults.json.');
+
+        return;
+    }
     if ($this->option('force') && app()->isProduction() && ! $this->confirm('Overwrite ERP edits with the file values?')) {
         return;
     }

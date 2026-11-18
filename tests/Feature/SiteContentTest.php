@@ -309,6 +309,30 @@ class SiteContentTest extends TestCase
         }
     }
 
+    /** The ERP prefills its editor from this file; re-run `php artisan site-content:export --json` when this fails. */
+    public function test_the_defaults_file_matches_the_readers_defaults(): void
+    {
+        $file = json_decode(file_get_contents(base_path(SiteContent::DEFAULTS_FILE)), true, flags: JSON_THROW_ON_ERROR);
+        $this->assertSame(SiteContent::defaultsForEditor(), $file, SiteContent::DEFAULTS_FILE.' is stale');
+
+        $en = SiteContent::defaults('en');
+        $bn = SiteContent::defaults('bn');
+        foreach (SiteContent::schema() as $key => $def) {
+            $env = SiteContent::envFields($key);
+            foreach ($def['value']['type'] === 'group' ? $def['value']['fields'] : [] as $f => $_) {
+                $this->assertSame(in_array($f, $env, true) ? null : $en[$key][$f], $file[$key]['en'][$f], "{$key}.{$f} (en)");
+            }
+            if ($def['value']['type'] !== 'group') {
+                $this->assertSame($en[$key], $file[$key]['en'], "{$key} (en)");
+            }
+            $translated = $def['translatable'] && $bn[$key] !== $en[$key];
+            $this->assertSame($translated ? $bn[$key] : null, $file[$key]['bn'], "{$key} (bn)");
+        }
+
+        $this->artisan('site-content:export --json')->assertSuccessful();
+        $this->assertSame($file, json_decode(file_get_contents(base_path(SiteContent::DEFAULTS_FILE)), true));
+    }
+
     public function test_every_default_is_valid_against_the_schema(): void
     {
         $this->assertSame(['site', 'version', 'keys'], array_keys(json_decode(file_get_contents(base_path(SiteContent::SCHEMA)), true)));
